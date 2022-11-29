@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap%27");
+
+body{
+    background-color: #E0E0E0;
+}
+
+.flex-stat{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #A8B9A2;
+    border-radius: 5px;  
+    align-items: center;  
+}
+
+.flex-ticket{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #A8B9A2;
+    border-radius: 5px;    
+}
+
+.vertical-line{
+    border-left: 2px solid white;
+    display: inline-block;
+    height: 100px;
+    margin: 15px;
+}
+
+.statistiques{
+    display: flex;
+}
+
+
+.flex-messages{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
+.container{
+    border-radius: 5px;  
+    background-color: #A8B9A2 ;
+    margin: 1%;
+    width: 100%;
+    padding: 1%;
+}
+
+.msg{
+    background: #E0E0E0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin: 3%; 
+    text-align: center;
+    display: flex;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+.flexbox{
+    width: 100%;
+    background: #E0E0E0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin: 3%;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+    flex-direction: column;
+}
+
+.flex-container-half{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container-100{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.admin-text{
+    margin: 10px;
+    
+}
+
+.text-stats{
+    color: white;
+}
+
+p{
+    font-family: 'Outfit', sans-serif;
+    font-size: large;
+}
+
+.data-ticket{
+    padding: 1%;
+    font-size: large;
+    width: -webkit-fill-available;
+    background: rgb(178, 172, 172);
+    border-radius: 3px;
+    border: none;
+    font-family: 'Outfit', sans-serif;
+}
+
