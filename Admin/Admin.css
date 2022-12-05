@@ -4,6 +4,19 @@ body{
     background-color: #E0E0E0;
 }
 
+textarea{
+    resize: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: large;
+    height: 200px;
+    margin : 1.5%;
+    padding: 1.5%;
+    background-color: #E0E0E0;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+
 .flex-stat{
     display: flex;
     justify-content: space-around;
@@ -20,6 +33,7 @@ body{
     justify-content: space-around;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 2%;
     background-color: #A8B9A2;
     border-radius: 5px;    
 }
@@ -51,6 +65,32 @@ body{
     margin: 1%;
     width: 100%;
     padding: 1%;
+}
+
+.boutton{
+    justify-content: center;
+    border-radius: 5px;
+    margin: 3%; 
+    text-align: center;
+    display: flex;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+#boutton-envoyer{
+    width: 40%;
+    height: 40px;
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: #E0E0E0;
+    font-family: 'Outfit', sans-serif;
+    font-size: large;
+}
+
+#boutton-envoyer:hover{
+    background-color: rgb(178, 172, 172);
+    cursor: pointer;
+    
 }
 
 .msg{
@@ -111,7 +151,7 @@ p{
     width: -webkit-fill-available;
     background: rgb(178, 172, 172);
     border-radius: 3px;
-    border: none;
+    border: 1px solid black;
     font-family: 'Outfit', sans-serif;
 }
 
