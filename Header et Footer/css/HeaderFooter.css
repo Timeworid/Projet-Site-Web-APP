@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap%27');
+
+body
+{
+    margin: 0px;
+    font-family: 'Outfit', sans-serif;
+}
+
+header{
+    padding: 0.25%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+#menu:hover{
+    background-color: blueviolet;
+}
+
+.menugauche{
+    margin: 0.25%;
+    display:block;
+    justify-content: flex-start;
+}
+
+.espaceimage{
+    margin: 2px;
+}
+
+.menudroite{
+    margin: 0.5%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.wtf1{
+    background-color: rgb(242, 240, 240);
+    display:flex;
+    flex-direction:row;
+    margin:0px;
+}
+    
+.parallax {
+    /* The image used */
+    background-image: url("../images/fondecran1.png");
+        
+    /* Set a specific height */
+    min-height: 800px; 
+        
+    /* Create the parallax scrolling effect */
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p{
+    font-size: 15px;
+    margin: 2%;
+}
+
+/*Footer*/
+
+.footer-global{
+    display: flex;
+    background-color: #E0E0E0;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.footer-yelp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0.5%;
+}
+
+.footer-bleu{
+    vertical-align:middle;
+    border-radius: 20px;
+    height: -webkit-fill-available;
+    background-color: #7FC0C4;
+    align-items: center;
+}
+
+.footer-gris{
+    display: flex;
+    border-radius: 20px;
+    margin: 0.5%;
+    background-color: #9d9b9b;
+    align-items: center;
+    flex-direction: column
+}
+
+.footer-gauche{
+    flex-direction: column;
+}
+
+.footer-milieu{ 
+    flex-grow: 4;
+    border-radius: 20px;
+    background-color: #7FC0C4;
+}
+
+.vertical-line{
+    border-left: 2px solid #000;
+    display: inline-block;
+    height: auto;
+    margin: 5px;
+}
+
+.footer-droite{
+    flex-direction: column;
+}
+
+.footer-aled{
+    padding: 1% ;
+    background-color: #9d9b9b;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-aled2{
+    display: flex;
+}
+
+.text-footer{
+    font-size: 10px;
+    margin: 2px;
+}

@@ -103,6 +103,7 @@ form .btn .btn-layer{
 }
 form .btn:hover .btn-layer{
   left: 0;
+  background:#444;
 }
 form .btn input[type="submit"]{
   height: 100%;
@@ -118,10 +119,16 @@ form .btn input[type="submit"]{
   font-weight: 500;
   cursor: pointer;
 }
-
 .separator{
   border-left: 2px solid black; 
   height: 500px; 
   display: inline-block;
   margin: 10px;
+}
+.title-mdp{
+  width: 100%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
