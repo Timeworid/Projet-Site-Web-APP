@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 body {
     display: flex;
     flex-direction: column;
     background-color: white;
     justify-content: center;
     align-items: center;
+    font-family: 'Outfit', sans-serif;
+    border: 0px;
 }
 
 .flexcontainer1 {
@@ -54,12 +57,17 @@ body {
 .InformationsPersonnelles {
     display: flex;
     width: 100%;
-    height: 20%;
+    height: 25px;
     border-radius: 15px;
     background-color: #7FC0C4;
     margin-bottom: 15px;
     justify-content: center;
-    text-align: center;
+    text-align: left;
+    padding-left: 10px;
+    border: 0px;
+}
+.formIP{
+    width: 80%;
 }
 
 .ParamètreGetD {
@@ -123,11 +131,12 @@ input::placeholder {
     text-align: center;
     justify-content: center;
     margin-bottom: 15px;
+    border: 0px;
 }
 
 .Check {
     background-color: #7FC0C4;
-    border: 2px solid black;
+    border: 0px;
     width: 75%;
     border-radius: 15px;
     padding-left: 3%;
@@ -138,22 +147,25 @@ input::placeholder {
 
 .Button1 {
     background-color: #258D93;
-    width: 150px;
-    height: 20px;
+    width: 40%;
+    height: 30px;
     border-radius: 5px;
-    color: black;
+    color: white;
     font-weight: bold;
     text-align: center;
+    justify-content: center;
+    border: 0px;
 }
 
 .Button2 {
     background-color: #258D93;
-    width: 215px;
-    height: 20px;
+    width: 30%;
+    height: 30px;
     border-radius: 5px;
-    color: black;
+    color: white;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
+    border: 0px;
 }
 
