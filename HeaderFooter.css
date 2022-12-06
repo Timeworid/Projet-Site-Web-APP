@@ -14,6 +14,7 @@ header{
     width: 100%;
 }
 
+
 #menu:hover{
     background-color: blueviolet;
 }
@@ -56,20 +57,26 @@ header{
     background-size: cover;
 }
 
+p{
+    font-size: 15px;
+    margin: 2%;
+}
+
+/*Footer*/
+
 .footer-global{
-    background-color: #E0E0E0;
-    height: 250px;
-    justify-content: space-between;
-    width: 100%;
     display: flex;
+    background-color: #E0E0E0;
+    width: 100%;
+    justify-content: center;
+
 }
 
 .footer-yelp{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 0.5%;
-    height: -webkit-fill-available;
 }
 
 .footer-bleu{
@@ -78,12 +85,12 @@ header{
     height: -webkit-fill-available;
     background-color: #7FC0C4;
     align-items: center;
-    
 }
 
 .footer-gris{
+    display: flex;
     border-radius: 20px;
-    height: -webkit-fill-available;
+    margin: 0.5%;
     background-color: #9d9b9b;
     align-items: center;
     flex-direction: column
@@ -94,10 +101,8 @@ header{
 }
 
 .footer-milieu{ 
-    vertical-align:center;
     flex-grow: 4;
     border-radius: 20px;
-    height: -webkit-fill-available;
     background-color: #7FC0C4;
 }
 
@@ -107,6 +112,7 @@ header{
     height: auto;
     margin: 5px;
 }
+
 .footer-droite{
     flex-direction: column;
 }
@@ -124,16 +130,7 @@ header{
     display: flex;
 }
 
-.footer-aled-titre{
-    display: flex;
-}
-
 .text-footer{
     font-size: 10px;
     margin: 2px;
-}
-
-p{
-    font-size: 15px;
-    margin: 2%;
 }
