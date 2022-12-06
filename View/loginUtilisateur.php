@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./test.css">
+    <link rel="stylesheet" href="test.css">
     <title>Andrea - Connexion</title>
 </head>
 <body>

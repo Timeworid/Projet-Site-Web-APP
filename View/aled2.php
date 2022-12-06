@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <title>Aled1</title>
+    <link rel="stylesheet" href="Oskour2.css">
+  </head>
+  <body>
+    <footer class="footer-global2">
+        <div class="footer2">
+            <div class="footerbleu">
+              <input class="Bouton" type="submit" value="Connexion">
+            </div>
+            <div class="footerbleu">
+              <input class="Bouton" type="submit" value="Connexion">
+            </div> 
+        </div>
+        <div>
+        </div>    
+        <div class="footer2">
+            <div>
+            </div>
+            <div>
+            </div>
+        </div>   
+    </footer>
+</body> 
+</html>

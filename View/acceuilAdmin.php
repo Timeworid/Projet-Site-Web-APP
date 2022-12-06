@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Andrea - Admin</title>
-    <link rel="stylesheet" href="./Admin.css">
+    <link rel="stylesheet" href="Admin.css">
 </head>
 <body>
     <header>
@@ -24,19 +24,19 @@
         <div class="container"> 
             <!-- a rendre dynamique avec le php-->
             <div class="msg">
-                <img src="image.png" width="40px">
+                <img src="../Data/image.png" width="40px">
                 <p class="admin-text">FEFNRIUNREIUVNRIUGRURBVRUBRYURBVRUVBRVRBVRB</p>
             </div>
             <div class="msg">
-                <img src="image.png" width="40px">
+                <img src="../Data/image.png" width="40px">
                 <p class="admin-text">TEST</p>
             </div>
             <div class="msg">
-                <img src="image.png" width="40px">
+                <img src="../Data/image.png" width="40px">
                 <p class="admin-text">TEST</p>
             </div>
             <div class="msg">
-                <img src="image.png" width="40px">
+                <img src="../Data/image.png" width="40px">
                 <p class="admin-text">TEST</p>
             </div>  
             
@@ -44,19 +44,19 @@
         
         <div class="container"> 
             <div class="msg">
-                <img src="bulle.png" width="40px">
+                <img src="../Data/bulle.png" width="40px">
                 <p class="admin-text">TEST</p>
             </div>
             <div class="msg">
-                <img src="bulle.png" width="40px">
+                <img src="../Data/bulle.png" width="40px">
                 <p class="admin-text">TEST</p>
             </div>
             <div class="msg">
-                <img src="bulle.png" width="40px">
+                <img src="../Data/bulle.png" width="40px">
                 <p class="admin-text">TEST</p>
             </div>
             <div class="msg">
-                <img src="bulle.png" width="40px">
+                <img src="../Data/bulle.png" width="40px">
                 <p class="admin-text">TEST</p>
             </div>      
         </div>
