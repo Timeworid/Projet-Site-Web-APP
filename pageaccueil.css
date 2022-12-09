@@ -1,0 +1,39 @@
+body {
+    background-image:url("file:///C:/Users/gatbo/OneDrive/Bureau/code%20html/fond%20accueil%20v2.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.bbb{border-radius: 10px;
+width: 500px;
+height: 500px;
+}
+.button {
+    background-color: #258D93; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100px;
+    border-radius: 10px;
+  }
+  .produit{
+    display:flex;
+    align-items: center;
+  }
+.T3{
+  width: 1500px;
+  font-size: 100px;
+}
+h1{
+  font-size: 100px;
+}
+p{
+  font-size: 40px;
+}
+.bandeau{
+width: 1500px;
+background-color: antiquewhite;
+margin-left: -6px;
+margin-right: -6px;}
