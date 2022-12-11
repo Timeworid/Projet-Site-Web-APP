@@ -38,9 +38,50 @@
 
     </header>
 
-    <div class="parallax"></div>
-    <div style="height:1000px;background-color:rgb(205, 205, 205);font-size:36px">
+     <!--PAGE WEB EFFET imagetest-->
+
+  <div class="imagetest1">
+    <div class="texteimagetest">
+    <span class="bord">SCROLLER VERS LE BAS</span>
     </div>
+  </div>
+
+  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h3 style="text-align:center;">Nom du Produit</h3>
+    <p>Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</p>
+  </div>
+
+  <div class="imagetest2">
+    <div class="texteimagetest">
+    <span class="bord" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+    </div>
+  </div>
+
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>Le meilleur casque audio pour les sportifs</p>
+    </div>
+  </div>
+
+  <div class="imagetest3">
+    <div class="texteimagetest">
+    <span class="bord" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLLER VERS LE HAUT</span>
+    </div>
+  </div>
+
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>Conçu pour vous accompagner partout, tout le temps.</p>
+    </div>
+  </div>
+
+  <div class="imagetest1">
+    <div class="texteimagetest">
+    <span class="bord">Phrase d'accroche</span>
+    </div>
+  </div>
+
+
 
     <!--Footer-->
 
