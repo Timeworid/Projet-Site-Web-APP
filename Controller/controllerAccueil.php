@@ -3,7 +3,7 @@
     class controllerAcceuil{
 
         public static function accueil(){
-            include("View/HeaderFooter.php");
+            include("View/PageProduit.php");
         }
     }
 

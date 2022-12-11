@@ -1,0 +1,249 @@
+/* EN-TETE */
+
+header{
+    padding: 0.25%;
+    position: fixed;
+    justify-content:space-between;
+    width: 100%;
+}
+
+.headerglobal{
+    background-color: rgb(242, 240, 240);
+    display:flex;
+    margin:0px;
+    padding: 0%;
+    position: fixed;
+    z-index: 10;
+}
+
+.headermobile{
+    background-color: rgb(206, 206, 206);
+    display:flex;
+    position: sticky;
+    z-index: 8;
+    flex-direction: row;
+}
+
+.menugauche{
+    margin: 0.25%;
+    display:block;
+
+}
+
+/* MENU DEROULANT */
+
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .menu-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .menu-content a:hover {background-color: #ddd;}
+  
+  .menu:hover .menu-content {display: block;}
+  
+  .menu:hover .dropbtn {background-color:transparent;}
+
+
+.espaceimage{
+    margin: 2px;
+}
+
+.menudroite{
+    margin: 0.5%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.parallax1, .parallax2, .parallax3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.parallax1 {
+  background-image: url("../Data/fondecran1.png");
+  min-height: 100%;
+}
+
+.parallax2 {
+  background-image: url("../Data/fondecran2.jpg");
+  min-height: 400px;
+}
+
+.parallax3 {
+  background-image: url("../Data/fondecran3.jpg");
+  min-height: 400px;
+}
+
+.texteparallax {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.texteparallax span.contourtexteparallax {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Enleve le parallax pour tablettes et les téléphones */
+@media only screen and (max-device-width: 1024px) {
+  .parallax1, .parallax2, .parallax3 {
+    background-attachment: scroll;
+  }
+}
+
+/*VIDEO DE FOND*/
+
+#myVideo {
+    display: flex;
+    opacity: 0.65;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    max-width: 120%; 
+    max-height: 120%;
+    z-index:-1 ;
+}
+
+video {
+    height: auto;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.textevideo {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h5 {
+    color: white;
+    font-family: 'Nobile', sans-serif;
+    font-size: 9vw;
+    text-align: center;
+}
+
+/* BAS DE PAGE */
+
+.footer-global{
+    display: flex;
+    background-color: #E0E0E0;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-yelp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0.5%;
+}
+
+.footer-bleu{
+    vertical-align:middle;
+    border-radius: 20px;
+    height: -webkit-fill-available;
+    background-color: #7FC0C4;
+    align-items: center;
+}
+
+.footer-gris{
+    display: flex;
+    border-radius: 20px;
+    margin: 0.5%;
+    background-color: #9d9b9b;
+    align-items: center;
+    flex-direction: column
+}
+
+.footer-gauche{
+    flex-direction: column;
+}
+
+.footer-milieu{ 
+    flex-grow: 4;
+    border-radius: 20px;
+    background-color: #7FC0C4;
+}
+
+.vertical-line{
+    border-left: 2px solid #000;
+    display: inline-block;
+    height: auto;
+    margin: 5px;
+}
+
+.footer-droite{
+    flex-direction: column;
+}
+
+.footer-aled{
+    padding: 1% ;
+    background-color: #9d9b9b;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-aled2{
+    display: flex;
+}
+
+.text-footer{
+    font-size: 10px;
+    margin: 2px;
+}
