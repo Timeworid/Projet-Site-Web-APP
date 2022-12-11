@@ -11,21 +11,26 @@
     <header class="wtf1">    
 
       
-        <!-- Logo1 -->
+        <!-- Logo1 -->  
+        
         <div class= "menugauche">
-          <img class="espaceimage" id="menu" src="images/jpp/menu.png" height="40px" width="30px" alt="">
-          <img class="espaceimage" src="images/logo.png" height="40px" width="80px" alt="">
+              <a href=''>
+                <a href="https://youtube.com"><img src="Data/menu.png" alt="menu" style="width:30px;height:40px;"></a>
+                <a href="https://google.com"><img src="Data/logo.png" alt="menu" style="width:80px;height:40px;"></a>
+              </a>
         </div>
 
         <div class= "menudroite">
-          <img class="espaceimage" src="images/jpp/search.png" height="35px" width="40px" alt="">
-          <img class="espaceimage" src="images/jpp/cart.png" height="35px" width="40px" alt="">
+        <a href=''>
+          <a href="https://google.com"><img src="Data/search.png" alt="menu" style="width:40px;height:40px;"></a>
+          <a href="https://youtube.com"><img src="Data/cart.png" alt="menu" style="width:40px;height:40px;"></a>
+          </a>
         </div>
 
         <!--
         <div class="wtf2">
           <ul class="en-tete">
-            <li><a href="images/Header.html">Accueil</a></li>
+            <li><a href="Data/Header.html">Accueil</a></li>
             <li><a>Exemples</a></li>
           </ul>
         </div>
@@ -39,49 +44,51 @@
 
     <!--Footer-->
 
+    <style>
+      a.lien1:link {color:black;text-decoration:none;}
+      a.lien1:visited {color:black;text-decoration:none;}
+    </style>
+
     <footer class="footer-global">
       <div class="footer-yelp">
         <div class="footer-yelp footer-gauche">
           <div class="footer-yelp footer-bleu">
-            <p>ASSISTANCE</p>
+            <a class="lien1" href="https://google.com" >ASSISTANCE</a>
           </div>
           <div class="footer-yelp footer-bleu">
-              <p>FAQ</p>
+            <a class="lien1" href="https://google.com" >FAQ</a>
           </div>
         </div>  
         <div class="footer-yelp footer-milieu" >
-          <p>A PROPOS DE NOUS</p>
+          <a class="lien1" href="https://google.com" >A PROPOS DE NOUS</a>
           <span class="vertical-line"></span>
-          <p>NOUS CONTACTER</p>
+          <a class="lien1" href="https://google.com" >NOUS CONTACTER</a>
         </div>
         <div class="footer-yelp footer-droite">
           
           <!-- footer reseaux sociaux -->
 
           <div class="footer-aled">
-            <p>NOUS SUIVRE</p>
+            <a class="lien1" href="https://google.com" >NOUS SUIVRE</a>
           <div class = "footer-aled3">
-            <img class="espaceimage" src="images/jpp/facebook.png" height="35px" width="35px" alt="">
-            <img class="espaceimage" src="images/jpp/instagram.png" height="35px" width="35px" alt="">
-            <img class="espaceimage" src="images/jpp/tiktok.png" height="35px" width="35px" alt="">
-            <img class="espaceimage" src="images/jpp/twitter.png" height="35px" width="35px" alt="">
-            <img class="espaceimage" src="images/jpp/linkedin.png" height="35px" width="35px" alt="">
+            <img class="espaceimage" src="Data/facebook.png" height="35px" width="35px" alt="">
+            <img class="espaceimage" src="Data/instagram.png" height="35px" width="35px" alt="">
+            <img class="espaceimage" src="Data/tiktok.png" height="35px" width="35px" alt="">
+            <img class="espaceimage" src="Data/twitter.png" height="35px" width="35px" alt="">
+            <img class="espaceimage" src="Data/linkedin.png" height="35px" width="35px" alt="">
           </div>
 
           <!-- barre de recherche -->
           
           <div class="footer-aled2">
-            
           </div>
           </div>
             <div class="footer-yelp footer-gris">
-              <p>CONDITIONS GENERALES D'UTILISATION</p>
-              <p>NOTRE POLITIQUE DE CONFIDENTIALITE</p>
+              <a class="lien1" href="https://google.com" >CONDITIONS GENERALES D'UTILISATION</a>
+              <a class="lien1" href="https://google.com" >NOTRE POLITIQUE DE CONFIDENTIALITE</a>
             </div>
         </div>
       </div>  
     </footer>
 </body>
-    
-  </body>
 </html>
