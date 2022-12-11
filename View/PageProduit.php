@@ -74,11 +74,13 @@
         </div>
     </div>
 
-    <div class="parallax1">
+
+    <div class="parallax4">
         <div class="texteparallax">
-            <span class="contourtexteparallax">RESPIREZ ENFIN DE L'AIR PUR EN COURANT</span>
+            <span class="contourtexteparallax" style="background-color:transparent;font-size:25px;color: #f7f7f7;">RESPIREZ ENFIN DE L'AIR PUR EN COURANT</span>
         </div>
     </div>
+
 
     <div style="position:relative;">
         <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">

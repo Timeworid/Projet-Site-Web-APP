@@ -85,7 +85,7 @@ body, html {
   color: #777;
 }
 
-.parallax1, .parallax2, .parallax3 {
+.parallax1, .parallax2, .parallax3,.parallax4 {
   position: relative;
   opacity: 0.65;
   background-attachment: fixed;
@@ -96,7 +96,7 @@ body, html {
 }
 
 .parallax1 {
-  background-image: url("Data/fondecran1.png");
+  background-image: url("Data/fondecran1.jpg");
   min-height: 100%;
 }
 
@@ -108,6 +108,11 @@ body, html {
 .parallax3 {
   background-image: url("Data/fondecran3.jpg");
   min-height: 400px;
+}
+
+.parallax4 {
+  background-image: url("Data/fondecran4.jpg");
+  min-height: 600px;
 }
 
 .texteparallax {
