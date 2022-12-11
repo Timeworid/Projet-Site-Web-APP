@@ -21,7 +21,7 @@
         </div>
 
         <div class= "menudroite">
-        <a href=''>
+          <a href=''>
           <a href="https://google.com"><img src="Data/search.png" alt="menu" style="width:40px;height:40px;"></a>
           <a href="https://youtube.com"><img src="Data/cart.png" alt="menu" style="width:40px;height:40px;"></a>
           </a>
