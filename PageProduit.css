@@ -96,17 +96,17 @@ body, html {
 }
 
 .parallax1 {
-  background-image: url("../Data/fondecran1.png");
+  background-image: url("Data/fondecran1.png");
   min-height: 100%;
 }
 
 .parallax2 {
-  background-image: url("../Data/fondecran2.jpg");
+  background-image: url("Data/fondecran2.jpg");
   min-height: 400px;
 }
 
 .parallax3 {
-  background-image: url("../Data/fondecran3.jpg");
+  background-image: url("Data/fondecran3.jpg");
   min-height: 400px;
 }
 
