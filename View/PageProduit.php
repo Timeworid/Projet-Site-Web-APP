@@ -39,7 +39,7 @@
 
 </div>
     <div class="parallax1">
-        <div class="texteparallax">
+        <div class="texteparallax" style="font-family: 'Outfit', sans-serif;">
             <span class="contourtexteparallax">UN NOUVEAU CASQUE AUDIO CONCU POUR VOUS</span>
         </div>
     </div>
@@ -77,7 +77,7 @@
 
     <div class="parallax4">
         <div class="texteparallax">
-            <span class="contourtexteparallax" style="font-family: 'Outfit', sans-serif; background-color:transparent;font-size:25px;color: #f7f7f7;">RESPIREZ ENFIN DE L'AIR PUR EN COURANT</span>
+            <span class="contourtexteparallax" style="font-family: 'Outfit', sans-serif;">RESPIREZ ENFIN DE L'AIR PUR EN COURANT</span>
         </div>
     </div>
 

@@ -133,6 +133,7 @@ body, html {
   width: 100%;
   text-align: center;
   color: #000;
+  z-index: 2;
 }
 
 .texteparallax span.contourtexteparallax {
@@ -141,12 +142,13 @@ body, html {
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
+  z-index: 2;
 }
 
 h3 {
   letter-spacing: 5px;
   text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
+  font: 20px "Outfit", sans-serif;
   color: #111;
 }
 
