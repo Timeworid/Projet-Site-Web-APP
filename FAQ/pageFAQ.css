@@ -1,9 +1,12 @@
-/* Bandeau de haut de page */
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap%27");
+
 body{
+    font-family: 'Outfit', sans-serif;
     margin:0px;
-    font-family: Georgia, 'Times New Roman', Times;
-    }
-    #header{
+
+}
+
+#header{
     height:120px;
     background:#2F2F2E;
 }
@@ -13,7 +16,10 @@ h1{
 }
 
 section{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Outfit', sans-serif;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
 }
 
 
@@ -48,7 +54,7 @@ img {
 }
 
 /* Si le checkbox est coché, montrer tous les paragraphes */
-.faq-section input[type=checkbox]:checked~p{
+.divquestion input[type=checkbox]:checked~p{
     display: block;
     color: #444;
     font-size: 1em;
