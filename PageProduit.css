@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap%27');
+
+body
+{
+    margin: 0px;
+    font-family: 'Outfit', sans-serif;
+    color: #000;
+}
+
 /* EN-TETE */
 
 header{
@@ -67,6 +76,8 @@ header{
   
   .menu:hover .dropbtn {background-color:transparent;}
 
+
+/* SUITE HEADER */
 
 .espaceimage{
     margin: 2px;
@@ -168,15 +179,15 @@ video {
 .textevideo {
     position:absolute;
     display: flex;
-    align-items: center;
     justify-content: center;
+    margin-left: 5%;
     z-index: 2;
 }
 
 h5 {
     color: white;
-    font-family: 'Nobile', sans-serif;
-    font-size: 9vw;
+    font-family: 'Outfit', sans-serif;
+    font-size: 8vw;
     text-align: center;
 }
 
