@@ -60,11 +60,44 @@ textarea{
 
 
 .container{
+    border: 0.5px solid black;
     border-radius: 5px;  
     background-color: #A8B9A2 ;
     margin: 1%;
     width: 100%;
     padding: 1%;
+    
+}
+
+
+
+/* scrollbar perso */
+
+/* firefox only */
+
+.scroller{
+    height: 200px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+/* le reste */
+
+.scroller::-webkit-scrollbar-track{
+    background: white;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.scroller::-webkit-scrollbar {
+    padding : 0.2%;
+    width: 12px;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+    background-color: #E0E0E0;
+    border-radius: 20px;
+    border: 1px solid black;
 }
 
 .boutton{
