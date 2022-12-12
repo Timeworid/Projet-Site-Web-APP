@@ -1,39 +1,22 @@
 <!DOCTYPE html>
 <html>
+<?php
+        $handle = fopen("./Header.html", "r");
+        if($handle){
+            while (!feof($handle)) {
+                $buffer = fgets($handle);
+                echo $buffer;
+            }
+            if(feof($handle)){
+                fclose($handle);
+            };
+        };  
+    ?>
 <head>
     <title>Test1</title>
-    <link rel="stylesheet" href="PageProduit.css">
+    <link rel="stylesheet" href="../PageProduit.css">
 </head>
 <body>
-
-<!-- EN-TETE -->
-
-<header class="headerglobal">
-    <div class= "menugauche">
-        <a href=''>
-            <div class="menu">
-            <button class="dropbtn"><img src="Data/menu.png" alt="menu" style="width:40px;height:40px;"></button>
-            <div class="menu-content">
-                <a href="https://instagram.com">Fiche Produit</a>
-                <a href="https://tiktok.com">Compte</a>
-                <a href="https://facebook.com">Paramètres</a>
-            </div>
-            <a href="https://google.com"><img src="Data/logo.png" alt="menu" style="width:80px;height:40px;"></a>
-            </div>
-        </a>
-    </div>
-    <div style='align-items: center;' class= "menudroite">
-            <div class="searchbar">
-            <input type="text" placeholder="Rechercher...">
-            </div>
-            <a href=''>
-            <a href="https://google.com"><img src="Data/search.png" alt="menu" style="width:40px;height:40px;"></a>
-            <div style="color:transparent";><p>__</p></div>
-            <a href="https://youtube.com"><img src="Data/cart.png" alt="menu" style="width:40px;height:40px;"></a>
-        </a>
-    </div>
-
-</header>
 
 
 
@@ -104,54 +87,17 @@
     </video>
   
  </div>
-
- <!--BAS DE PAGE-->
-
- <style>
-    a.lien1:link {color:black;text-decoration:none;}
-    a.lien1:visited {color:black;text-decoration:none;}
-  </style>
-
-  <footer class="footer-global">
-    <div class="footer-yelp">
-      <div class="footer-yelp footer-gauche">
-        <div class="footer-yelp footer-bleu">
-          <a class="lien1" href="https://google.com" >ASSISTANCE</a>
-        </div>
-        <div class="footer-yelp footer-bleu">
-          <a class="lien1" href="https://google.com" >FAQ</a>
-        </div>
-      </div>  
-      <div class="footer-yelp footer-milieu" >
-        <a class="lien1" href="https://google.com" >A PROPOS DE NOUS</a>
-        <span class="vertical-line"></span>
-        <a class="lien1" href="https://google.com" >NOUS CONTACTER</a>
-      </div>
-      <div class="footer-yelp footer-droite">
-        
-        <!-- footer reseaux sociaux -->
-
-        <div class="footer-aled">
-          <a class="lien1" href="https://google.com" >NOUS SUIVRE</a>
-        <div class = "footer-aled3">
-          <img class="espaceimage" src="Data/facebook.png" height="35px" width="35px" alt="">
-          <img class="espaceimage" src="Data/instagram.png" height="35px" width="35px" alt="">
-          <img class="espaceimage" src="Data/tiktok.png" height="35px" width="35px" alt="">
-          <img class="espaceimage" src="Data/twitter.png" height="35px" width="35px" alt="">
-          <img class="espaceimage" src="Data/linkedin.png" height="35px" width="35px" alt="">
-        </div>
-
-        <!-- barre de recherche -->
-        
-        <div class="footer-aled2">
-        </div>
-        </div>
-          <div class="footer-yelp footer-gris">
-            <a class="lien1" href="https://google.com" >CONDITIONS GENERALES D'UTILISATION</a>
-            <a class="lien1" href="https://google.com" >NOTRE POLITIQUE DE CONFIDENTIALITE</a>
-          </div>
-      </div>
-    </div>  
-  </footer>
 </body>
+<?php
+$handle = fopen("./Footer.html", "r");
+    if($handle){
+		while (!feof($handle)) {
+            $buffer = fgets($handle);
+            echo $buffer;
+        }
+        if(feof($handle)){
+            fclose($handle);
+        };
+    }; 
+    ?>
 </html>

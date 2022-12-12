@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
+<?php
+        $handle = fopen("./Header.html", "r");
+        if($handle){
+            while (!feof($handle)) {
+                $buffer = fgets($handle);
+                echo $buffer;
+            }
+            if(feof($handle)){
+                fclose($handle);
+            };
+        };  
+    ?>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="../login.css">
     <title>Andrea - Connexion</title>
 </head>
 <body>
@@ -62,11 +74,9 @@
                     <div class="mdpLien">
                         <a id="mdp">Mot de passe oublié ?</a>
                         <script>
-                            var myWindow = window.open("", "MsgWindow", "width=200,height=100");
-                            myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
                             var forgot=document.getElementById('mdp');
                             forgot.addEventListener("click", function() {
-                                myWindow.open
+                                window.open("./forgot.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
                             });
                         </script>
                     </div>
@@ -75,4 +85,16 @@
         </div>
     </div>
 </body>
+<?php
+$handle = fopen("./Footer.html", "r");
+    if($handle){
+		while (!feof($handle)) {
+            $buffer = fgets($handle);
+            echo $buffer;
+        }
+        if(feof($handle)){
+            fclose($handle);
+        };
+    }; 
+    ?>
 </html>
