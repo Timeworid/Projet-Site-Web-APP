@@ -34,7 +34,6 @@ html,body{
   font-size: 35px;
   font-weight: 600;
   text-align: center;
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 .wrapper .form1{
   width: 100%;
@@ -46,7 +45,6 @@ html,body{
 }
 .form1 .form2 form{
   width: 50%;
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 .form2 form .case{
   height: 50px;
@@ -62,7 +60,6 @@ html,body{
   border: 1px solid lightgrey;
   border-bottom-width: 2px;
   font-size: 17px;
-  transition: all 0.3s ease;
 }
 .form2 form .case input:focus{
   border-color: #258d93;
@@ -70,7 +67,6 @@ html,body{
 }
 .form2 form .case input::placeholder{
   color: #999;
-  transition: all 0.3s ease;
 }
 form .case input:focus::placeholder{
   color: #b3b3b3;
@@ -135,4 +131,7 @@ form .btn input[type="submit"]{
   font-weight: 600;
   text-align: center;
   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.forgot{
+  width: 200%;
 }
