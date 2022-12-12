@@ -89,6 +89,24 @@ header{
     justify-content: flex-end;
 }
 
+/* BARRE DE RECHERCHE*/
+
+.searchbar input[type=text] {
+  float: right;
+  padding: 8px;
+  border: none;
+  font-size: 17px;
+  border: 1px solid #ccc;
+  margin-right: 20px;
+  margin-bottom: 2%;
+  border-color: #000;
+  font-family: 'Outfit', sans-serif;
+  max-width: 150px;
+  border-radius: 20px;
+}
+
+/* FIN BARRE DE RECHERCHE*/
+
 body, html {
   height: 100%;
   margin: 0;

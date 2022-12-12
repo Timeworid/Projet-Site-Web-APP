@@ -23,7 +23,10 @@
         </a>
     </div>
     <div style='align-items: center;' class= "menudroite">
-        <a href=''>
+            <div class="searchbar">
+            <input type="text" placeholder="Rechercher...">
+            </div>
+            <a href=''>
             <a href="https://google.com"><img src="Data/search.png" alt="menu" style="width:40px;height:40px;"></a>
             <div style="color:transparent";><p>__</p></div>
             <a href="https://youtube.com"><img src="Data/cart.png" alt="menu" style="width:40px;height:40px;"></a>
