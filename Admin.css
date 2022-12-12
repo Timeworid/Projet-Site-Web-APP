@@ -20,6 +20,7 @@ textarea{
 .flex-stat{
     display: flex;
     justify-content: space-around;
+    margin-top: 100px;
     margin-left: 10%;
     margin-right: 10%;
     background-color: #A8B9A2;
@@ -33,7 +34,8 @@ textarea{
     justify-content: space-around;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 2%;
+    margin-top: 120px;
+    margin-bottom: 5%;
     background-color: #A8B9A2;
     border-radius: 5px;    
 }
@@ -56,6 +58,7 @@ textarea{
     margin-top: 5%;
     margin-right: 10%;
     margin-left: 10%;
+    margin-bottom: 5%;
 }
 
 
