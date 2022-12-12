@@ -25,9 +25,11 @@ h1{
     padding-top: 3%;
     padding-left: 5%;
 }
-
+²²²
 .t3{
     padding-left: 15%;
+    background-color: #258d93;
+    margin: 0px;
 }
 
 .job{
@@ -38,14 +40,21 @@ h1{
     padding-bottom: 0px;
     display: flex;
     flex: 1 1 auto;
+    background-color: #258d93;
 }
 
 .job1{
     flex: 1 1 0;
+    margin: 1%;
+    border-right: rgb(60, 60, 60) solid 1px;
 }
 .job2{
     flex: 1 1 0;
+    margin: 1%;
+    border-right: rgb(60, 60, 60) solid 1px;
 }
 .job3{
     flex: 1 1 0;
 }
+
+
