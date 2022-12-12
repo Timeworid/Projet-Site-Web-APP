@@ -1,0 +1,82 @@
+/* BODY ET MISE EN FORME */
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap%27');
+
+.jeanneoskour2 {
+    margin: 0px;
+    font-family: 'Outfit', sans-serif;
+    color: #000;
+}
+
+/* BAS DE PAGE */
+
+.footer-global{
+    display: flex;
+    background-color: #E0E0E0;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-yelp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0.5%;
+}
+
+.footer-bleu{
+    vertical-align:middle;
+    border-radius: 20px;
+    height: -webkit-fill-available;
+    background-color: #7FC0C4;
+    align-items: center;
+}
+
+.footer-gris{
+    display: flex;
+    border-radius: 20px;
+    margin: 0.5%;
+    background-color: #9d9b9b;
+    align-items: center;
+    flex-direction: column
+}
+
+.footer-gauche{
+    flex-direction: column;
+}
+
+.footer-milieu{ 
+    flex-grow: 4;
+    border-radius: 20px;
+    background-color: #7FC0C4;
+}
+
+.vertical-line{
+    border-left: 2px solid #000;
+    display: inline-block;
+    height: auto;
+    margin: 5px;
+}
+
+.footer-droite{
+    flex-direction: column;
+}
+
+.footer-aled{
+    padding: 1% ;
+    background-color: #9d9b9b;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-aled2{
+    display: flex;
+}
+
+.text-footer{
+    font-size: 10px;
+    margin: 2px;
+}
