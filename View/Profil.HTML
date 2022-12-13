@@ -1,54 +1,74 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="fr">
     <head>
-        <link rel="stylesheet" href="Profil\CSS\Profil.CSS ">
+        <title>Profil</title>
+        <link rel="stylesheet" href="../CSS/Profil.css ">
     </head>
     <body>
         <div class="flexcontainer1">
             <div class="fc11">
                 <div class="Photo"> Photo de profil </div>
-                <form>
+                <form class ="formIP">
                     <input class="InformationsPersonnelles" type="text" placeholder="Nom Prénom">
                     <input class="InformationsPersonnelles" type="text" placeholder="Age">
                     <input class="InformationsPersonnelles" type="text" placeholder="Adresse">
                     <input class="InformationsPersonnelles" type="text" placeholder="Adresse Mail">
-                </form> 
             </div>
-            <div class="fc11">
-                        <form class="BigAM">
+                    <div class="fc11">
+                        <div class="BigAM">
                             <input class="Aproposdemoi" type="text" placeholder="A propos de moi">
-                        </form>
-                <div class="Button1"> Modifier mon profil </div>
+                        </div>
+                        <input class="Button1" type="submit" value="Modifier mon profil">
+                </form>
+                
             </div>
         </div>
         <div class="flexcontainer2">
             <div class="Paramètres">
-                <div class="ParamètreGetD">
+                <form class="ParamètreGetD">
                     <div class="ParamètreG">
-                        <div class="Check"> <a> Je souhaite recevoir les notifications <br> <input type="checkbox"> Oui <input type="checkbox"> Non </a>
+                        <div class="Check"> 
+                            <a> Je souhaite recevoir les notifications <br> 
+                                <input type="checkbox"> Oui 
+                                <input type="checkbox"> Non 
+                            </a>
                         </div>
-                        <div class="Check"> <a> J'autorise la géolocalisation <br> <input type="checkbox"> Oui <input type="checkbox"> Non </a>
-                            <input type="checkbox">
+                        <div class="Check"> 
+                            <a> J'autorise la géolocalisation <br> 
+                                <input type="checkbox"> Oui 
+                                <input type="checkbox"> Non
+                            </a>
                         </div>
-                        <div class="Check"> <a> J'autorise l'utilisation de capteurs à CO2 <br> <input type="checkbox"> Oui <input type="checkbox"> Non </a>
-                            <input type="checkbox">
+                        <div class="Check"> 
+                            <a> J'autorise l'utilisation de capteurs à CO2 <br> 
+                                <input type="checkbox"> Oui 
+                                <input type="checkbox"> Non 
+                            </a>
                         </div>
                     </div>
                     <div class="ParamètreD">
-                        <div class="Check"> <a> J'autorise l'utilisation de capteurs cardiaques <br> <input type="checkbox"> Oui <input type="checkbox"> Non </a>
-                            <input type="checkbox">
+                        <div class="Check"> 
+                            <a> J'autorise l'utilisation de capteurs cardiaques <br> 
+                                <input type="checkbox"> Oui 
+                                <input type="checkbox"> Non 
+                            </a>
                         </div>
-                        <div class="Check"> <a> J'autorise l'utilisation de capteurs sonores <br> <input type="checkbox"> Oui <input type="checkbox"> Non </a>
-                            <input type="checkbox">
+                        <div class="Check"> 
+                            <a> J'autorise l'utilisation de capteurs sonores <br> 
+                                <input type="checkbox"> Oui 
+                                <input type="checkbox"> Non 
+                            </a>
                         </div>
-                        <div class="Check"> <a> J'autorise l'utilisation de capteurs à température corporelle <br> <input type="checkbox"> Oui <input type="checkbox"> Non </a>
-                            <input type="checkbox">
+                        <div class="Check"> 
+                            <a> J'autorise l'utilisation de capteurs à température corporelle <br> 
+                                <input type="checkbox"> Oui 
+                                <input type="checkbox"> Non 
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="Button2"> Enregistrer les modifications </div>
-            </div>
+                <input class="Button2" type="submit" value="Enregistrer les modifications">
+            </form>
         </div>
     </body>
 </html>
