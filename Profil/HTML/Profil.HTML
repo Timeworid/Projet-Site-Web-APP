@@ -4,24 +4,26 @@
         <link rel="stylesheet" href="../CSS/Profil.css ">
     </head>
     <body>
-        <div class="flexcontainer1">
+        <form class="flexcontainer1">
             <div class="fc11">
-                <div class="Photo"> Photo de profil </div>
-                <form class ="formIP">
+                <div class="Photo">
+                    <label for="file" class="label-file"></label>
+                    <input id="file" class="input-file" type="file" name="pdp" accept="image/png, image/jpeg, image/jpg">
+                </div>
+                <div class ="formIP">
                     <input class="InformationsPersonnelles" type="text" placeholder="Nom Prénom">
                     <input class="InformationsPersonnelles" type="text" placeholder="Age">
                     <input class="InformationsPersonnelles" type="text" placeholder="Adresse">
                     <input class="InformationsPersonnelles" type="text" placeholder="Adresse Mail">
+                </div>
+            </div>  
+            <div class="fc11">
+                <div class="BigAM">
+                    <input class="Aproposdemoi" type="text" placeholder="A propos de moi">
+                </div>
+                <input class="Button1" type="submit" value="Modifier mon profil">
             </div>
-                    <div class="fc11">
-                        <div class="BigAM">
-                            <input class="Aproposdemoi" type="text" placeholder="A propos de moi">
-                        </div>
-                        <input class="Button1" type="submit" value="Modifier mon profil">
-                </form>
-                
-            </div>
-        </div>
+        </form>
         <div class="flexcontainer2">
             <div class="Paramètres">
                 <form class="ParamètreGetD">

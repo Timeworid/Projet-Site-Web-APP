@@ -169,3 +169,25 @@ input::placeholder {
     border: 0px;
 }
 
+.InformationsPersonnelles:hover, .Aproposdemoi:hover{
+    background-color: #91d2d6;
+}
+.Photo:hover{
+    background-color: #222222e5;
+}
+.Button1:active, .Button2:active{
+    background-color: black;
+}
+.Button1:hover, .Button2:hover{
+    background-color: #399ea5;
+}
+.input-file {
+    display: none;
+}
+.label-file{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
