@@ -1,39 +1,76 @@
-body {
-    background-image:url("file:///C:/Users/gatbo/OneDrive/Bureau/code%20html/fond%20accueil%20v2.png");
-    background-repeat: no-repeat;
-    background-size:cover;
+body{
+  background-color: #a8b9a2;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-size-adjust: 2%;
+  font-size: larger;
 }
-.bbb{border-radius: 10px;
-width: 500px;
-height: 500px;
+.header{
+  background-color: #258D93;
+  text-align: center;
+  padding: 3%;
 }
-.button {
-    background-color: #258D93; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 100px;
-    border-radius: 10px;
+.content{
+  background-color: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: #33333333;
+}
+.footer{
+  background-color: #e0e0e0;
+  padding: 3%;
+}
+.bloc3{
+  background-color:none;
+  align-self: center;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
-  .produit{
-    display:flex;
-    align-items: center;
+.bloc2{
+  display: block;
+  align-self: center;
+  width: 40%;
+  height: 100%;
+}
+.bloc1{background-color: #258D93; 
+  height: 50%;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 100%;
+  border-radius: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  align-self: center;
+  width: 15%;
+  margin-left: 5%;
+  
+}
+.image{width: 75%;
+height: 50%;
+border-radius: 20%;
+}
+@media (max-width:800px) {
+  .bloc1{
+      font-size: small;
   }
-.T3{
-  width: 1500px;
-  font-size: 100px;
+  .maintenant{
+      display: none;
+  }
+
 }
-h1{
-  font-size: 100px;
-}
-p{
-  font-size: 40px;
-}
-.bandeau{
-width: 1500px;
-background-color: antiquewhite;
-margin-left: -6px;
-margin-right: -6px;}
+
+  
