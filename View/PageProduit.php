@@ -16,11 +16,11 @@
     <title>Test1</title>
     <link rel="stylesheet" href="../PageProduit.css">
 </head>
-<body>
-
-
 
 <!--CORPS DE LA PAGE-->>
+
+<body>
+
 <div class="header2">
 
 </div>
@@ -75,7 +75,7 @@
     </div>
 
 
- <!-- VIDEO -->
+<!-- VIDEO -->
 
  <div class="myVideo">
     <div class="textevideo" style="font-family: 'Outfit', sans-serif;">
