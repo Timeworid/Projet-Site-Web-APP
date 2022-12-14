@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <?php
-        $handle = fopen("./Header.html", "r");
-        if($handle){
-            while (!feof($handle)) {
-                $buffer = fgets($handle);
-                echo $buffer;
-            }
-            if(feof($handle)){
-                fclose($handle);
-            };
-        };  
-    ?>
+    $handle = fopen("./Header.html", "r");
+    if($handle){
+        while (!feof($handle)) {
+            $buffer = fgets($handle);
+            echo $buffer;
+        }
+        if(feof($handle)){
+            fclose($handle);
+        };
+    };  
+?>
+
 <head>
     <title>Test1</title>
     <link rel="stylesheet" href="../PageProduit.css">
@@ -40,6 +41,20 @@
         <div class="texteparallax">
             <span class="contourtexteparallax" style="font-family: 'Outfit', sans-serif; background-color:transparent;font-size:25px;color: #f7f7f7;">100% MADE IN FRANCE</span>
         </div>
+        <div class="notation">
+            <input type="radio" id="etoiles5" name="notation" value="5" />
+            <label for="etoiles5" title="text">5 etoiles</label>
+            <input type="radio" id="etoiles4" name="notation" value="4" />
+            <label for="etoiles4" title="text">4 etoiles</label>
+            <input type="radio" id="etoiles3" name="notation" value="3" />
+            <label for="etoiles3" title="text">3 etoiles</label>
+            <input type="radio" id="etoiles2" name="notation" value="2" />
+            <label for="etoiles2" title="text">2 etoiles</label>
+            <input type="radio" id="etoiles1" name="notation" value="1" />
+            <label for="etoiles1" title="text">1 etoiles</label>
+            </div>
+        </div>
+
     </div>
 
     <div style="position:relative;">
@@ -86,8 +101,9 @@
           Your browser does not support the video tag.
     </video>
   
- </div>
+</div>
 </body>
+
 <?php
 $handle = fopen("./Footer.html", "r");
     if($handle){
