@@ -99,8 +99,8 @@ p{
 
 .graph {
     display: flex;
-    width: 50%;
-    height: 100%;
+    width: 400px;
+    height: 400px;
     justify-content: center;
     align-items: center;
     margin: 5%;
@@ -119,4 +119,8 @@ p{
 
 .Button:hover {
     background-color: #91d2d6;
+}
+
+.Button:active {
+    opacity: 50%;;
 }
