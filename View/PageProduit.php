@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html>
-<?php
-        $handle = fopen("View/Header.html", "r");
-        if($handle){
-            while (!feof($handle)) {
-                $buffer = fgets($handle);
-                echo $buffer;
-            }
-            if(feof($handle)){
-                fclose($handle);
-            };
-        };  
-    ?>
+
 <head>
     <title>Test1</title>
     <link rel="stylesheet" href="PageProduit.css">
 </head>
 <body>
 
-
+<?php
+    include("View/Header.php");
+?>
 
 <!--CORPS DE LA PAGE-->>
 <div class="header2">
@@ -87,17 +78,9 @@
     </video>
   
  </div>
-</body>
-<?php
-$handle = fopen("View/Footer.html", "r");
-    if($handle){
-		while (!feof($handle)) {
-            $buffer = fgets($handle);
-            echo $buffer;
-        }
-        if(feof($handle)){
-            fclose($handle);
-        };
-    }; 
+ <?php
+    include("View/Footer.php");
     ?>
+</body>
+
 </html>

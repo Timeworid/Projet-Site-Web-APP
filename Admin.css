@@ -247,9 +247,11 @@ p{
     padding:7px 15px; 
     border-radius:3px; 
     margin-left: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    word-break: break-all;
+    text-align: left;
+    
 }
+
 .bubble-text-left{ 
     max-width: 50%;
     margin: 2%;
@@ -258,9 +260,8 @@ p{
     padding:7px 15px; 
     border-radius:3px;
     margin-right: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
+    word-break: break-all;
+    text-align: left;
 }
 
 .a-invisible{

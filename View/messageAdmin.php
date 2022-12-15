@@ -1,26 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<?php
-        $handle = fopen("./Header.html", "r");
-        if($handle){
-            while (!feof($handle)) {
-                $buffer = fgets($handle);
-                echo $buffer;
-            }
-            if(feof($handle)){
-                fclose($handle);
-            };
-        };  
-    ?>
 <head>
     <meta charset="utf-8">
     <title>Andrea - Admin</title>
     <link rel="stylesheet" href="../Admin.css">
 </head>
 <body>
-    <header>
-    </header>
-
+    <?php
+        include("../View/Header.php")
+    ?>
     <div class="flex-ticket">
         <div class= "flex-container-half">
             <div class="msg">
@@ -55,17 +43,8 @@
 
         </div>
     </div>
-</body> 
-<?php
-$handle = fopen("./Footer.html", "r");
-    if($handle){
-		while (!feof($handle)) {
-            $buffer = fgets($handle);
-            echo $buffer;
-        }
-        if(feof($handle)){
-            fclose($handle);
-        };
-    }; 
+    <?php
+    include("../View/Footer.php");
     ?>
+</body> 
 </html>

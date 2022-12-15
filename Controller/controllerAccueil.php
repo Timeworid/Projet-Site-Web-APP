@@ -5,6 +5,16 @@
         public static function accueil(){
             include("View/PageProduit.php");
         }
+
+        public static function ConnecterCompte() {
+            include("View/loginUtilisateur.php");
+        }
+
+		public static function Deconnexion() {
+            unset($_SESSION["pseudo"]);
+            unset($_SESSION["admin"]);
+            self::accueil();
+        }
     }
 
 
