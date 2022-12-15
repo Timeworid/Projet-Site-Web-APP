@@ -2,12 +2,12 @@
 <html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../login.css">
+    <link rel="stylesheet" href="login.css">
     <title>Andrea - Connexion</title>
 </head>
 <body>
     <?php
-        include("../View/Header.php")
+        include("View/Header.php")
     ?>
     <div class="wrapper">
         <div class="title-text">
@@ -76,7 +76,7 @@
         </div>
     </div>
     <?php
-    include("../View/Footer.php");
+    include("View/Footer.php");
     ?>
 </body>
 </html>
