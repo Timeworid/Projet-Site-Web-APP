@@ -70,11 +70,11 @@ header{
   display: block;
 }
 
-.menu-content a:hover {background-color: #ddd;}
+.menu-content {background-color: #ddd;}
 
-.menu:hover .menu-content {display: block;}
+.menu-content:hover {display: block;}
 
-.menu:hover .dropbtn {background-color:transparent;}
+.menu-content:hover{background-color:transparent;}
 
 
 /* SUITE HEADER */

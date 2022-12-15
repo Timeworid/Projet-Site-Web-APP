@@ -56,7 +56,7 @@
 <div class="parallax4">
     <div class="produit">
         <div class ="avisclient">
-            <img src="../Data/casque.png" alt="imageproduit" style="height:500px;">
+            <img src="Data/casque.png" alt="imageproduit" style="height:500px;">
         </div>
         <div class="notation">
             <input type="radio" id="etoiles5" name="notation" value="5" />
@@ -99,7 +99,7 @@
         <h5>Pour un son authentique</h5>
      </div>
     <video autoplay loop muted>
-          <source src="../Data/Video1.mp4" type="video/mp4">
+          <source src="Data/Video1.mp4" type="video/mp4">
           Your browser does not support the video tag.
     </video>
   

@@ -6,9 +6,14 @@
 </head>
 <body class="jeanneoskour2">
 <style>
-    a.lien1:link {color:black;text-decoration:none;}
-    a.lien1:visited {color:black;text-decoration:none;}
-  </style>
+  a.link:link {color:black;text-decoration:none;}
+  a.link:hover {text-shadow: white;text-decoration:underline;}
+  a.link:visited {color:black;text-decoration:underline;}
+
+  a.link2:link {color:black;text-decoration:none;}
+  a.link2:hover {text-shadow: white;text-decoration:underline;}
+  a.link2:visited {color:black;text-decoration:underline;}
+</style>
 
   <footer class="footer-global">
     <div class="footer-yelp">

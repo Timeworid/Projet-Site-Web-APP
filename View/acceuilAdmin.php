@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-        include("../View/Header.php")
+    include("../View/Header.php");
     ?>
 
     <div class="flex-stat">
@@ -63,6 +63,6 @@
     </div>
 </body> 
     <?php
-    include("../View/Footer.php")
+    include("../View/Footer.php");
     ?>
 </html>

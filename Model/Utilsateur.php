@@ -116,5 +116,56 @@
 		$this->type = $type;
 	}
 
+
+	public static function UtilisateurExiste($pseudo) {
+		$requetePreparee = "SELECT count(*) FROM Utilisateur WHERE pseudoUtilisateur = :tag_pseudo"; 
+		$req_prep = Connexion::pdo()->prepare($requetePreparee);
+		$valeurs = array("tag_pseudo" => $pseudo);
+		try {
+			$req_prep->execute($valeurs);
+			$r = $req_prep->fetch();
+		return ($r[0] == 1);
+		} catch (PDOException $e) {
+			echo "erreur : ".$e->getMessage()."<br>";
+		}
+		return false;
+	}
+
+	public static function canConnect($pseudo, $mdp) {
+		$motDePasse = self::getMDPByPseudo($pseudo);
+		return $mdp == $motDePasse;
+	}
+
+	public static function AjouterUtilisateur($pseudo, $motDePasse) {
+		$tags = array( "tag_pseudo" => $pseudo, "tag_motDePasse" => $motDePasse, "tag_admin" => 0);
+
+		$requetePreparee = "INSERT INTO Utilisateur VALUES(:tag_pseudo, :tag_motDePasse, :tag_admin);";
+		$req_prep = Connexion::pdo()->prepare($requetePreparee);
+
+		try {
+			$req_prep->execute($tags);
+		} catch (PDOException $e) {
+			echo "erreur : ".$e->getMessage()."<br>";
+		}
+	}
+
+	public static function getMDPByPseudo($pseudo) {
+		$requetePreparee = "SELECT motDePasse FROM Utilisateur WHERE pseudoUtilisateur = :tag_pseudo"; 
+		$req_prep = Connexion::pdo()->prepare($requetePreparee);
+		$valeurs = array("tag_pseudo" => $pseudo);
+		try {
+			$req_prep->execute($valeurs);
+			$r = $req_prep->fetch();
+			if (!$r[0]) 
+				return false;
+			return $r[0];
+		} catch (PDOException $e) {
+			echo "erreur : ".$e->getMessage()."<br>";
+		}
+		return false;
+	}
+
+
+
 }
 ?>
