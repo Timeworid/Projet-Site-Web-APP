@@ -27,8 +27,6 @@ body
 .parallax4 {
   background-image: url("Data/fondecran4.jpg");
   min-height: 600px;
-  display: flex;
-  justify-content: center;
 }
 
 .texteparallax {
@@ -61,30 +59,9 @@ h3 {
 
 /* PARTIE ACHAT PRODUIT */
 
-.notation{
+.presproduit{
   display: flex;
   justify-content: center;
-  margin: 0.5%;
-}
-
-.achat{
-display: flex;
-}
-
-.produit{
-  display:flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
-  margin: 0.5%;
-}
-
-.avisclient{
-  display:flex;
-  justify-content: center;
-  flex-direction: row;
-  background-color: grey;
-  border-radius: 20px;
 }
 
 /* FIN PARTIE ACHAT PRODUIT */

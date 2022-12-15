@@ -62,29 +62,24 @@
     </div>
 
 
-    <div class="parallax4"> 
-        <div class="achat">
-            <div class="avisclient">
-                <div class="produit footer-yelp">
-                    <div>
-                        <img src="../Data/casque.png" alt="imageproduit" style="height:500px;">
-                    </div>
-                    <div class="notation" style="min-width: 325px;">
-                        <input type="radio" id="etoiles5" name="notation" value="5" />
-                        <label for="etoiles5" title="text">5 etoiles</label>
-                        <input type="radio" id="etoiles4" name="notation" value="4" />
-                        <label for="etoiles4" title="text">4 etoiles</label>
-                        <input type="radio" id="etoiles3" name="notation" value="3" />
-                        <label for="etoiles3" title="text">3 etoiles</label>
-                        <input type="radio" id="etoiles2" name="notation" value="2" />
-                        <label for="etoiles2" title="text">2 etoiles</label>
-                        <input type="radio" id="etoiles1" name="notation" value="1" />
-                        <label for="etoiles1" title="text">1 etoiles</label>
-                        </div>
-                    </div>
-                </div>
+    <div class="parallax4">
+        <div class="presproduit">
+            <div>
+                <img src="../Data/casque.png" alt="imageproduit" style="height:500px;">
             </div>
-        </div>
+            <div class="notation" style="min-width: 325px;">
+                <input type="radio" id="etoiles5" name="notation" value="5" />
+                <label for="etoiles5" title="text">5 etoiles</label>
+                <input type="radio" id="etoiles4" name="notation" value="4" />
+                <label for="etoiles4" title="text">4 etoiles</label>
+                <input type="radio" id="etoiles3" name="notation" value="3" />
+                <label for="etoiles3" title="text">3 etoiles</label>
+                <input type="radio" id="etoiles2" name="notation" value="2" />
+                <label for="etoiles2" title="text">2 etoiles</label>
+                <input type="radio" id="etoiles1" name="notation" value="1" />
+                <label for="etoiles1" title="text">1 etoiles</label>
+            </div>
+        </div> 
     </div>
 
 
