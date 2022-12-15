@@ -69,7 +69,33 @@ textarea{
     margin: 1%;
     width: 100%;
     padding: 1%;
+    height: 300px;
     
+}
+
+.container-msg{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #E0E0E0 ;
+    margin: 3%;
+    width: 100%;
+    padding: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    height: 500px;
+}
+
+.rep-msg{
+    margin-bottom: auto;
+    border: 0.5px solid black;
+    border-radius: 10px;  
+    background-color: #7FC0C4 ;
+    margin: 1%;
+    width: 75%;
+    padding: 0.2%;
+    height: fit-content;
 }
 
 
@@ -79,7 +105,6 @@ textarea{
 /* firefox only */
 
 .scroller{
-    height: 200px;
     overflow-y: scroll;
     scrollbar-width: thin;
 }
@@ -88,8 +113,7 @@ textarea{
 
 .scroller::-webkit-scrollbar-track{
     background: white;
-    border-radius: 10px;
-    height: 200px;
+    border-radius: 10px;    
 }
 
 .scroller::-webkit-scrollbar {
@@ -169,7 +193,12 @@ textarea{
 
 .admin-text{
     margin: 10px;
-    
+}
+
+.admin-text-msg{
+    margin: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .text-stats{
@@ -190,4 +219,54 @@ p{
     border: 1px solid black;
     font-family: 'Outfit', sans-serif;
 }
+
+.container-bulles{
+    margin: 2%;
+    width: 100%;
+    padding: 1%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
+}
+
+.input-send-msg{
+    padding: 1%;
+    font-size: large;
+    width: -webkit-fill-available;
+    background: #7FC0C4;
+    border-radius: 3px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.bubble-text-right{
+    max-width: 50%;
+    margin: 2%;
+    margin-top: auto;
+    background:#7FC0C4; 
+    padding:7px 15px; 
+    border-radius:3px; 
+    margin-left: auto;
+    word-break: break-all;
+    text-align: left;
+    
+}
+
+.bubble-text-left{ 
+    max-width: 50%;
+    margin: 2%;
+    margin-top: auto;
+    background:#A8B9A2; 
+    padding:7px 15px; 
+    border-radius:3px;
+    margin-right: auto;
+    word-break: break-all;
+    text-align: left;
+}
+
+.a-invisible{
+    text-decoration: none;
+    color:inherit;
+}
+
 

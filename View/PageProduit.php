@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html>
-<?php
-        $handle = fopen("../View/Header.html", "r");
-        if($handle){
-            while (!feof($handle)) {
-                $buffer = fgets($handle);
-                echo $buffer;
-            }
-            if(feof($handle)){
-                fclose($handle);
-            };
-        };  
-    ?>
 <head>
     <title>Test1</title>
     <link rel="stylesheet" href="../PageProduit.css">
 </head>
+<body>
+
+<?php
+    include("View/Header.php");
+?>
 
 <!--CORPS DE LA PAGE-->>
 
@@ -115,19 +108,10 @@
           Your browser does not support the video tag.
     </video>
   
-</div>
+ </div>
+ <?php
+    include("View/Footer.php");
+    ?>
 </body>
 
-<?php
-$handle = fopen("../View/Footer.html", "r");
-    if($handle){
-		while (!feof($handle)) {
-            $buffer = fgets($handle);
-            echo $buffer;
-        }
-        if(feof($handle)){
-            fclose($handle);
-        };
-    }; 
-    ?>
 </html>

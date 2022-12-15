@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<?php
-        $handle = fopen("./Header.html", "r");
-        if($handle){
-            while (!feof($handle)) {
-                $buffer = fgets($handle);
-                echo $buffer;
-            }
-            if(feof($handle)){
-                fclose($handle);
-            };
-        };  
-    ?>
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../login.css">
     <title>Andrea - Connexion</title>
 </head>
 <body>
+    <?php
+        include("../View/Header.php")
+    ?>
     <div class="wrapper">
         <div class="title-text">
             <div class="title insc">
@@ -84,17 +75,8 @@
             </div>
         </div>
     </div>
-</body>
-<?php
-$handle = fopen("./Footer.html", "r");
-    if($handle){
-		while (!feof($handle)) {
-            $buffer = fgets($handle);
-            echo $buffer;
-        }
-        if(feof($handle)){
-            fclose($handle);
-        };
-    }; 
+    <?php
+    include("../View/Footer.php");
     ?>
+</body>
 </html>

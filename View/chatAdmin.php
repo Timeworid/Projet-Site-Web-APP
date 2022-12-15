@@ -39,9 +39,8 @@
     </div>
 
 
-
-    <footer>
-
-    </footer>
+    <?php
+    include("../View/Footer.php");
+    ?>
 
 </body> 

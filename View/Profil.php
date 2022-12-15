@@ -4,6 +4,9 @@
         <link rel="stylesheet" href="../CSS/Profil.css ">
     </head>
     <body>
+    <?php
+    include("../View/Header.php");
+    ?>
         <div class="flexcontainer1">
             <div class="fc11">
                 <div class="Photo"> Photo de profil </div>
@@ -69,5 +72,8 @@
                 <input class="Button2" type="submit" value="Enregistrer les modifications">
             </form>
         </div>
+        <?php
+            include("../View/Footer.php");
+        ?>
     </body>
 </html>

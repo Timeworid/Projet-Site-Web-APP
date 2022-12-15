@@ -10,13 +10,14 @@
                 <button class="dropbtn"><img src="../Data/menu.png" alt="menu" style="width:40px;height:40px;"></button>
                 <div class="menu-content">
                     <a href="https://instagram.com">Fiche Produit</a>
-                    <a href="../View/Statistiques.html">Statistiques</a>
+                    <a href="https://tiktok.com">Compte</a>
                     <a href="https://facebook.com">Paramètres</a>
                 </div>
-                <a href="routeur.php"><img src="Data/logo.png" alt="menu" style="width:80px;height:40px;"></a>
+                <a href="../routeur.php"><img src="../Data/logo.png" alt="menu" style="width:80px;height:40px;"></a>
                 </div>
             </a>
         </div>
+        
         <div style='align-items: center;' class= "menudroite">
                 <div class="searchbar">
                 <input type="text" placeholder="Rechercher...">
