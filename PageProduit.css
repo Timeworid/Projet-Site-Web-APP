@@ -59,9 +59,34 @@ h3 {
 
 /* PARTIE ACHAT PRODUIT */
 
-.presproduit{
+.produit{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.avisclient{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avisutilisateurs{
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  align-items: center;
+  justify-content: center;
+}
+
+.commentaires{
+  display: flex;
+  min-width: 500px;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+  padding: 10px;
 }
 
 /* FIN PARTIE ACHAT PRODUIT */
