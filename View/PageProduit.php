@@ -53,48 +53,43 @@
         </div>
     </div>
 
-
 <div class="parallax4">
     <div class="produit">
-    <div class="avisclient">
-        <img src="../Data/casque.png" alt="imageproduit" style="height:500px;">
+        <div class ="avisclient">
+            <img src="../Data/casque.png" alt="imageproduit" style="height:500px;">
+        </div>
+        <div class="notation">
+            <input type="radio" id="etoiles5" name="notation" value="5" />
+            <label for="etoiles5" title="text">5 etoiles</label>
+            <input type="radio" id="etoiles4" name="notation" value="4" />
+            <label for="etoiles4" title="text">4 etoiles</label>
+            <input type="radio" id="etoiles3" name="notation" value="3" />
+            <label for="etoiles3" title="text">3 etoiles</label>
+            <input type="radio" id="etoiles2" name="notation" value="2" />
+            <label for="etoiles2" title="text">2 etoiles</label>
+            <input type="radio" id="etoiles1" name="notation" value="1" />
+            <label for="etoiles1" title="text">1 etoiles</label>
+        </div>
+        <div style="color:white;"><p>Note moyenne des utiliisateurs</p></div>
     </div>
-    <div class="notation">
-        <input type="radio" id="etoiles5" name="notation" value="5">
-        <label for="etoiles5" title="text">5 etoiles</label>
-        <input type="radio" id="etoiles4" name="notation" value="4">
-        <label for="etoiles4" title="text">4 etoiles</label>
-        <input type="radio" id="etoiles3" name="notation" value="3">
-        <label for="etoiles3" title="text">3 etoiles</label>
-        <input type="radio" id="etoiles2" name="notation" value="2">
-        <label for="etoiles2" title="text">2 etoiles</label>
-        <input type="radio" id="etoiles1" name="notation" value="1">
-        <label for="etoiles1" title="text">1 etoiles</label>
+    <div class="avisutilisateurs">
+        <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
+        </div>
+        <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
+        </div>
+        <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
+        </div>
     </div>
-    <div style="color:white;"><p>Note moyenne des utiliisateurs</p></div>
 </div>
 
-<div class="avisutilisateurs">
-    <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
-        </div>
-        
-    <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
-        </div>
-        
-    <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
-        </div>
-         
-</div></div>
-
-
-    <div style="position:relative;">
-        <div style="font-family: 'Outfit', sans-serif; color:black;background-color:#7FC0C4;text-align:center;padding:50px 80px;text-align: justify;">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
-        </div>
+<div style="position:relative;">
+    <div style="font-family: 'Outfit', sans-serif; color:black;background-color:#7FC0C4;text-align:center;padding:50px 80px;text-align: justify;">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
     </div>
+</div>
 
 
 <!-- VIDEO -->
