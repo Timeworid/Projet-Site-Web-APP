@@ -41,20 +41,6 @@
         <div class="texteparallax">
             <span class="contourtexteparallax" style="font-family: 'Outfit', sans-serif; background-color:transparent;font-size:25px;color: #f7f7f7;">100% MADE IN FRANCE</span>
         </div>
-        <div class="notation">
-            <input type="radio" id="etoiles5" name="notation" value="5" />
-            <label for="etoiles5" title="text">5 etoiles</label>
-            <input type="radio" id="etoiles4" name="notation" value="4" />
-            <label for="etoiles4" title="text">4 etoiles</label>
-            <input type="radio" id="etoiles3" name="notation" value="3" />
-            <label for="etoiles3" title="text">3 etoiles</label>
-            <input type="radio" id="etoiles2" name="notation" value="2" />
-            <label for="etoiles2" title="text">2 etoiles</label>
-            <input type="radio" id="etoiles1" name="notation" value="1" />
-            <label for="etoiles1" title="text">1 etoiles</label>
-            </div>
-        </div>
-
     </div>
 
     <div style="position:relative;">
@@ -76,9 +62,28 @@
     </div>
 
 
-    <div class="parallax4">
-        <div class="texteparallax">
-            <span class="contourtexteparallax" style="font-family: 'Outfit', sans-serif;">RESPIREZ ENFIN DE L'AIR PUR EN COURANT</span>
+    <div class="parallax4"> 
+        <div class="achat">
+            <div class="avisclient">
+                <div class="produit footer-yelp">
+                    <div>
+                        <img src="../Data/casque.png" alt="imageproduit" style="height:500px;">
+                    </div>
+                    <div class="notation" style="min-width: 325px;">
+                        <input type="radio" id="etoiles5" name="notation" value="5" />
+                        <label for="etoiles5" title="text">5 etoiles</label>
+                        <input type="radio" id="etoiles4" name="notation" value="4" />
+                        <label for="etoiles4" title="text">4 etoiles</label>
+                        <input type="radio" id="etoiles3" name="notation" value="3" />
+                        <label for="etoiles3" title="text">3 etoiles</label>
+                        <input type="radio" id="etoiles2" name="notation" value="2" />
+                        <label for="etoiles2" title="text">2 etoiles</label>
+                        <input type="radio" id="etoiles1" name="notation" value="1" />
+                        <label for="etoiles1" title="text">1 etoiles</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -97,7 +102,7 @@
         <h5>Pour un son authentique</h5>
      </div>
     <video autoplay loop muted>
-          <source src="Data/Video1.mp4" type="video/mp4">
+          <source src="../Data/Video1.mp4" type="video/mp4">
           Your browser does not support the video tag.
     </video>
   
