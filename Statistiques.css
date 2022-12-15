@@ -107,13 +107,18 @@ p{
 }
 
 .Button {
+    display: flex;
+    flex-direction: row;
     background-color: #7FC0C4;
-    width: 200px;
+    width: 225px;
     height: 50px;
     border-radius: 20px;
     color: black;
     font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
+    padding-left: 1%;
     margin-bottom: 20px;
 }
 
