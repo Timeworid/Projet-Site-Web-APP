@@ -6,7 +6,7 @@
             include("View/PageProduit.php");
         }
 
-        public static function ConnecterCompte() {
+        public static function loginUtilisateur() {
             include("View/loginUtilisateur.php");
         }
 

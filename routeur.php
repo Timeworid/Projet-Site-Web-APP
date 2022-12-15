@@ -12,7 +12,7 @@
 	}
 	else{
 		$actionEffectue = false; 
-		$listeController = []; // Liste des noms de controller 
+		$listeController = ["controllerAcceuil"]; // Liste des noms de controller 
 		foreach($listeController as $key => $controller) { // On récupère tous les controllers 
 			$tabMethods = get_class_methods($controller); // On récupères toutes les fonctions des controller
 			if(in_array($action,$tabMethods)) {  // On regarde si l'action effectuée correspond à une des fonctions du controller : Si oui, on appelle la fonction, si non , on renvoie à l'acceuil.
