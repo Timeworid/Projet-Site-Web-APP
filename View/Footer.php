@@ -2,7 +2,7 @@
 
 <head>
     <title>Test1</title>
-    <link rel="stylesheet" href="Footer.css">
+    <link rel="stylesheet" href="../Footer.css">
 </head>
 <body class="jeanneoskour2">
 <style>
@@ -19,14 +19,14 @@
     <div class="footer-yelp">
       <div class="footer-yelp footer-gauche">
         <div class="footer-yelp footer-bleu">
-          <a class="lien1" href="https://google.com" >ASSISTANCE</a>
+          <a class="lien1" href="../routeur.php?action=" >ASSISTANCE</a>
         </div>
         <div class="footer-yelp footer-bleu">
-          <a class="lien1" href="https://google.com" >FAQ</a>
+          <a class="lien1" href="../routeur.php?action=pageFAQ">FAQ</a>
         </div>
       </div>  
       <div class="footer-yelp footer-milieu" >
-        <a class="lien1" href="https://google.com" >A PROPOS DE NOUS</a>
+        <a class="lien1" href="../routeur.php?action=a-propos" >A PROPOS DE NOUS</a>
         <span class="vertical-line"></span>
         <a class="lien1" href="https://google.com" >NOUS CONTACTER</a>
       </div>
