@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-        $handle = fopen("View/Header.html", "r");
+        $handle = fopen("../View/Header.html", "r");
         if($handle){
             while (!feof($handle)) {
                 $buffer = fgets($handle);
@@ -14,7 +14,7 @@
     ?>
 <head>
     <title>Test1</title>
-    <link rel="stylesheet" href="PageProduit.css">
+    <link rel="stylesheet" href="../PageProduit.css">
 </head>
 
 <!--CORPS DE LA PAGE-->>
@@ -119,7 +119,7 @@
 </body>
 
 <?php
-$handle = fopen("View/Footer.html", "r");
+$handle = fopen("../View/Footer.html", "r");
     if($handle){
 		while (!feof($handle)) {
             $buffer = fgets($handle);
