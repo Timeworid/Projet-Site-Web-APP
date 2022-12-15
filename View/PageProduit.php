@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <?php
-        $handle = fopen("./Header.html", "r");
-        if($handle){
-            while (!feof($handle)) {
-                $buffer = fgets($handle);
-                echo $buffer;
-            }
-            if(feof($handle)){
-                fclose($handle);
-            };
-        };  
-    ?>
+    $handle = fopen("./Header.html", "r");
+    if($handle){
+        while (!feof($handle)) {
+            $buffer = fgets($handle);
+            echo $buffer;
+        }
+        if(feof($handle)){
+            fclose($handle);
+        };
+    };  
+?>
+
 <head>
     <title>Test1</title>
     <link rel="stylesheet" href="../PageProduit.css">
 </head>
-<body>
-
-
 
 <!--CORPS DE LA PAGE-->>
+
+<body>
+
 <div class="header2">
 
 </div>
@@ -61,11 +62,40 @@
     </div>
 
 
-    <div class="parallax4">
-        <div class="texteparallax">
-            <span class="contourtexteparallax" style="font-family: 'Outfit', sans-serif;">RESPIREZ ENFIN DE L'AIR PUR EN COURANT</span>
-        </div>
+<div class="parallax4">
+    <div class="produit">
+    <div class="avisclient">
+        <img src="../Data/casque.png" alt="imageproduit" style="height:500px;">
     </div>
+    <div class="notation">
+        <input type="radio" id="etoiles5" name="notation" value="5">
+        <label for="etoiles5" title="text">5 etoiles</label>
+        <input type="radio" id="etoiles4" name="notation" value="4">
+        <label for="etoiles4" title="text">4 etoiles</label>
+        <input type="radio" id="etoiles3" name="notation" value="3">
+        <label for="etoiles3" title="text">3 etoiles</label>
+        <input type="radio" id="etoiles2" name="notation" value="2">
+        <label for="etoiles2" title="text">2 etoiles</label>
+        <input type="radio" id="etoiles1" name="notation" value="1">
+        <label for="etoiles1" title="text">1 etoiles</label>
+    </div>
+    <div style="color:white;"><p>Note moyenne des utiliisateurs</p></div>
+</div>
+
+<div class="avisutilisateurs">
+    <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
+        </div>
+        
+    <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
+        </div>
+        
+    <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
+        </div>
+         
+</div></div>
 
 
     <div style="position:relative;">
@@ -75,19 +105,20 @@
     </div>
 
 
- <!-- VIDEO -->
+<!-- VIDEO -->
 
  <div class="myVideo">
     <div class="textevideo" style="font-family: 'Outfit', sans-serif;">
         <h5>Pour un son authentique</h5>
      </div>
     <video autoplay loop muted>
-          <source src="Data/Video1.mp4" type="video/mp4">
+          <source src="../Data/Video1.mp4" type="video/mp4">
           Your browser does not support the video tag.
     </video>
   
- </div>
+</div>
 </body>
+
 <?php
 $handle = fopen("./Footer.html", "r");
     if($handle){
