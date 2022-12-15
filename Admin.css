@@ -240,20 +240,27 @@ p{
 }
 
 .bubble-text-right{
+    max-width: 50%;
     margin: 2%;
     margin-top: auto;
     background:#7FC0C4; 
     padding:7px 15px; 
     border-radius:3px; 
     margin-left: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .bubble-text-left{ 
+    max-width: 50%;
     margin: 2%;
     margin-top: auto;
     background:#A8B9A2; 
     padding:7px 15px; 
     border-radius:3px;
     margin-right: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 
 
