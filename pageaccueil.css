@@ -4,15 +4,16 @@ body{
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding-left: 10%;
-  padding-right: 10%;
   text-size-adjust: 2%;
   font-size: larger;
 }
+
 .header{
   background-color: #258D93;
   text-align: center;
   padding: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .content{
   background-color: none;
@@ -21,10 +22,14 @@ body{
   margin-top: 5%;
   margin-bottom: 5%;
   background-color: #33333333;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .footer{
   background-color: #e0e0e0;
   padding: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .bloc3{
   background-color:none;

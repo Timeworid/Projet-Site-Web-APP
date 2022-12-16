@@ -2,7 +2,7 @@
 
 <head>
     <title>Test1</title>
-    <link rel="stylesheet" href="../Footer.css">
+    <link rel="stylesheet" href="Footer.css">
 </head>
 <body class="jeanneoskour2">
 <style>
@@ -18,23 +18,23 @@
     <div class="footer-yelp">
       <div class="footer-yelp footer-gauche">
         <div class="footer-yelp footer-bleu">
-          <a class="lien1" href="../routeur.php?action=" >ASSISTANCE</a>
+          <a class="lien1" href="routeur.php?action=" >ASSISTANCE</a>
         </div>
         <div class="footer-yelp footer-bleu">
-          <a class="lien1" href="../routeur.php?action=pageFAQ">FAQ</a>
+          <a class="lien1" href="routeur.php?action=pageFAQ">FAQ</a>
         </div>
       </div>  
       <div class="footer-yelp footer-milieu" >
-        <a class="lien1" href="../routeur.php?action=a-propos" >A PROPOS DE NOUS</a>
+        <a class="lien1" href="routeur.php?action=apropos" >A PROPOS DE NOUS</a>
         <span class="vertical-line"></span>
-        <a class="lien1" href="../routeur.php?action=chatAdmin" >NOUS CONTACTER</a>
+        <a class="lien1" href="routeur.php?action=ticketAdmin" >NOUS CONTACTER</a>
       </div>
       <div class="footer-yelp footer-droite">
         
         <!-- footer reseaux sociaux -->
 
         <div class="footer-aled">
-          <a class="lien1" href="../routeur.php?action=" >NOUS SUIVRE</a>
+          <a class="lien1" href="routeur.php?action=" >NOUS SUIVRE</a>
         <div class = "footer-aled3">
           <img class="espaceimage" src="Data/facebook.png" height="35px" width="35px" alt="">
           <img class="espaceimage" src="Data/instagram.png" height="35px" width="35px" alt="">

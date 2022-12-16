@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>Andrea - Admin</title>
-    <link rel="stylesheet" href="../Admin.css">
+    <link rel="stylesheet" href="Admin.css">
 </head>
 <body>
-    <header>
-    </header>
+<?php
+    include("View/Header.php");
+    ?>
 
     <div class="flex-ticket">
         <div class="container-msg ">
@@ -40,7 +41,7 @@
 
 
     <?php
-    include("../View/Footer.php");
+    include("View/Footer.php");
     ?>
 
 </body> 

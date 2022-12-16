@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="fr">
     <head>
-        <link rel="stylesheet" href="../CSS/Profil.css ">
+        <link rel="stylesheet" href="Profil.css ">
     </head>
     <body>
     <?php
-    include("../View/Header.php");
+    include("View/Header.php");
     ?>
         <div class="flexcontainer1">
             <div class="fc11">
@@ -73,7 +73,7 @@
             </form>
         </div>
         <?php
-            include("../View/Footer.php");
+            include("View/Footer.php");
         ?>
     </body>
 </html>
