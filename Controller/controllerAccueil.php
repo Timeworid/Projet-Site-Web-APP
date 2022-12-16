@@ -7,30 +7,42 @@ require_once("Model\Utilsateur.php");
             include("View/PageProduit.php");
         }
 
+        public static function accueilAdmin(){
+            include("View/acceuilAdmin.php");
+        }
+
+        public static function ticketAdmin(){
+            include("View/messageAdmin.php");
+        }
+
+        public static function msgAdmin(){
+            include("View/chatAdmin.php");
+        }
+
         public static function loginUtilisateur() {
             include("View/loginUtilisateur.php");
         }
 
 		public static function Deconnexion() {
-            unset($_SESSION["pseudo"]);
+            unset($_SESSION["mail"]);
             unset($_SESSION["admin"]);
             self::accueil();
         }
 
         public static function login() {
             extract($_GET);
-            $userExist = Utilisateur::UtilisateurExiste($login);
+            $userExist = Utilisateur::UtilisateurExiste($mail);
             if(!$userExist) {
                 $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte <a href='routeur.php?action=CreerCompte'>cliquez ici</a>";
 				$_SESSION["erreur"] = $erreur;
                 self::loginUtilisateur();
             }
             else {
-                $canConnect = Utilisateur::canConnect($login, $motDePasse);
+                $canConnect = Utilisateur::canConnect($mail, $motDePasse);
                 if($canConnect) {
 					unset($_SESSION["erreur"]);
-                    $_SESSION["pseudo"] = $login;
-                     $admin = Utilisateur::getAdminByPseudo($login);
+                    $_SESSION["mail"] = $mail;
+                     $admin = Utilisateur::getAdminByMail($mail);
                      $_SESSION["admin"] = $admin;
                      controllerAcceuil::accueil();
                 } else {
@@ -43,7 +55,7 @@ require_once("Model\Utilsateur.php");
 
         public static function register() {
             extract($_GET);
-            $userExist = Utilisateur::UtilisateurExiste($login);
+            $userExist = Utilisateur::UtilisateurExiste($mail);
             if($userExist) {
                 $erreur = "Ce nom d'utilisateur est déjà utilisé";
                 $_SESSION["erreur"] = $erreur;
@@ -51,8 +63,8 @@ require_once("Model\Utilsateur.php");
             } else {
                 if($motDePasse == $motDePasse2) {
                     unset($_SESSION["erreur"]);
-                    Utilisateur::AjouterUtilisateur($login, $motDePasse);
-                    $_SESSION["pseudo"] = $login;
+                    Utilisateur::AjouterUtilisateur($mail, $motDePasse, $nom, $prenom, $dateNaissance);
+                    $_SESSION["mail"] = $mail;
                     $_SESSION["admin"] = 0;
                     controllerAcceuil::accueil();
                 } else {

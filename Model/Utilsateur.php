@@ -117,10 +117,10 @@
 	}
 
 
-	public static function UtilisateurExiste($pseudo) {
-		$requetePreparee = "SELECT count(*) FROM Utilisateur WHERE pseudoUtilisateur = :tag_pseudo"; 
+	public static function UtilisateurExiste($mail) {
+		$requetePreparee = "SELECT count(*) FROM Utilisateur WHERE mail = :tag_mail"; 
 		$req_prep = Connexion::pdo()->prepare($requetePreparee);
-		$valeurs = array("tag_pseudo" => $pseudo);
+		$valeurs = array("tag_mail" => $mail);
 		try {
 			$req_prep->execute($valeurs);
 			$r = $req_prep->fetch();
@@ -131,17 +131,16 @@
 		return false;
 	}
 
-	public static function canConnect($pseudo, $mdp) {
-		$motDePasse = self::getMDPByPseudo($pseudo);
+	public static function canConnect($mail, $mdp) {
+		$motDePasse = self::getMDPByMail($mail);
 		return $mdp == $motDePasse;
 	}
 
-	public static function AjouterUtilisateur($pseudo, $motDePasse) {
-		$tags = array( "tag_pseudo" => $pseudo, "tag_motDePasse" => $motDePasse, "tag_admin" => 0);
+	public static function AjouterUtilisateur($mail, $motDePasse, $nom, $prenom, $dateNaissance) {
+		$tags = array( "tag_mail" => $mail, "tag_motDePasse" => $motDePasse, "tag_admin" => 0, "tag_nom" => $nom, "tag_prenom" => $prenom, "tag_dateNaissance" => $dateNaissance);
 
-		$requetePreparee = "INSERT INTO Utilisateur VALUES(:tag_pseudo, :tag_motDePasse, :tag_admin);";
+		$requetePreparee = "INSERT INTO utilisateur VALUES(:tag_mail, :tag_motDePasse, :tag_nom, tag_prenom, tag_dateNaissance, :tag_admin);";
 		$req_prep = Connexion::pdo()->prepare($requetePreparee);
-
 		try {
 			$req_prep->execute($tags);
 		} catch (PDOException $e) {
@@ -149,10 +148,10 @@
 		}
 	}
 
-	public static function getMDPByPseudo($pseudo) {
-		$requetePreparee = "SELECT motDePasse FROM Utilisateur WHERE pseudoUtilisateur = :tag_pseudo"; 
+	public static function getMDPByMail($mail) {
+		$requetePreparee = "SELECT motDePasse FROM Utilisateur WHERE mail = :tag_mail"; 
 		$req_prep = Connexion::pdo()->prepare($requetePreparee);
-		$valeurs = array("tag_pseudo" => $pseudo);
+		$valeurs = array("tag_mail" => $mail);
 		try {
 			$req_prep->execute($valeurs);
 			$r = $req_prep->fetch();
