@@ -36,7 +36,7 @@ header{
 
 .menugauche{
     margin: 0.25%;
-    display:block;
+    display:flex;
 
 }
 
@@ -50,12 +50,12 @@ header{
     border: none;
   }
   
-  .menu {
+  .menuderoulant {
     position: relative;
     display: inline-block;
   }
   
-  .menu-content {
+  .liensmenu {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -64,18 +64,18 @@ header{
     z-index: 1;
   }
   
-  .menu-content a {
+  .liensmenu a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   
-  .menu-content a:hover {background-color: #ddd;}
+  .liensmenu a:hover {background-color: #ddd;}
   
-  .menu:hover .menu-content {display: block;}
+  .menuderoulant:hover .liensmenu {display: block;}
   
-  .menu:hover .dropbtn {background-color:transparent;}
+  .menuderoulant:hover .dropbtn {background-color:transparent;}
 
 
 /* SUITE HEADER */
