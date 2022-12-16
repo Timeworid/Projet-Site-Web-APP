@@ -2,40 +2,40 @@
 <html dir="ltr" lang="fr">
     <head>
         <title>Statistiques</title>
-        <link rel="stylesheet" href="../Statistiques.css">
+        <link rel="stylesheet" href="Statistiques.css">
         <meta charset="utf-8">
     </head>
     <?php
-        include("../View/Header.php");
+        include("View/Header.php");
     ?>
     <header>
         <div class="Bandeau">
             <a class="Pages" href="Stats-Température.html">
-                <img class="Logo" src="../Images/temperature.png">
+                <img class="Logo" src="Data/temperature.png">
                 <div>
                     <p>Température</p>
                 </div>
             </a>
             <a class="Pages" href="Stats-Cardiaque.html">
-                <img class="Logo" src="../Images/cardiaque.png">
+                <img class="Logo" src="Data/cardiaque.png">
                 <div>
                     <p>Cardiaque</p>
                 </div>
             </a>
             <a class="Pages" href="Stats-CO2.html">
-                <img class="Logo" src="../Images/">
+                <img class="Logo" src="Data/">
                 <div>
                     <p>CO2</p>
                 </div>
             </a>
             <a class="Pages" href="Stats-Géolocalisation.html">
-                <img class="Logo" src="../Images/geolocalisation.png">
+                <img class="Logo" src="Data/geolocalisation.png">
                 <div>
                     <p>Géolocalisation</p>
                 </div>
             </a>
             <a class="Pages" href="Stats-Sonore.html">
-                <img class="Logo" src="../Images/sonore.png">
+                <img class="Logo" src="Data/sonore.png">
                 <div>
                     <p>Sonore</p>
                 </div>
@@ -69,7 +69,7 @@
             
         </div>
         <?php
-            include("../View/Footer.php");
+            include("View/Footer.php");
         ?>
     </body>
 </html>

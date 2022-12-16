@@ -98,10 +98,11 @@
     margin: 2px;
 }
 
-a:link {
+a:link{
     text-decoration: none;
+    color: #000;
 }
   
-a:hover {
+a:hover{
     text-decoration: underline;
 }

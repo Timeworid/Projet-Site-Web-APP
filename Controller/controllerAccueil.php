@@ -4,7 +4,25 @@ require_once("Model\Utilsateur.php");
     class controllerAcceuil{
 
         public static function accueil(){
+
+            include("View/pageaccueil.php");
+        }
+
+        public static function Statistiques(){
+
+            include("View/Statistiques.php");
+        }
+
+        public static function Profil(){
+            include("View/Profil.php");
+        }
+        public static function presentationProduit(){
+
             include("View/PageProduit.php");
+        }
+
+        public static function apropos(){
+            include("View/a-propos.php");
         }
 
         public static function accueilAdmin(){
@@ -17,6 +35,10 @@ require_once("Model\Utilsateur.php");
 
         public static function msgAdmin(){
             include("View/chatAdmin.php");
+        }
+
+        public static function pageFAQ(){
+            include("View/pageFAQ.php");
         }
 
         public static function loginUtilisateur() {

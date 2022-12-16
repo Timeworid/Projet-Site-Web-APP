@@ -9,7 +9,7 @@
                     <div>
                         <button class="dropbtn"><img src="Data/menu.png" alt="menu" style="width:40px;height:40px;"></button>
                         <div class="liensmenu">
-                            <a href="routeur.php?action=PageProduit">Fiche Produit</a>
+                            <a href="routeur.php?action=presentationProduit">Fiche Produit</a>
                             <?php if(isset($_SESSION['pseudo'])){?>
                             <a href="routeur.php?action=PROFIL.php">Compte</a>
                             <a href="routeur.php?action=Statistiques">Statistiques</a>

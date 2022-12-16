@@ -25,9 +25,9 @@
         </div>
       </div>  
       <div class="footer-yelp footer-milieu" >
-        <a class="lien1" href="routeur.php?action=a-propos" >A PROPOS DE NOUS</a>
+        <a class="lien1" href="routeur.php?action=apropos" >A PROPOS DE NOUS</a>
         <span class="vertical-line"></span>
-        <a class="lien1" href="routeur.php?action=chatAdmin" >NOUS CONTACTER</a>
+        <a class="lien1" href="routeur.php?action=ticketAdmin" >NOUS CONTACTER</a>
       </div>
       <div class="footer-yelp footer-droite">
         

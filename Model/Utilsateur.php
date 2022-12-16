@@ -137,9 +137,8 @@
 	}
 
 	public static function AjouterUtilisateur($mail, $motDePasse, $nom, $prenom, $dateNaissance) {
-		$tags = array( "tag_mail" => $mail, "tag_motDePasse" => $motDePasse, "tag_admin" => 0, "tag_nom" => $nom, "tag_prenom" => $prenom, "tag_dateNaissance" => $dateNaissance);
-
 		$requetePreparee = "INSERT INTO utilisateur VALUES(:tag_mail, :tag_motDePasse, :tag_nom, tag_prenom, tag_dateNaissance, :tag_admin);";
+		$tags = array( "tag_mail" => $mail, "tag_motDePasse" => $motDePasse,  "tag_nom" => $nom, "tag_prenom" => $prenom, "tag_dateNaissance" => $dateNaissance, "tag_admin" => 0);
 		$req_prep = Connexion::pdo()->prepare($requetePreparee);
 		try {
 			$req_prep->execute($tags);
