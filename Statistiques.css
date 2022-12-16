@@ -129,3 +129,23 @@ p{
 .Button:active {
     opacity: 50%;
 }
+
+.Température {
+    display: none;
+}
+
+.Cardiaque {
+    display: none;
+}
+
+.CO2 {
+    display: none;
+}
+
+.Géolocalisation {
+    display: none;
+}
+
+.Sonore {
+    display: none;
+}

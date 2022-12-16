@@ -13,31 +13,31 @@
             a.Pages:active {background-color: #eeeeee}
         </style>
         <div class="Bandeau">
-            <a class="Pages" href="Stats-Température.html">
+            <a class="Pages" id="Temp">
                 <img class="Logo" src="../Data/thermometre.png">
                 <div>
                     <p>Température</p>
                 </div>
             </a>
-            <a class="Pages" href="Stats-Cardiaque.html">
+            <a class="Pages" id="Card">
                 <img class="Logo" src="../Data/cardiaque.png">
                 <div>
                     <p>Cardiaque</p>
                 </div>
             </a>
-            <a class="Pages" href="Stats-CO2.html">
+            <a class="Pages" id="C">
                 <img class="Logo" src="../Data/co2.png">
                 <div>
                     <p>CO2</p>
                 </div>
             </a>
-            <a class="Pages" href="Stats-Géolocalisation.html">
+            <a class="Pages" id="Géoloc">
                 <img class="Logo" src="../Data/geolocalisation.png">
                 <div>
                     <p>Géolocalisation</p>
                 </div>
             </a>
-            <a class="Pages" href="Stats-Sonore.html">
+            <a class="Pages" id="Son">
                 <img class="Logo" src="../Data/sonore.png">
                 <div>
                     <p>Sonore</p>
@@ -46,46 +46,226 @@
         </div>
     </header>
     <body>
-        <div class="Stats_Graphique">
-            <div class="Stats">
-                <div class="Infos">
-                    <div>
-                        <p>Température actuelle :</p>
+        <div class="Température" id="D1">
+            <div class="Stats_Graphique">
+                <div class="Stats">
+                    <div class="Infos">
+                        <div>
+                            <p>Température actuelle :</p>
+                        </div>
+                    </div>
+                    <div class="Infos">
+                        <div>
+                            <p>Température moyenne sur la journée :</p>
+                        </div>
+                    </div>
+                    <div class="Infos">
+                        <div>
+                            <p>Température minimale et maximale du jour :</p>
+                        </div>
+                    </div>
+                    <div class="Conseils">
+                        <div>
+                            <p>Température idéale et conseils :</p>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                        </div>
                     </div>
                 </div>
-                <div class="Infos">
+                <div class="Graphique">
                     <div>
-                        <p>Température moyenne sur la journée :</p>
+                        <img class="graph" src="../Data/graphique.png">
                     </div>
-                </div>
-                <div class="Infos">
-                    <div>
-                        <p>Température minimale et maximale du jour :</p>
-                    </div>
-                </div>
-                <div class="Conseils">
-                    <div>
-                        <p>Température idéale et conseils :</p>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                    </div>
+                    <button class="Button">
+                        <img src="../Data/plein-ecran.png" height=50px; width=50px>
+                        <p>Afficher en plein écran</p>
+                    </button>
                 </div>
             </div>
-            <div class="Graphique">
-                <div>
-                    <img class="graph" src="../Data/graphique.png">
+        </div>
+        <div class="Cardiaque" id="D2">
+            <div class="Stats_Graphique">
+                <div class="Stats">
+                    <div class="Infos">
+                        <div>
+                            <p>Température actuelle :</p>
+                        </div>
+                    </div>
+                    <div class="Infos">
+                        <div>
+                            <p>Température moyenne sur la journée :</p>
+                        </div>
+                    </div>
+                    <div class="Infos">
+                        <div>
+                            <p>Température minimale et maximale du jour :</p>
+                        </div>
+                    </div>
+                    <div class="Conseils">
+                        <div>
+                            <p>Température idéale et conseils :</p>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                        </div>
+                    </div>
                 </div>
-                <button class="Button">
-                    <img src="../Data/plein-ecran.png" height=50px; width=50px>
-                    <p>Afficher en plein écran</p>
-                </button>
+                <div class="Graphique">
+                    <div>
+                        <img class="graph" src="../Data/graphique.png">
+                    </div>
+                    <button class="Button">
+                        <img src="../Data/plein-ecran.png" height=50px; width=50px>
+                        <p>Afficher en plein écran</p>
+                    </button>
+                </div>
             </div>
         </div>
+        <div class="CO2" id="D3">
+            <div class="Stats_Graphique">
+                <div class="Stats">
+                    <div class="Infos">
+                        <div>
+                            <p>Température actuelle :</p>
+                        </div>
+                    </div>
+                    <div class="Infos">
+                        <div>
+                            <p>Température moyenne sur la journée :</p>
+                        </div>
+                    </div>
+                    <div class="Infos">
+                        <div>
+                            <p>Température minimale et maximale du jour :</p>
+                        </div>
+                    </div>
+                    <div class="Conseils">
+                        <div>
+                            <p>Température idéale et conseils :</p>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                        </div>
+                    </div>
+                </div>
+                <div class="Graphique">
+                    <div>
+                        <img class="graph" src="../Data/graphique.png">
+                    </div>
+                    <button class="Button">
+                        <img src="../Data/plein-ecran.png" height=50px; width=50px>
+                        <p>Afficher en plein écran</p>
+                    </button>
+                </div>
+            </div>
         </div>
+        <div class="Géolocalisation" id="D4">
+            <div class="Stats_Graphique">
+                <div class="Stats">
+                    <div class="Infos">
+                        <div>
+                            <p>Température actuelle :</p>
+                        </div>
+                    </div>
+                    <div class="Infos">
+                        <div>
+                            <p>Température moyenne sur la journée :</p>
+                        </div>
+                    </div>
+                    <div class="Infos">
+                        <div>
+                            <p>Température minimale et maximale du jour :</p>
+                        </div>
+                    </div>
+                    <div class="Conseils">
+                        <div>
+                            <p>Température idéale et conseils :</p>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                        </div>
+                    </div>
+                </div>
+                <div class="Graphique">
+                    <div>
+                        <img class="graph" src="../Data/graphique.png">
+                    </div>
+                    <button class="Button">
+                        <img src="../Data/plein-ecran.png" height=50px; width=50px>
+                        <p>Afficher en plein écran</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="Sonore" id="D5">
+            <div class="Stats_Graphique">
+                <div class="Stats">
+                    <div class="Infos">
+                        <div>
+                            <p>Température actuelle :</p>
+                        </div>
+                    </div>
+                    <div class="Infos">
+                        <div>
+                            <p>Température moyenne sur la journée :</p>
+                        </div>
+                    </div>
+                    <div class="Infos">
+                        <div>
+                            <p>Température minimale et maximale du jour :</p>
+                        </div>
+                    </div>
+                    <div class="Conseils">
+                        <div>
+                            <p>Température idéale et conseils :</p>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                        </div>
+                    </div>
+                </div>
+                <div class="Graphique">
+                    <div>   
+                        <img class="graph" src="../Data/graphique.png">
+                    </div>
+                    <button class="Button">
+                        <img src="../Data/plein-ecran.png" height=50px; width=50px>
+                        <p>Afficher en plein écran</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script>
+            var Temp=document.getElementById('Temp');
+            var Card=document.getElementById('Card');
+            Temp.addEventListener("click", function() {
+                document.getElementById('D1').style.display="Contents";
+                document.getElementById('D2').style.display="None";
+                document.getElementById('D3').style.display="None";
+                document.getElementById('D4').style.display="None";
+                document.getElementById('D5').style.display="None";
+            });
+        </script>
     </body>
 </html>
