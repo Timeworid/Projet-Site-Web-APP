@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap%27");
+
+body{
+    font-family: 'Outfit', sans-serif;
+    margin: 0px;
+
+}
+
+
+h1{
+    text-align: center;
+}
+
+.description{
+
+    font-family: 'Outfit', sans-serif;
+    font-size: large;
+    background-color: #7fc0c4;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0px;
+}
+
+.t2{
+    padding-top: 3%;
+    padding-left: 5%;
+}
+
+.t3{
+    padding-left: 10%;
+    margin: 0px;
+
+}
+
+.job{
+    font-family: 'Outfit', sans-serif;
+    font-size: large;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0px;
+    display: flex;
+    flex: 1 1 auto;
+    background-color: #258d93;
+}
+
+.job1{
+    flex: 1 1 0;
+    margin: 1%;
+    border-right: rgb(60, 60, 60) solid 1px;
+}
+.job2{
+    flex: 1 1 0;
+    margin: 1%;
+    border-right: rgb(60, 60, 60) solid 1px;
+}
+.job3{
+    flex: 1 1 0;
+}
+
+

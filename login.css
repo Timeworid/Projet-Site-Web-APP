@@ -106,6 +106,10 @@ form .btn .btn-layer{
 form .btn:hover .btn-layer{
   left: 0;
 }
+form .btn:active .btn-layer{
+  left: 0;
+  background:#888;
+}
 form .btn input[type="submit"]{
   height: 100%;
   width: 100%;
