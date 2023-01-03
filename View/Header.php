@@ -11,8 +11,9 @@
                         <div class="liensmenu">
                             <a href="routeur.php?action=presentationProduit">Fiche Produit</a>
                             <?php if(isset($_SESSION['mail'])){?>
-                            <a href="routeur.php?action=PROFIL.php">Compte</a>
+                            <a href="routeur.php?action=Profil">Compte</a>
                             <a href="routeur.php?action=Statistiques">Statistiques</a>
+                            <a href="routeur.php?action=Deconnexion">Déconnexion</a>
                             <?php } else { ?>
                             <a href="routeur.php?action=loginUtilisateur">Compte</a>
                             <?php } ?>

@@ -73,6 +73,12 @@
                             });
                         </script>
                     </div>
+                    <p>
+                        <?php 
+                            if (isset($_SESSION["erreur"])) {
+                            echo $_SESSION["erreur"];} 
+                        ?>
+                    </p>
                 </form>
             </div>
         </div>
