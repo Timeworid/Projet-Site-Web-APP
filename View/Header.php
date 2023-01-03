@@ -1,9 +1,8 @@
-<body class="jeanneoskour">
+
     <head>
-        <title>Test1</title>
         <link rel="stylesheet" href="Header.css">
     </head>
-    <header class="headerglobal .jeanneoskour">
+    <header class="headerglobal">
         <div class= "menugauche">
                 <div class="menuderoulant">
                     <div>
@@ -33,4 +32,3 @@
             </a>
         </div>
     </header>
-</body>

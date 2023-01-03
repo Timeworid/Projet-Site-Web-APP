@@ -8,7 +8,7 @@
     <?php
         include("View/Header.php");
     ?>
-    <header>
+    <header class="Selection">
         <style>
             a.Pages:link {color:black; text-decoration:none}
             a.Pages:visited {color:black; text-decoration:none}

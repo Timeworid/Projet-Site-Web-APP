@@ -6,6 +6,7 @@ body{
   justify-content: flex-start;
   text-size-adjust: 2%;
   font-size: larger;
+  margin: 0px;
 }
 
 .header{
