@@ -17,6 +17,12 @@
   <footer class="footer-global">
     <div class="footer-yelp">
       <div class="footer-yelp footer-gauche">
+        <div class="footer-yelp footer-bleu">
+          <a class="lien1" href="routeur.php?action=" >ASSISTANCE</a>
+        </div>
+        <div class="footer-yelp footer-bleu">
+          <a class="lien1" href="routeur.php?action=pageFAQ">FAQ</a>
+        </div>
       </div>  
       <div class="footer-yelp footer-milieu" >
         <a class="lien1" href="routeur.php?action=apropos" >A PROPOS DE NOUS</a>
