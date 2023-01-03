@@ -1,5 +1,5 @@
 body{
-  background-color: #a8b9a2;
+  background-color: #e0e0e0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -26,7 +26,7 @@ body{
   margin-right: 10%;
 }
 .footer{
-  background-color: #e0e0e0;
+  background-color: #a8b9a2;
   padding: 3%;
   margin-left: 10%;
   margin-right: 10%;
@@ -34,7 +34,7 @@ body{
 .bloc3{
   background-color:none;
   align-self: center;
-  width: 20%;
+  width: 25%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -47,7 +47,6 @@ body{
   height: 100%;
 }
 .bloc1{background-color: #258D93; 
-  height: 50%;
   border: none;
   color: white;
   text-align: center;
@@ -60,12 +59,11 @@ body{
   padding-top: 1%;
   padding-bottom: 1%;
   align-self: center;
-  width: 15%;
+  width: 10%;
   margin-left: 5%;
-  
 }
 .image{width: 75%;
-height: 50%;
+height: 100%;
 border-radius: 20%;
 }
 @media (max-width:800px) {
@@ -75,7 +73,6 @@ border-radius: 20%;
   .maintenant{
       display: none;
   }
-
 }
 
   
