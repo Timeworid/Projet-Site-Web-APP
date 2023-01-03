@@ -17,31 +17,31 @@
         </style>
         <div class="Bandeau">
             <a class="Pages" id="Temp">
-                <img class="Logo" src="../Data/thermometre.png">
+                <img class="Logo" src="Data/thermometre.png">
                 <div>
                     <p>Température</p>
                 </div>
             </a>
             <a class="Pages" id="Card">
-                <img class="Logo" src="../Data/cardiaque.png">
+                <img class="Logo" src="Data/cardiaque.png">
                 <div>
                     <p>Cardiaque</p>
                 </div>
             </a>
             <a class="Pages" id="TCO2">
-                <img class="Logo" src="../Data/co2.png">
+                <img class="Logo" src="Data/co2.png">
                 <div>
                     <p>CO2</p>
                 </div>
             </a>
             <a class="Pages" id="Géol">
-                <img class="Logo" src="../Data/geolocalisation.png">
+                <img class="Logo" src="Data/geolocalisation.png">
                 <div>
                     <p>Géolocalisation</p>
                 </div>
             </a>
             <a class="Pages" id="Sono">
-                <img class="Logo" src="../Data/sonore.png">
+                <img class="Logo" src="Data/sonore.png">
                 <div>
                     <p>Sonore</p>
                 </div>
@@ -82,10 +82,10 @@
                 </div>
                 <div class="Graphique">
                     <div>
-                        <img class="graph" src="../Data/graphique.png">
+                        <img class="graph" src="Data/graphique.png">
                     </div>
                     <button class="Button">
-                        <img src="../Data/plein-ecran.png" height=50px; width=50px>
+                        <img src="Data/plein-ecran.png" height=50px; width=50px>
                         <p>Afficher en plein écran</p>
                     </button>
                 </div>
@@ -124,10 +124,10 @@
                 </div>
                 <div class="Graphique">
                     <div>
-                        <img class="graph" src="../Data/graphique.png">
+                        <img class="graph" src="Data/graphique.png">
                     </div>
                     <button class="Button">
-                        <img src="../Data/plein-ecran.png" height=50px; width=50px>
+                        <img src="Data/plein-ecran.png" height=50px; width=50px>
                         <p>Afficher en plein écran</p>
                     </button>
                 </div>
@@ -166,10 +166,10 @@
                 </div>
                 <div class="Graphique">
                     <div>
-                        <img class="graph" src="../Data/graphique.png">
+                        <img class="graph" src="Data/graphique.png">
                     </div>
                     <button class="Button">
-                        <img src="../Data/plein-ecran.png" height=50px; width=50px>
+                        <img src="Data/plein-ecran.png" height=50px; width=50px>
                         <p>Afficher en plein écran</p>
                     </button>
                 </div>
@@ -208,10 +208,10 @@
                 </div>
                 <div class="Graphique">
                     <div>
-                        <img class="graph" src="../Data/graphique.png">
+                        <img class="graph" src="Data/graphique.png">
                     </div>
                     <button class="Button">
-                        <img src="../Data/plein-ecran.png" height=50px; width=50px>
+                        <img src="Data/plein-ecran.png" height=50px; width=50px>
                         <p>Afficher en plein écran</p>
                     </button>
                 </div>
@@ -250,10 +250,10 @@
                 </div>
                 <div class="Graphique">
                     <div>   
-                        <img class="graph" src="../Data/graphique.png">
+                        <img class="graph" src="Data/graphique.png">
                     </div>
                     <button class="Button">
-                        <img src="../Data/plein-ecran.png" height=50px; width=50px>
+                        <img src="Data/plein-ecran.png" height=50px; width=50px>
                         <p>Afficher en plein écran</p>
                     </button>
                 </div>
