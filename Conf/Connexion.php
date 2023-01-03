@@ -3,7 +3,7 @@
 // Appellez cette classe en début de fichier : require(Connexion.php)
 		class Connexion{
 			static private $hostname ='localhost';
-			static private $database ='test'; // Mettez ici le nom de votre base de donnée de test
+			static private $database ='site web app'; // Mettez ici le nom de votre base de donnée de test
 			static private $login = 'root'; // Identifiant PHPmyAdmin Wamp / Xampp
 			static private $password = ''; // Mdp PHPmyAdmin Wamp / Xampp
 			

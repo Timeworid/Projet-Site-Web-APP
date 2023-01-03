@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>Andrea - Admin</title>
-    <link rel="stylesheet" href="../Admin.css">
+    <link rel="stylesheet" href="Admin.css">
 </head>
 <body>
     <?php
-    include("../View/Header.php");
+    include("View/Header.php");
     ?>
 
     <div class="flex-stat">
@@ -23,46 +23,68 @@
     <div class="flex-messages">
         <div class="container"> 
             <!-- a rendre dynamique avec le php-->
-            <div class="msg">
-                <img src="../Data/image.png" width="40px">
-                <p class="admin-text">FEFNRIUNREIUVNRIUGRURBVRUBRYURBVRUVBRVRBVRB</p>
-            </div>
-            <div class="msg">
-                <img src="../Data/image.png" width="40px">
-                <p class="admin-text">TEST</p>
-            </div>
-            <div class="msg">
-                <img src="../Data/image.png" width="40px">
-                <p class="admin-text">TEST</p>
-            </div>
-            <div class="msg">
-                <img src="../Data/image.png" width="40px">
-                <p class="admin-text">TEST</p>
-            </div>  
+            <a href="routeur.php?action=ticketAdmin" class="a-invisible">
+                <div class="msg">
+                    <img src="Data/image.png" width="40px">
+                    <p class="admin-text-msg">FEFNRIUNREIUVNRIUGRURBVRUBRYURBVRUVBRVRBVRB</p>
+                </div>
+            </a>
+            <a href="routeur.php?action=ticketAdmin" class="a-invisible">
+                <div class="msg">
+                    <img src="Data/image.png" width="40px">
+                    <p class="admin-text-msg">TEST</p>
+                </div>
+            </a>
+            <a href="routeur.php?action=ticketAdmin" class="a-invisible">
+                <div class="msg">
+                    <img src="Data/image.png" width="40px">
+                    <p class="admin-text-msg">TEST</p>
+                </div>
+            </a>
+            <a href="routeur.php?action=ticketAdmin" class="a-invisible">
+                <div class="msg">
+                    <img src="Data/image.png" width="40px">
+                    <p class="admin-text-msg">TEST</p>
+                </div>
+            </a> 
             
         </div>
         
-        <div class="container"> 
-            <div class="msg">
-                <img src="../Data/bulle.png" width="40px">
-                <p class="admin-text">TEST</p>
-            </div>
-            <div class="msg">
-                <img src="../Data/bulle.png" width="40px">
-                <p class="admin-text">TEST</p>
-            </div>
-            <div class="msg">
-                <img src="../Data/bulle.png" width="40px">
-                <p class="admin-text">TEST</p>
-            </div>
-            <div class="msg">
-                <img src="../Data/bulle.png" width="40px">
-                <p class="admin-text">TEST</p>
-            </div>      
+        <div class="container scroller"> 
+            <a href="routeur.php?action=msgAdmin" class="a-invisible">
+                <div class="msg">
+                    <img src="Data/bulle.png" width="40px">
+                    <p class="admin-text-msg">TEST</p>
+                </div>
+            </a> 
+            <a href="routeur.php?action=msgAdmin" class="a-invisible">
+                <div class="msg">
+                    <img src="Data/bulle.png" width="40px">
+                    <p class="admin-text-msg">TEST</p>
+                </div>
+            </a> 
+            <a href="routeur.php?action=msgAdmin" class="a-invisible">
+                <div class="msg">
+                    <img src="Data/bulle.png" width="40px">
+                    <p class="admin-text-msg">TEST</p>
+                </div>
+            </a> 
+            <a href="routeur.php?action=msgAdmin" class="a-invisible">
+                <div class="msg">
+                    <img src="Data/bulle.png" width="40px">
+                    <p class="admin-text-msg">TEST</p>
+                </div>
+            </a>
+            <a href="routeur.php?action=msgAdmin" class="a-invisible">
+                <div class="msg">
+                    <img src="Data/bulle.png" width="40px">
+                    <p class="admin-text-msg">TEST</p>
+                </div>
+            </a>   
         </div>
     </div>
 </body> 
     <?php
-    include("../View/Footer.php");
+    include("View/Footer.php");
     ?>
 </html>

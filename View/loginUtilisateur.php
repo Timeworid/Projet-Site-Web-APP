@@ -20,24 +20,25 @@
         </div>
         <div class="form1">
             <div class="form2">
-                <form action="#" class="signup">
+                <form action="routeur.php" method = "get" class="signup">
+                <input type="hidden" name="action" value="register">
                     <div class="case">
-                        <input type="Text" placeholder="Nom">
+                        <input type="Text" placeholder="Nom" name="nom">
                     </div>
                     <div class="case">
-                        <input type="Text" placeholder="Prénom">
+                        <input type="Text" placeholder="Prénom" name="prenom">
                     </div>
                     <div class="case">
-                        <input type="email" placeholder="Addresse Mail" required>
+                        <input type="email" placeholder="Addresse Mail" name="mail"required>
                     </div>
                     <div class="case">
-                        <input type="date" placeholder="Date de naissance" required>
+                        <input type="date" placeholder="Date de naissance" name="dateNaissance" required>
                     </div>
                     <div class="case">
-                        <input type="password" placeholder="Mot de passe" required>
+                        <input type="password" placeholder="Mot de passe" name="motDePasse" required>
                     </div>
                     <div class="case">
-                        <input type="password" placeholder="Confirmation Mot de passe" required>
+                        <input type="password" placeholder="Confirmation Mot de passe" name="motDePasse2" required>
                     </div>
                     <input type="checkbox" name="cgu" required>
                     <label for="cgu" class="condition"> J'ai lu et j'accepte les <a href="./cgu.html">conditions générales d'utilisations.</a> </label>
@@ -47,7 +48,7 @@
                     </div>
                 </form>
                 <div class="separator"></div>
-                <form action="#" class="login">
+                <form action="login" class="login">
                     <div class="case">
                         <input type="email" placeholder="Adresse Mail" required>
                     </div>
