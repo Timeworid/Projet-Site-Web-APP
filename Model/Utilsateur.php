@@ -137,9 +137,9 @@
 	}
 
 	public static function AjouterUtilisateur($mail, $motDePasse, $nom, $prenom, $dateNaissance) {
-		$requetePreparee = "INSERT INTO utilisateur VALUES(:tag_mail, :tag_motDePasse, :tag_nom, tag_prenom, tag_dateNaissance, :tag_admin);";
-		$tags = array( "tag_mail" => $mail, "tag_motDePasse" => $motDePasse,  "tag_nom" => $nom, "tag_prenom" => $prenom, "tag_dateNaissance" => $dateNaissance, "tag_admin" => 0);
+		$requetePreparee = "INSERT INTO utilisateur VALUES(:tag_mail, :tag_nom, :tag_prenom, :tag_dateNaissance, NULL, NULL, NULL, NULL, :tag_motDePasse,:tag_admin);";
 		$req_prep = Connexion::pdo()->prepare($requetePreparee);
+		$tags = ["tag_mail" => $mail, "tag_motDePasse" => $motDePasse,  "tag_nom" => $nom, "tag_prenom" => $prenom, "tag_dateNaissance" => $dateNaissance, "tag_admin" => 0];
 		try {
 			$req_prep->execute($tags);
 		} catch (PDOException $e) {
@@ -149,6 +149,22 @@
 
 	public static function getMDPByMail($mail) {
 		$requetePreparee = "SELECT motDePasse FROM Utilisateur WHERE mail = :tag_mail"; 
+		$req_prep = Connexion::pdo()->prepare($requetePreparee);
+		$valeurs = array("tag_mail" => $mail);
+		try {
+			$req_prep->execute($valeurs);
+			$r = $req_prep->fetch();
+			if (!$r[0]) 
+				return false;
+			return $r[0];
+		} catch (PDOException $e) {
+			echo "erreur : ".$e->getMessage()."<br>";
+		}
+		return false;
+	}
+
+	public static function getAdminByMail($mail) {
+		$requetePreparee = "SELECT Utilisateur.type FROM Utilisateur WHERE mail = :tag_mail"; 
 		$req_prep = Connexion::pdo()->prepare($requetePreparee);
 		$valeurs = array("tag_mail" => $mail);
 		try {

@@ -53,16 +53,17 @@
                     </div>
                 </form>
                 <div class="separator"></div>
-                <form action="login" class="login">
+                <form action="routeur.php" method ="get" class="login">
+                <input type="hidden" name="action" value="login">
                     <div class="case">
-                        <input type="email" placeholder="Adresse Mail" required>
+                        <input type="email" placeholder="Adresse Mail" name="mail"required>
                     </div>
                     <div class="case">
-                        <input type="password" placeholder="Mot de passe" required>
+                        <input type="password" placeholder="Mot de passe" name="motDePasse" required>
                     </div>
                     <div class="caseRadio">
-                        <input type="checkbox" name="cremember">
-                        <label for="cremember" class="condition"> Se souvenir de moi </label>
+                        <input type="checkbox" name="remember">
+                        <label for="remember" class="condition"> Se souvenir de moi </label>
                     </div>
                     <div class="case btn">
                         <div class="btn-layer"></div>

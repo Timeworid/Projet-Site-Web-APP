@@ -25,19 +25,19 @@
                     <p>Cardiaque</p>
                 </div>
             </a>
-            <a class="Pages" id="C">
+            <a class="Pages" id="TCO2">
                 <img class="Logo" src="../Data/co2.png">
                 <div>
                     <p>CO2</p>
                 </div>
             </a>
-            <a class="Pages" id="Géoloc">
+            <a class="Pages" id="Géol">
                 <img class="Logo" src="../Data/geolocalisation.png">
                 <div>
                     <p>Géolocalisation</p>
                 </div>
             </a>
-            <a class="Pages" id="Son">
+            <a class="Pages" id="Sono">
                 <img class="Logo" src="../Data/sonore.png">
                 <div>
                     <p>Sonore</p>
@@ -93,22 +93,22 @@
                 <div class="Stats">
                     <div class="Infos">
                         <div>
-                            <p>Température actuelle :</p>
+                            <p>Rythme cardiaque actuelle :</p>
                         </div>
                     </div>
                     <div class="Infos">
                         <div>
-                            <p>Température moyenne sur la journée :</p>
+                            <p>Rythme cardiaque moyen sur la journée :</p>
                         </div>
                     </div>
                     <div class="Infos">
                         <div>
-                            <p>Température minimale et maximale du jour :</p>
+                            <p>Rythme cardiaque minimal et maximal du jour :</p>
                         </div>
                     </div>
                     <div class="Conseils">
                         <div>
-                            <p>Température idéale et conseils :</p>
+                            <p>Rythme cardiaque idéal et conseils :</p>
                             <br></br>
                             <br></br>
                             <br></br>
@@ -135,22 +135,22 @@
                 <div class="Stats">
                     <div class="Infos">
                         <div>
-                            <p>Température actuelle :</p>
+                            <p>Taux de CO2 actuel :</p>
                         </div>
                     </div>
                     <div class="Infos">
                         <div>
-                            <p>Température moyenne sur la journée :</p>
+                            <p>Taux de CO2 moyen sur la journée :</p>
                         </div>
                     </div>
                     <div class="Infos">
                         <div>
-                            <p>Température minimale et maximale du jour :</p>
+                            <p>Taux de CO2 minimal et maximal du jour :</p>
                         </div>
                     </div>
                     <div class="Conseils">
                         <div>
-                            <p>Température idéale et conseils :</p>
+                            <p>Taux de CO2 idéal et conseils :</p>
                             <br></br>
                             <br></br>
                             <br></br>
@@ -219,22 +219,22 @@
                 <div class="Stats">
                     <div class="Infos">
                         <div>
-                            <p>Température actuelle :</p>
+                            <p>Volume sonore actuelle :</p>
                         </div>
                     </div>
                     <div class="Infos">
                         <div>
-                            <p>Température moyenne sur la journée :</p>
+                            <p>Volume sonore moyen sur la journée :</p>
                         </div>
                     </div>
                     <div class="Infos">
                         <div>
-                            <p>Température minimale et maximale du jour :</p>
+                            <p>Volume sonore minimal et maximal du jour :</p>
                         </div>
                     </div>
                     <div class="Conseils">
                         <div>
-                            <p>Température idéale et conseils :</p>
+                            <p>Volume sonore idéal et conseils :</p>
                             <br></br>
                             <br></br>
                             <br></br>
@@ -259,12 +259,43 @@
         <script>
             var Temp=document.getElementById('Temp');
             var Card=document.getElementById('Card');
+            var TCO2=document.getElementById('TCO2');
+            var Géol=document.getElementById('Géol');
+            var Sono=document.getElementById('Sono');
             Temp.addEventListener("click", function() {
                 document.getElementById('D1').style.display="Contents";
                 document.getElementById('D2').style.display="None";
                 document.getElementById('D3').style.display="None";
                 document.getElementById('D4').style.display="None";
                 document.getElementById('D5').style.display="None";
+            });
+            Card.addEventListener("click", function() {
+                document.getElementById('D1').style.display="None";
+                document.getElementById('D2').style.display="Contents";
+                document.getElementById('D3').style.display="None";
+                document.getElementById('D4').style.display="None";
+                document.getElementById('D5').style.display="None";
+            });
+            TCO2.addEventListener("click", function() {
+                document.getElementById('D1').style.display="None";
+                document.getElementById('D2').style.display="None";
+                document.getElementById('D3').style.display="Contents";
+                document.getElementById('D4').style.display="None";
+                document.getElementById('D5').style.display="None";
+            });
+            Géol.addEventListener("click", function() {
+                document.getElementById('D1').style.display="None";
+                document.getElementById('D2').style.display="None";
+                document.getElementById('D3').style.display="None";
+                document.getElementById('D4').style.display="Contents";
+                document.getElementById('D5').style.display="None";
+            });
+            Sono.addEventListener("click", function() {
+                document.getElementById('D1').style.display="None";
+                document.getElementById('D2').style.display="None";
+                document.getElementById('D3').style.display="None";
+                document.getElementById('D4').style.display="None";
+                document.getElementById('D5').style.display="Contents";
             });
         </script>
     </body>
