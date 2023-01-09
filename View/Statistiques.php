@@ -1,36 +1,54 @@
-<?php // content="text/plain; charset=utf-8"
-include('phpgraphlib/phpgraphlib.php');
-
-// Set up the graph data
-$data = array(
-  'Jan' => 10,
-  'Feb' => 20,
-  'Mar' => 30,
-  'Apr' => 40,
-  'May' => 50,
-  'Jun' => 60
-);
-
-// Create a new graph
-$graph = new PHPGraphLib(400, 300);
-
-// Set the graph data and title
-$graph->addData($data);
-$graph->setTitle('My Bar Graph');
-
-// Set the y-axis label
-$graph->setYAxis('Units');
-
-// Set the bar colors
-$graph->setBarColor('navy', 'teal');
-
-?>
 <!DOCTYPE html>
 <html dir="ltr" lang="fr">
     <head>
         <title>Statistiques</title>
         <link rel="stylesheet" href="Statistiques.css">
         <meta charset="utf-8">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Heure', 'Température'],
+          ['00h',  1000],
+          ['01h',  1170],
+          ['02h',  660],
+          ['03h',  1030],
+          ['04h',  660],
+          ['05h',  660],
+          ['06h',  660],
+          ['07h',  660],
+          ['08h',  660],
+          ['09h',  660],
+          ['10h',  660],
+          ['11h',  660],
+          ['12h',  660],
+          ['13h',  660],
+          ['14h',  660],
+          ['15h',  660],
+          ['16h',  660],
+          ['17h',  660],
+          ['18h',  660],
+          ['19h',  660],
+          ['20h',  660],
+          ['21h',  660],
+          ['22h',  660],
+          ['23h',  660],
+          ['24h',  660]
+        ]);
+
+        var options = {
+          title: 'Evolution de la température pendant la journée',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('Temp_Graph'));
+
+        chart.draw(data, options);
+      }
+    </script>
     </head>
     <?php
         include("View/Header.php");
@@ -108,7 +126,7 @@ $graph->setBarColor('navy', 'teal');
                     </div>
                 </div>
                 <div class="Graphique">
-                    <?php $graph->createGraph(); ?>
+                    <div id="Temp_Graph" style="width: 100%; height: 100%; margin-left:50%; z-index:0"></div>
                     <button class="Button">
                         <img src="Data/plein-ecran.png" height=50px; width=50px>
                         <p>Afficher en plein écran</p>

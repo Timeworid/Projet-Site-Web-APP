@@ -1182,9 +1182,9 @@ class PHPGraphLib {
         {
             switch (strtolower($currency_type)) {
                 case 'dollar': $this->data_currency = '$'; break;
-                case 'yen': $this->data_currency = '¥'; break;
-                case 'pound': $this->data_currency = '£'; break;
-                case 'lira': $this->data_currency = '£'; break;
+                case 'yen': $this->data_currency = 'ï¿½'; break;
+                case 'pound': $this->data_currency = 'ï¿½'; break;
+                case 'lira': $this->data_currency = 'ï¿½'; break;
                 // Euro doesn't display properly
                 // Franc doesn't display properly
                 default: $this->data_currency = $currency_type; break;
@@ -1265,7 +1265,7 @@ class PHPGraphLib {
 
 	protected function formatDataAsDegrees($input)
 	{
-		return $input . '°';
+		return $input . 'ï¿½';
 	}
 
 	protected function formatDataAsGeneric($input)
