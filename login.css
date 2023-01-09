@@ -17,14 +17,13 @@ html,body{
   color: #fff;
 }
 .wrapper{
-  overflow: hidden;
   width: 65%;
   min-width: 400px;
   background: #e0e0e0;
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
-  margin-top: 25%;
+  margin-top: 5%;
   margin-bottom: 5%;
 }
 .wrapper .title-text{
