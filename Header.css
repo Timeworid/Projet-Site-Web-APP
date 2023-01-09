@@ -2,12 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap%27');
 /* EN-TETE */
 
-header{
-    position: fixed;
-    justify-content:space-between;
-    width: 100%;
+.corentin{
+  position: fixed;
+  justify-content:space-between;
+  width: 100%;
 }
-
 .headerglobal{
     background-color: rgb(242, 240, 240);
     display:flex;
@@ -30,7 +29,6 @@ header{
 .menugauche{
     margin: 0.25%;
     display:flex;
-
 }
 
 /* MENU DEROULANT */
