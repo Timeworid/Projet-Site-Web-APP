@@ -1,55 +1,46 @@
-<!--BAS DE PAGE-->
-
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <link rel="stylesheet" href="Footer.css">
+  <title>Footer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Footer.css">
 </head>
-<style>
-  a.link:link {color:black;text-decoration:none;}
-  a.link:hover {text-shadow: white;text-decoration:underline;}
-  a.link:visited {color:black;text-decoration:underline;}
-  a.link2:link {color:black;text-decoration:none;}
-  a.link2:hover {text-shadow: white;text-decoration:underline;}
-  a.link2:visited {color:black;text-decoration:underline;}
-</style>
-
+<body>
   <footer class="footer-global">
-    <div class="footer-yelp">
-      <div class="footer-yelp footer-gauche">
-        <div class="footer-yelp footer-bleu">
-          <a class="lien1" href="routeur.php?action=" >ASSISTANCE</a>
-        </div>
-        <div class="footer-yelp footer-bleu">
-          <a class="lien1" href="routeur.php?action=pageFAQ">FAQ</a>
-        </div>
-      </div>  
-      <div class="footer-yelp footer-milieu" >
-        <a class="lien1" href="routeur.php?action=apropos" >A PROPOS DE NOUS</a>
-        <span class="vertical-line"></span>
-        <a class="lien1" href="routeur.php?action=ticketAdmin" >NOUS CONTACTER</a>
-      </div>
-      <div class="footer-yelp footer-droite">
-        
-        <!-- footer reseaux sociaux -->
-
-        <div class="footer-aled">
-          <a class="lien1" href="routeur.php?action=" >NOUS SUIVRE</a>
-        <div class = "footer-aled3">
-          <img class="espaceimage" src="Data/facebook.png" height="35px" width="35px" alt="">
-          <img class="espaceimage" src="Data/instagram.png" height="35px" width="35px" alt="">
-          <img class="espaceimage" src="Data/tiktok.png" height="35px" width="35px" alt="">
-          <img class="espaceimage" src="Data/twitter.png" height="35px" width="35px" alt="">
-          <img class="espaceimage" src="Data/linkedin.png" height="35px" width="35px" alt="">
-        </div>
-
-        <!-- barre de recherche -->
-        
-        <div class="footer-aled2">
-        </div>
-        </div>
-          <div class="footer-yelp footer-gris">
-            <a class="lien1" href="https://google.com" >CONDITIONS GENERALES D'UTILISATION</a>
-            <a class="lien1" href="https://google.com" >NOTRE POLITIQUE DE CONFIDENTIALITE</a>
-          </div>
-      </div>
-    </div>  
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer">
+  	 			<h1>Plus d'informations</h1>
+  	 			<ul class="liste">
+					<li><a href="routeur.php?action=apropos">A propos</a></li>
+					<li><a href="routeur.php?action=">Clause de confidentialité</a></li>
+					<li><a href="routeur.php?action=">Conditions générales d'utilisation</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer">
+  	 			<h1>Nous contacter</h1>
+  	 			<ul class="liste">
+  	 				<li><a href="routeur.php?action=pageFAQ">Problèmes fréquents</a></li>
+  	 				<li><a href="routeur.php?action=">Nos offres d'emploi</a></li>
+					<li><a href="routeur.php?action=ticketAdmin">Contacter administrateur</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer">
+  	 			<h1>Nous suivre</h1>
+  	 			<div class="social-links">
+					<a href="routeur.php?action="><img class="espaceimage" src="Data/facebook.png" height="35px" width="35px" alt=""></a>
+					<a href="routeur.php?action="><img class="espaceimage" src="Data/instagram.png" height="35px" width="35px" alt=""></a>
+					<a href="routeur.php?action="><img class="espaceimage" src="Data/tiktok.png" height="35px" width="35px" alt=""></a>
+					<a href="routeur.php?action="><img class="espaceimage" src="Data/twitter.png" height="35px" width="35px" alt=""></a>
+					<a href="routeur.php?action="><img class="espaceimage" src="Data/linkedin.png" height="35px" width="35px" alt=""></a>
+  	 			</div>
+				<ul>
+					<li><a  style="color:grey;text-decoration:none;font-size:14px;">Copyright</a></li>
+				</ul>
+  	 		</div>
+  	 	</div>
+  	 </div>
   </footer>
+</body>
+</html>

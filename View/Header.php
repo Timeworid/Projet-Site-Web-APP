@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" href="Header.css">
     </head>
-    <header class="headerglobal">
+    <header class="headerglobal,corentin">
         <div class= "menugauche">
                 <div class="menuderoulant">
                     <div>
