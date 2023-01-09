@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="Footer.css">
 </head>
 <body>
-  <footer class="footer-global">
+  <footer class="corentin1-global">
   	 <div class="container">
   	 	<div class="row">
   	 		<div class="corentin1">
@@ -36,7 +36,7 @@
 					<a href="routeur.php?action="><img class="espaceimage" src="Data/linkedin.png" height="35px" width="35px" alt=""></a>
   	 			</div>
 				<ul>
-					<li><a  style="color:grey;text-decoration:none;font-size:14px;">Copyright</a></li>
+					<li><a  style="color:grey;text-decoration:none;font-size:14px;">Copyright © Andrea</a></li>
 				</ul>
   	 		</div>
   	 	</div>
