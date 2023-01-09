@@ -1,54 +1,28 @@
 <?php // content="text/plain; charset=utf-8"
-require_once ('jpgraph/jpgraph.php');
-require_once ('jpgraph/jpgraph_line.php');
+include('phpgraphlib/phpgraphlib.php');
 
-$datay1 = array(20,15,23,15);
-$datay2 = array(12,9,42,8);
-$datay3 = array(5,17,32,24);
+// Set up the graph data
+$data = array(
+  'Jan' => 10,
+  'Feb' => 20,
+  'Mar' => 30,
+  'Apr' => 40,
+  'May' => 50,
+  'Jun' => 60
+);
 
-// Setup the graph
-$graph = new Graph(300,250);
-$graph->SetScale("textlin");
+// Create a new graph
+$graph = new PHPGraphLib(400, 300);
 
-$theme_class=new UniversalTheme;
+// Set the graph data and title
+$graph->addData($data);
+$graph->setTitle('My Bar Graph');
 
-$graph->SetTheme($theme_class);
-$graph->img->SetAntiAliasing(false);
-$graph->title->Set('Filled Y-grid');
-$graph->SetBox(false);
+// Set the y-axis label
+$graph->setYAxis('Units');
 
-$graph->SetMargin(40,20,36,63);
-
-$graph->img->SetAntiAliasing();
-
-$graph->yaxis->HideZeroLabel();
-$graph->yaxis->HideLine(false);
-$graph->yaxis->HideTicks(false,false);
-
-$graph->xgrid->Show();
-$graph->xgrid->SetLineStyle("solid");
-$graph->xaxis->SetTickLabels(array('A','B','C','D'));
-$graph->xgrid->SetColor('#E3E3E3');
-
-// Create the first line
-$p1 = new LinePlot($datay1);
-$graph->Add($p1);
-$p1->SetColor("#6495ED");
-$p1->SetLegend('Line 1');
-
-// Create the second line
-$p2 = new LinePlot($datay2);
-$graph->Add($p2);
-$p2->SetColor("#B22222");
-$p2->SetLegend('Line 2');
-
-// Create the third line
-$p3 = new LinePlot($datay3);
-$graph->Add($p3);
-$p3->SetColor("#FF1493");
-$p3->SetLegend('Line 3');
-
-$graph->legend->SetFrameWeight(1);
+// Set the bar colors
+$graph->setBarColor('navy', 'teal');
 
 ?>
 <!DOCTYPE html>
@@ -134,7 +108,7 @@ $graph->legend->SetFrameWeight(1);
                     </div>
                 </div>
                 <div class="Graphique">
-                    <?php $graph->Stroke(); ?>
+                    <?php $graph->createGraph(); ?>
                     <button class="Button">
                         <img src="Data/plein-ecran.png" height=50px; width=50px>
                         <p>Afficher en plein écran</p>
