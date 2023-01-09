@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap%27');
-body{
-	font-family: 'Poppins', sans-serif;
-}
+
 *{
 	margin:0;
 	padding:0;
@@ -20,7 +18,9 @@ ul{
 }
 .corentin1-global{
 	background-color: #ffffff;
-    padding: 70px 0;
+    padding: 30px 0;
+	width: 100%;
+	z-index: 10;
 }
 .corentin1{
    width: 33%;
