@@ -41,8 +41,20 @@
 
         var options = {
           title: 'Evolution de la température pendant la journée',
-          legend: { position: 'bottom' }
-        };
+          width: 1000,
+          height: 500,
+          legend: { position: 'bottom' },
+          chartArea: {
+            backgroundColor: {
+            fill: '#FF0000',
+            fillOpacity: 0.1,
+            }
+            },
+        backgroundColor: {
+        fill: '#FF0000',
+        fillOpacity: 0.8,
+        }
+        }
 
         var chart = new google.visualization.LineChart(document.getElementById('Temp_Graph'));
 
@@ -126,7 +138,7 @@
                     </div>
                 </div>
                 <div class="Graphique">
-                    <div id="Temp_Graph" style="width: 100%; height: 100%; margin-left:50%; z-index:0"></div>
+                    <div id="Temp_Graph" style="width: 800; height: 400; z-index:0"></div>
                     <button class="Button">
                         <img src="Data/plein-ecran.png" height=50px; width=50px>
                         <p>Afficher en plein écran</p>
