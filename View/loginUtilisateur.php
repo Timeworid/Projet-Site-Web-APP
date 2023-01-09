@@ -7,7 +7,11 @@
 </head>
 <body>
     <?php
-        include("View/Header.php")
+        include("View/Header.php");
+        foreach ($_GET as $key => $value)
+		    $_GET[$key] = htmlspecialchars($value);
+	    foreach ($_POST as $key => $value)
+		    $_POST[$key] = htmlspecialchars($value);
     ?>
     <style>
         .logo{
@@ -25,7 +29,7 @@
         </div>
         <div class="form1">
             <div class="form2">
-                <form action="routeur.php" method = "get" class="signup">
+                <form action="routeur.php" method = "post" class="signup">
                 <input type="hidden" name="action" value="register">
                     <div class="case">
                         <input type="Text" placeholder="Nom" name="nom">
@@ -46,14 +50,14 @@
                         <input type="password" placeholder="Confirmation Mot de passe" name="motDePasse2" required>
                     </div>
                     <input type="checkbox" name="cgu" required>
-                    <label for="cgu" class="condition"> J'ai lu et j'accepte les <a href="./cgu.html">conditions générales d'utilisations.</a> </label>
+                    <label for="cgu" class="condition"> J'ai lu et j'accepte les <a href="routeur.php?action=cgu">conditions générales d'utilisations.</a> </label>
                     <div class="case btn">
                         <div class="btn-layer"></div>
                         <input type="submit" value="Inscription">
                     </div>
                 </form>
                 <div class="separator"></div>
-                <form action="routeur.php" method ="get" class="login">
+                <form action="routeur.php" method ="post" class="login">
                 <input type="hidden" name="action" value="login">
                     <div class="case">
                         <input type="email" placeholder="Adresse Mail" name="mail"required>

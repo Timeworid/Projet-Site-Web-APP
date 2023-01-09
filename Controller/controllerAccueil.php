@@ -28,6 +28,10 @@ require_once("Model\Utilsateur.php");
         public static function apropos(){
             include("View/a-propos.php");
         }
+		
+		public static function cgu(){
+            include("View/cgu.php");
+        }
 
         public static function accueilAdmin(){
             include("View/acceuilAdmin.php");
@@ -56,7 +60,7 @@ require_once("Model\Utilsateur.php");
         }
 
         public static function login() {
-            extract($_GET);
+            extract($_POST);
             $userExist = Utilisateur::UtilisateurExiste($mail);
             if(!$userExist) {
                 $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
