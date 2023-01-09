@@ -27,6 +27,7 @@
 			controllerAcceuil::accueil();
 		}
 	}
-	echo "<meta http-equiv='pragma' content='no-cache'/>"
+	echo "<meta http-equiv='pragma' content='no-cache'/>";
+	header("Cache-Control:no-cache");
 ?>
 
