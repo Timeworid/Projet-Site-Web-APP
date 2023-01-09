@@ -15,6 +15,7 @@
                         <button class="dropbtn"><img src="Data/menu.png" alt="menu" style="width:40px;height:40px;"></button>
                         <div class="liensmenu">
                             <a href="routeur.php?action=presentationProduit">Fiche Produit</a>
+                            <a href="routeur.php?action=pageFAQ">FAQ</a>
                             <?php if(isset($_SESSION['mail'])){?>
                             <a href="routeur.php?action=Profil">Compte</a>
                             <a href="routeur.php?action=Statistiques">Statistiques</a>
@@ -34,7 +35,7 @@
                 </div>
                 <a href="https://google.com"><img src="Data/search.png" alt="menu" style="width:40px;height:40px;"></a>
                 <div style="color:transparent";><p>__</p></div>
-                <a href="routeur.php?action=PageProduit"><img src="Data/utilisateur.png" alt="menu" style="width:40px;height:40px;"></a>
+                <a href="routeur.php?action=loginUtilisateur"><img src="Data/utilisateur.png" alt="menu" style="width:40px;height:40px;"></a>
             </a>
         </div>
     </header>
