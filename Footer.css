@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap%27');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer-global{
+	background-color: #ffffff;
+    padding: 70px 0;
+}
+.footer{
+   width: 33%;
+   padding: 0 15px;
+}
+.footer h1{
+	font-size: 18px;
+	color: black;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer h1::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #5acad2;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.liste a{
+	font-size: 16px;
+	color: black;
+	text-decoration: none;
+	font-weight: 300;
+	display: block;
+	transition: all 0.3s ease;
+}
+.liste a:hover{
+	color: grey;
+	padding-left: 8px;
+}
+
+.footer .social-links a:hover{
+	color: grey;
+}
+/*responsive*/
+@media(max-width: 767px){
+  .footer{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer{
+    width: 100%;
+}
+}

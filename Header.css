@@ -1,0 +1,109 @@
+/* BODY ET MISE EN FORME */
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap%27');
+/* EN-TETE */
+
+body{
+  margin-top: 80px;
+}
+.corentin{
+  position: fixed;
+  justify-content:space-between;
+  width: 100%;
+}
+.headerglobal{
+    background-color: rgb(242, 240, 240);
+    display:flex;
+    margin:0px;
+    padding: 0%;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    margin-bottom:60px
+}
+
+.headermobile{
+    background-color: rgb(206, 206, 206);
+    display:flex;
+    position: sticky;
+    z-index: 8;
+    flex-direction: row;
+}
+
+.menugauche{
+    margin: 0.25%;
+    display:flex;
+}
+
+/* MENU DEROULANT */
+
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .menuderoulant {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .liensmenu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .liensmenu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .liensmenu a:hover {background-color: #ddd;}
+  
+  .menuderoulant:hover .liensmenu {display: block;}
+  
+  .menuderoulant:hover .dropbtn {background-color:transparent;}
+
+
+/* SUITE HEADER */
+
+.espaceimage{
+    margin: 2px;
+}
+
+.menudroite{
+    margin: 0.5%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+/* BARRE DE RECHERCHE*/
+
+.searchbar input[type=text] {
+  float: right;
+  padding: 8px;
+  border: none;
+  font-size: 17px;
+  border: 1px solid #ccc;
+  margin-right: 20px;
+  margin-bottom: 2%;
+  border-color: #000;
+  font-family: 'Outfit', sans-serif;
+  max-width: 150px;
+  border-radius: 20px;
+}
+
+/* FIN BARRE DE RECHERCHE*/
+
+.logo{
+  width: 80px;
+  height: 40px;
+  padding-top: 16px;
+}

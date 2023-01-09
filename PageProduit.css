@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap%27');
+
+body
+{
+  margin: 0px;
+  font-family: 'Outfit', sans-serif;
+  color: #000;
+}
+
+.menudroite{
+  margin: 0.5%;
+  display:flex;
+  justify-content: flex-end;
+}
+
+
+.espaceimage{
+  margin: 2px;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.parallax1, .parallax2, .parallax3,.parallax4 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.parallax1 {
+  background-image: url("Data/fondecran1.jpg");
+  min-height: 100%;
+}
+
+.parallax2 {
+  background-image: url("Data/fondecran2.jpg");
+  min-height: 400px;
+}
+
+.parallax3 {
+  background-image: url("Data/fondecran3.jpg");
+  min-height: 400px;
+}
+
+.parallax4 {
+  background-image: url("Data/fondecran4.jpg");
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.texteparallax {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  z-index: 2;
+}
+
+.texteparallax span.contourtexteparallax {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  z-index: 2;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Outfit", sans-serif;
+  color: #111;
+}
+
+/* FIN CORPS DE LA PAGE PRODUIT */
+
+/* PARTIE ACHAT PRODUIT */
+
+.produit{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.avisclient{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avisutilisateurs{
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  align-items: center;
+  justify-content: center;
+}
+
+.commentaires{
+  display: flex;
+  min-width: 500px;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+  padding: 10px;
+}
+
+/* FIN PARTIE ACHAT PRODUIT */
+
+/* Enleve le parallax pour tablettes et les téléphones */
+@media only screen and (max-device-width: 1024px) {
+  .parallax1, .parallax2, .parallax3 {
+    background-attachment: scroll;
+  }
+}
+
+/*VIDEO DE FOND*/
+
+#myVideo {
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width: 120%; 
+  max-height: 120%;
+}
+
+video {
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+  opacity: 0.65;
+}
+
+.textevideo {
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  margin-left: 5%;
+  z-index: 2;
+}
+
+h5 {
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 8vw;
+  text-align: center;
+}
+
+/* CSS ETOILES NOTATION */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.notation {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.notation:not(:checked) > input {
+  position:relative;
+  display: none;
+}
+.notation:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.notation:not(:checked) > label:before {
+  content: '★ ';
+}
+.notation > input:checked ~ label {
+  color: #ffc700;    
+}
+.notation:not(:checked) > label:hover,
+.notation:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.notation > input:checked + label:hover,
+.notation > input:checked + label:hover ~ label,
+.notation > input:checked ~ label:hover,
+.notation > input:checked ~ label:hover ~ label,
+.notation > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+/* FIN CSS ETOILES NOTATION */

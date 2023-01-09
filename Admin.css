@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap%27");
+
+body{
+    background-color: #E0E0E0;
+}
+
+textarea{
+    resize: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: large;
+    height: 200px;
+    margin : 1.5%;
+    padding: 1.5%;
+    background-color: #E0E0E0;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+
+.flex-stat{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #A8B9A2;
+    border-radius: 5px;  
+    align-items: center;  
+}
+
+.flex-ticket{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 120px;
+    margin-bottom: 5%;
+    background-color: #A8B9A2;
+    border-radius: 5px;    
+}
+
+.vertical-line{
+    border-left: 2px solid white;
+    display: inline-block;
+    height: 100px;
+    margin: 15px;
+}
+
+.statistiques{
+    display: flex;
+}
+
+
+.flex-messages{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+
+.container{
+    border: 0.5px solid black;
+    border-radius: 5px;  
+    background-color: #A8B9A2 ;
+    margin: 1%;
+    width: 100%;
+    padding: 1%;
+    height: 300px;
+    
+}
+
+.container-msg{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #E0E0E0 ;
+    margin: 3%;
+    width: 100%;
+    padding: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    height: 500px;
+}
+
+.rep-msg{
+    margin-bottom: auto;
+    border: 0.5px solid black;
+    border-radius: 10px;  
+    background-color: #7FC0C4 ;
+    margin: 1%;
+    width: 75%;
+    padding: 0.2%;
+    height: fit-content;
+}
+
+
+
+/* scrollbar perso */
+
+/* firefox only */
+
+.scroller{
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+/* le reste */
+
+.scroller::-webkit-scrollbar-track{
+    background: white;
+    border-radius: 10px;    
+}
+
+.scroller::-webkit-scrollbar {
+    padding : 0.2%;
+    width: 12px;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+    background-color: #E0E0E0;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.boutton{
+    justify-content: center;
+    border-radius: 5px;
+    margin: 3%; 
+    text-align: center;
+    display: flex;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+#boutton-envoyer{
+    width: 40%;
+    height: 40px;
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: #E0E0E0;
+    font-family: 'Outfit', sans-serif;
+    font-size: large;
+}
+
+#boutton-envoyer:hover{
+    background-color: rgb(178, 172, 172);
+    cursor: pointer;
+    
+}
+
+.msg{
+    background: #E0E0E0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin: 3%; 
+    text-align: center;
+    display: flex;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+.flexbox{
+    width: 100%;
+    background: #E0E0E0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin: 3%;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+    flex-direction: column;
+}
+
+.flex-container-half{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container-100{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.admin-text{
+    margin: 10px;
+}
+
+.admin-text-msg{
+    margin: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-stats{
+    color: white;
+}
+
+p{
+    font-family: 'Outfit', sans-serif;
+    font-size: large;
+}
+
+.data-ticket{
+    padding: 1%;
+    font-size: large;
+    width: -webkit-fill-available;
+    background: rgb(178, 172, 172);
+    border-radius: 3px;
+    border: 1px solid black;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container-bulles{
+    margin: 2%;
+    width: 100%;
+    padding: 1%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
+}
+
+.input-send-msg{
+    padding: 1%;
+    font-size: large;
+    width: -webkit-fill-available;
+    background: #7FC0C4;
+    border-radius: 3px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.bubble-text-right{
+    max-width: 50%;
+    margin: 2%;
+    margin-top: auto;
+    background:#7FC0C4; 
+    padding:7px 15px; 
+    border-radius:3px; 
+    margin-left: auto;
+    word-break: break-all;
+    text-align: left;
+    
+}
+
+.bubble-text-left{ 
+    max-width: 50%;
+    margin: 2%;
+    margin-top: auto;
+    background:#A8B9A2; 
+    padding:7px 15px; 
+    border-radius:3px;
+    margin-right: auto;
+    word-break: break-all;
+    text-align: left;
+}
+
+.a-invisible{
+    text-decoration: none;
+    color:inherit;
+}
+
+
