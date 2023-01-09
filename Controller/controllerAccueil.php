@@ -55,7 +55,7 @@ require_once("Model\Utilsateur.php");
             extract($_GET);
             $userExist = Utilisateur::UtilisateurExiste($mail);
             if(!$userExist) {
-                $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte <a href='routeur.php?action=CreerCompte'>cliquez ici</a>";
+                $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
 				$_SESSION["erreur"] = $erreur;
                 self::loginUtilisateur();
             }
@@ -64,9 +64,9 @@ require_once("Model\Utilsateur.php");
                 if($canConnect) {
 					unset($_SESSION["erreur"]);
                     $_SESSION["mail"] = $mail;
-                     $admin = Utilisateur::getAdminByMail($mail);
-                     $_SESSION["admin"] = $admin;
-                     controllerAcceuil::accueil();
+                    $admin = Utilisateur::getAdminByMail($mail);
+                    $_SESSION["admin"] = $admin;
+                    controllerAcceuil::accueil();
                 } else {
                     $erreur = "Votre login ou votre mot de passe est incorrect";
                     $_SESSION["erreur"] = $erreur;

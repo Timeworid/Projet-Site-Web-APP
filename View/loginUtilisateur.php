@@ -9,6 +9,11 @@
     <?php
         include("View/Header.php")
     ?>
+    <style>
+        .logo{
+            height: 56px;
+        }
+    </style>
     <div class="wrapper">
         <div class="title-text">
             <div class="title insc">
@@ -73,6 +78,12 @@
                             });
                         </script>
                     </div>
+                    <p>
+                        <?php 
+                            if (isset($_SESSION["erreur"])) {
+                            echo $_SESSION["erreur"];} 
+                        ?>
+                    </p>
                 </form>
             </div>
         </div>

@@ -1,6 +1,7 @@
-header{
+.Selection{
     display: flex;
     justify-content: space-between;
+    padding:0%;
 }
 
 p{
