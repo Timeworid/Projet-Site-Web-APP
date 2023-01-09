@@ -22,7 +22,7 @@
   	 			<h1>Nous contacter</h1>
   	 			<ul class="liste">
   	 				<li><a href="routeur.php?action=pageFAQ">Problèmes fréquents</a></li>
-  	 				<li><a href="routeur.php?action=">Nos offres d'emploi</a></li>
+  	 				<li><a href="routeur.php?action=">Protection des données</a></li>
 					<li><a href="routeur.php?action=ticketAdmin">Contacter administrateur</a></li>
   	 			</ul>
   	 		</div>
