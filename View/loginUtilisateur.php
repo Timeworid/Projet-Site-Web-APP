@@ -13,11 +13,6 @@
 	    foreach ($_POST as $key => $value)
 		    $_POST[$key] = htmlspecialchars($value);
     ?>
-    <style>
-        .logo{
-            height: 56px;
-        }
-    </style>
     <div class="wrapper">
         <div class="title-text">
             <div class="title insc">

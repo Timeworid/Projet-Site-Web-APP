@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </a>
-            <a href="routeur.php?action=pageaccueil"><img class="logo" src="Data/logo.png" alt="menu" style="width:80px;padding-top: 16px;"></a>
+            <a href="routeur.php?action=pageaccueil"><img class="logo" src="Data/logo.png" alt="menu" style="width:80px;height:56px;padding-top: 16px;"></a>
         </div>
         <div style='align-items: center;' class= "menudroite">
                 <div class="searchbar">
