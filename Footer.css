@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap%27');
 body{
-	line-height: 1.5;
 	font-family: 'Poppins', sans-serif;
 }
 *{
@@ -19,22 +18,22 @@ body{
 ul{
 	list-style: none;
 }
-.footer-global{
+.corentin1-global{
 	background-color: #ffffff;
     padding: 70px 0;
 }
-.footer{
+.corentin1{
    width: 33%;
    padding: 0 15px;
 }
-.footer h1{
+.corentin1 h1{
 	font-size: 18px;
 	color: black;
 	margin-bottom: 35px;
 	font-weight: 500;
 	position: relative;
 }
-.footer h1::before{
+.corentin1 h1::before{
 	content: '';
 	position: absolute;
 	left:0;
@@ -44,7 +43,7 @@ ul{
 	box-sizing: border-box;
 	width: 50px;
 }
-.footer ul li:not(:last-child){
+.corentin1 ul li:not(:last-child){
 	margin-bottom: 10px;
 }
 .liste a{
@@ -60,18 +59,18 @@ ul{
 	padding-left: 8px;
 }
 
-.footer .social-links a:hover{
+.corentin1 .social-links a:hover{
 	color: grey;
 }
 /*responsive*/
 @media(max-width: 767px){
-  .footer{
+  .corentin1{
     width: 50%;
     margin-bottom: 30px;
 }
 }
 @media(max-width: 574px){
-  .footer{
+  .corentin1{
     width: 100%;
 }
 }

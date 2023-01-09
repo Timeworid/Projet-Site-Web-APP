@@ -10,7 +10,7 @@
   <footer class="footer-global">
   	 <div class="container">
   	 	<div class="row">
-  	 		<div class="footer">
+  	 		<div class="corentin1">
   	 			<h1>Plus d'informations</h1>
   	 			<ul class="liste">
 					<li><a href="routeur.php?action=apropos">A propos</a></li>
@@ -18,7 +18,7 @@
 					<li><a href="routeur.php?action=">Conditions générales d'utilisation</a></li>
   	 			</ul>
   	 		</div>
-  	 		<div class="footer">
+  	 		<div class="corentin1">
   	 			<h1>Nous contacter</h1>
   	 			<ul class="liste">
   	 				<li><a href="routeur.php?action=pageFAQ">Problèmes fréquents</a></li>
@@ -26,7 +26,7 @@
 					<li><a href="routeur.php?action=ticketAdmin">Contacter administrateur</a></li>
   	 			</ul>
   	 		</div>
-  	 		<div class="footer">
+  	 		<div class="corentin1">
   	 			<h1>Nous suivre</h1>
   	 			<div class="social-links">
 					<a href="routeur.php?action="><img class="espaceimage" src="Data/facebook.png" height="35px" width="35px" alt=""></a>
