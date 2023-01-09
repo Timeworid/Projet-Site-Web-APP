@@ -1,7 +1,5 @@
 /* BODY ET MISE EN FORME */
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap%27');
-
-
 /* EN-TETE */
 
 header{
@@ -18,6 +16,7 @@ header{
     position: fixed;
     z-index: 10;
     top: 0px;
+
 }
 
 .headermobile{

@@ -27,5 +27,6 @@
 			controllerAcceuil::accueil();
 		}
 	}
+	echo "<meta http-equiv='pragma' content='no-cache'/>"
 ?>
 
