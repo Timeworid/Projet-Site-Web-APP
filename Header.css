@@ -1,11 +1,13 @@
 /* BODY ET MISE EN FORME */
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap%27');
 /* EN-TETE */
-.corentin{
-  position: fixed;
-  justify-content:space-between;
-  width: 100%;
+
+header{
+    position: fixed;
+    justify-content:space-between;
+    width: 100%;
 }
+
 .headerglobal{
     background-color: rgb(242, 240, 240);
     display:flex;
