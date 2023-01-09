@@ -7,6 +7,9 @@
 	unset($_SESSION["erreur"]); // On reset le cookie qui s'occupera des erreurs
 	extract($_GET); // On recupera les actions effectuées
 
+	
+	echo "<meta http-equiv='pragma' content='no-cache'/>";
+	header("Cache-Control:no-cache");
 	if(!isset($action)) { // La variable action enregistra les différentes actions de l'utilisateur via la méthode Get : s'il n'est pas set, on renvoie à l'acceuil.
 		controllerAcceuil::accueil();
 	}
@@ -27,7 +30,5 @@
 			controllerAcceuil::accueil();
 		}
 	}
-	echo "<meta http-equiv='pragma' content='no-cache'/>";
-	header("Cache-Control:no-cache");
 ?>
 
