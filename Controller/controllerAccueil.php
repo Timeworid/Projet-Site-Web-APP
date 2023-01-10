@@ -9,15 +9,20 @@ require_once("Model\Utilsateur.php");
         }
 
         public static function Statistiques(){
-
-            include("View/Statistiques.php");
+            if (isset($_SESSION['mail'])) {
+                include("View/Statistiques.php");
+            }else{
+                include("View/Statistiques.php");
+                //self::accueil();
+            }
         }
 
         public static function Profil(){
             if (isset($_SESSION['mail'])) {
                 include("View/Profil.php");
             }else{
-            self::accueil();
+                include("View/Profil.php");
+                //self::accueil();
             }
         }
         public static function presentationProduit(){
@@ -27,10 +32,6 @@ require_once("Model\Utilsateur.php");
 
         public static function apropos(){
             include("View/a-propos.php");
-        }
-		
-		public static function cgu(){
-            include("View/cgu.php");
         }
 
         public static function accueilAdmin(){
@@ -60,6 +61,7 @@ require_once("Model\Utilsateur.php");
         }
 
         public static function login() {
+            
             extract($_POST);
             $userExist = Utilisateur::UtilisateurExiste($mail);
             if(!$userExist) {
@@ -84,7 +86,7 @@ require_once("Model\Utilsateur.php");
         }
 
         public static function register() {
-            extract($_GET);
+            extract($_POST);
             $userExist = Utilisateur::UtilisateurExiste($mail);
             if($userExist) {
                 $erreur = "Ce nom d'utilisateur est déjà utilisé";
