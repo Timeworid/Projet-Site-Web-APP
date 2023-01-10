@@ -58,7 +58,7 @@
         <div class ="avisclient">
             <img src="Data/casque.png" alt="imageproduit" style="height:500px;">
         </div>
-        <div class="notation">
+        <div class="notation" id=etoiles>
             <input type="radio" id="etoiles5" name="notation" value="5" />
             <label for="etoiles5" title="text">5 etoiles</label>
             <input type="radio" id="etoiles4" name="notation" value="4" />
@@ -70,8 +70,19 @@
             <input type="radio" id="etoiles1" name="notation" value="1" />
             <label for="etoiles1" title="text">1 etoiles</label>
         </div>
+        <!-- DEBUG -> Vérifie si une étoile est cochée -->
+
+        <!-- <p>
+            <input type="button" id="check" onclick="nowCheck()" value="Click it" />
+        </p> -->
         <div style="color:white;"><p>Note moyenne des utiliisateurs</p></div>
-    </div>
+</div>
+
+<!-- Verifie si on peut mettre un avis/si on est connecté -->
+<?php
+    
+
+?>
     <div class="avisutilisateurs">
         <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
@@ -82,8 +93,12 @@
         <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
         </div>
+        <div class="commentaires2">
+            <input type="Text" placeholder="Laissez-nous un avis" name="mail" required="" style="border-radius:20px; color:grey;">
+        </div>
+        <p><button class="bouton" style="width:150px; height:30px; hover:background-color:grey; border-radius:20px">Laissez-nous un avis</button></p>
+        </div>
     </div>
-</div>
 
 <div style="position:relative;">
     <div style="font-family: 'Outfit', sans-serif; color:black;background-color:#7FC0C4;text-align:center;padding:50px 80px;text-align: justify;">

@@ -110,13 +110,25 @@ h3 {
 
 .commentaires{
   display: flex;
-  min-width: 500px;
+  min-width: 100%;
   align-items: center;
   justify-content: center;
   margin: 1%;
   padding: 10px;
 }
 
+.commentaires2 input{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+  padding: 10px;
+}
+
+.commentaires2{
+  width: 99%;
+}
 /* FIN PARTIE ACHAT PRODUIT */
 
 /* Enleve le parallax pour tablettes et les téléphones */
