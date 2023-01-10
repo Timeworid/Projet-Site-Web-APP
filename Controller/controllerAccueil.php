@@ -17,7 +17,8 @@ require_once("Model\Utilsateur.php");
             if (isset($_SESSION['mail'])) {
                 include("View/Profil.php");
             }else{
-            self::accueil();
+                include("View/Profil.php");
+                //self::accueil();
             }
         }
         public static function presentationProduit(){
