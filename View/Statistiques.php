@@ -45,7 +45,7 @@
           height: 400,
           legend: { position: 'bottom' },
           chartArea: {
-            left:55,
+            left:150,
             top:50,
             height:300,
             width:1400,
@@ -111,6 +111,107 @@
         var chart_Card = new google.visualization.LineChart(document.getElementById('Card_Graph'));
 
         chart_Card.draw(data_Card, options_Card);
+
+        var data_C02 = google.visualization.arrayToDataTable([
+          ['Heure', 'Température'],
+          ['00h',  2],
+          ['01h',  3],
+          ['02h',  3],
+          ['03h',  4],
+          ['04h',  5],
+          ['05h',  5],
+          ['06h',  5],
+          ['07h',  6],
+          ['08h',  6],
+          ['09h',  7],
+          ['10h',  7],
+          ['11h',  8],
+          ['12h',  9],
+          ['13h',  9],
+          ['14h',  8],
+          ['15h',  8],
+          ['16h',  7],
+          ['17h',  6],
+          ['18h',  5],
+          ['19h',  4],
+          ['20h',  4],
+          ['21h',  3],
+          ['22h',  2],
+          ['23h',  1],
+          ['24h',  1]
+        ]);
+
+        var options_C02 = {
+          title: 'Evolution de la température pendant la journée',
+          curveType: 'function',
+          width: 1200,
+          height: 400,
+          legend: { position: 'bottom' },
+          chartArea: {
+            left:55,
+            top:50,
+            height:300,
+            width:1400,
+            backgroundColor: {
+            fill: '	#FFFFFF',
+            fillOpacity: 0.8,
+            }
+            },
+        }
+
+        var chart_C02 = new google.visualization.LineChart(document.getElementById('C02_Graph'));
+
+        chart_C02.draw(data_C02, options_C02);
+
+        var data_Sonore = google.visualization.arrayToDataTable([
+          ['Heure', 'Température'],
+          ['00h',  2],
+          ['01h',  3],
+          ['02h',  3],
+          ['03h',  4],
+          ['04h',  5],
+          ['05h',  5],
+          ['06h',  5],
+          ['07h',  6],
+          ['08h',  6],
+          ['09h',  7],
+          ['10h',  7],
+          ['11h',  8],
+          ['12h',  9],
+          ['13h',  9],
+          ['14h',  8],
+          ['15h',  8],
+          ['16h',  7],
+          ['17h',  6],
+          ['18h',  5],
+          ['19h',  4],
+          ['20h',  4],
+          ['21h',  3],
+          ['22h',  2],
+          ['23h',  1],
+          ['24h',  1]
+        ]);
+
+        var options_Sonore = {
+          title: 'Evolution de la température pendant la journée',
+          width: 1200,
+          height: 400,
+          legend: { position: 'bottom' },
+          chartArea: {
+            left:55,
+            top:50,
+            height:300,
+            width:1400,
+            backgroundColor: {
+            fill: '	#FFFFFF',
+            fillOpacity: 0.8,
+            }
+            },
+        }
+
+        var chart_Sonore = new google.visualization.LineChart(document.getElementById('Sonore_Graph'));
+
+        chart_Sonore.draw(data_Sonore, options_Sonore);
       }
 
     </script>
@@ -241,6 +342,13 @@
         </div>
         <div class="CO2" id="D3">
             <div class="Stats_Graphique">
+                <div class="Graphique">
+                    <div id="C02_Graph" style="margin-top:20px"></div>
+                    <button class="Button">
+                        <img src="Data/plein-ecran.png" height=50px; width=50px>
+                        <p>Afficher en plein écran</p>
+                    </button>
+                </div>
                 <div class="Stats">
                     <div class="Infos">
                         <div>
@@ -270,6 +378,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="Géolocalisation" id="D4">
+            <div class="Stats_Graphique">
                 <div class="Graphique">
                     <div>
                         <img class="graph" src="Data/graphique.png">
@@ -279,10 +391,6 @@
                         <p>Afficher en plein écran</p>
                     </button>
                 </div>
-            </div>
-        </div>
-        <div class="Géolocalisation" id="D4">
-            <div class="Stats_Graphique">
                 <div class="Stats">
                     <div class="Infos">
                         <div>
@@ -312,19 +420,17 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="Sonore" id="D5">
+            <div class="Stats_Graphique">
                 <div class="Graphique">
-                    <div>
-                        <img class="graph" src="Data/graphique.png">
-                    </div>
+                    <div id="Sonore_Graph" style="margin-top:20px"></div>
                     <button class="Button">
                         <img src="Data/plein-ecran.png" height=50px; width=50px>
                         <p>Afficher en plein écran</p>
                     </button>
                 </div>
-            </div>
-        </div>
-        <div class="Sonore" id="D5">
-            <div class="Stats_Graphique">
                 <div class="Stats">
                     <div class="Infos">
                         <div>
@@ -353,15 +459,6 @@
                             <br></br>
                         </div>
                     </div>
-                </div>
-                <div class="Graphique">
-                    <div>   
-                        <img class="graph" src="Data/graphique.png">
-                    </div>
-                    <button class="Button">
-                        <img src="Data/plein-ecran.png" height=50px; width=50px>
-                        <p>Afficher en plein écran</p>
-                    </button>
                 </div>
             </div>
         </div>
