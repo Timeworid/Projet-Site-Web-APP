@@ -39,11 +39,12 @@ require_once("Model\Avis.php");
 
 
         public static function RecupMsgUser(){
-            return Avis::RecupererMessage();
+            $avis = Avis::RecupererMessage();
         }
 
         public static function EnvoyerMsgUser(){
         if (isset($_SESSION["mail"])) {
+            
         }
         }
 

@@ -3,6 +3,7 @@
 <head>
     <title>Test1</title>
     <link rel="stylesheet" href="PageProduit.css">
+    <script src="Javascript/PageProduit.js"></script>
 </head>
 <body>
 
@@ -81,40 +82,18 @@
 <!-- Verifie si on peut mettre un avis/si on est connecté -->
 
 <script>
-if (window.XMLHttpRequest) {
-    xmlhttp=new XMLHttpRequest();
-} else {
-    if (window.ActiveXObject)
-        try {
-            xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");
-        } catch (e) {
-            try {
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-            } catch (e) {
-                return NULL;
-            }
-        }
-}
 
-xmlhttp.open(GET, "routeur.php", true);
-xmlhttp.send("action=RecupMsgUser"); // -> fonction à appeler dans controlleur accueil
-
-xmlhttp.onreadystatechange=function(){
-if (xmlhttp.readyState==4 && xmlhttp.status==200){
-    document.getElementsByClassName("commentaires").innerHTML = xmlhttp.responseText;
-}
-}
 </script>
 
     <div class="avisutilisateurs">
         <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
+            <p class="MsgUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
         </div>
         <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
+            <p class="MsgUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
         </div>
         <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
+            <p class="MsgUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
         </div>
         <div class="commentaires2">
             <input type="Text" placeholder="Laissez-nous un avis" name="mail" required="" style="border-radius:20px; color:grey;">
