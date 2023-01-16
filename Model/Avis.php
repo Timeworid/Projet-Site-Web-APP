@@ -24,6 +24,20 @@
     	$this->idUtilisateur = $idUtilisateur;
     }
 
+	public static function RecupererMessage(){
+		$requetePreparee = "SELECT count(*) FROM avis WHERE note =5";
+		$req_prep = Connexion::pdo()->prepare($requetePreparee);
+		$valeurs = array();
+		try {
+			$req_prep->execute($valeurs);
+			$r = $req_prep->fetch();
+		return ($r[0] == 1);
+		} catch (PDOException $e) {
+			echo "erreur : ".$e->getMessage()."<br>";
+		}
+		return false;
+	}
+
     public function getIdAvis(){
 		return $this->idAvis;
 	}

@@ -79,10 +79,33 @@
 </div>
 
 <!-- Verifie si on peut mettre un avis/si on est connecté -->
-<?php
-    
 
-?>
+<script>
+if (window.XMLHttpRequest) {
+    xmlhttp=new XMLHttpRequest();
+} else {
+    if (window.ActiveXObject)
+        try {
+            xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {
+                return NULL;
+            }
+        }
+}
+
+xmlhttp.open(GET, "routeur.php", true);
+xmlhttp.send("action=RecupMsgUser"); // -> fonction à appeler dans controlleur accueil
+
+xmlhttp.onreadystatechange=function(){
+if (xmlhttp.readyState==4 && xmlhttp.status==200){
+    document.getElementsByClassName("commentaires").innerHTML = xmlhttp.responseText;
+}
+}
+</script>
+
     <div class="avisutilisateurs">
         <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
@@ -96,7 +119,7 @@
         <div class="commentaires2">
             <input type="Text" placeholder="Laissez-nous un avis" name="mail" required="" style="border-radius:20px; color:grey;">
         </div>
-        <p><button class="bouton" style="width:150px; height:30px; hover:background-color:grey; border-radius:20px">Laissez-nous un avis</button></p>
+        <button class="bouton-avis bouton-avis5">Laissez-nous un avis</button>
         </div>
     </div>
 

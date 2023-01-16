@@ -131,6 +131,7 @@
 		return false;
 	}
 
+
 	public static function canConnect($mail, $mdp) {
 		$motDePasse = self::getMDPByMail($mail);
 		return $mdp == $motDePasse;

@@ -1,6 +1,9 @@
 <?php
 // require ici tous les models (les différentes tables de la base de données).
 require_once("Model\Utilsateur.php");
+
+require_once("Model\Avis.php");
+
     class controllerAcceuil{
 
         public static function accueil(){
@@ -34,6 +37,16 @@ require_once("Model\Utilsateur.php");
             include("View/a-propos.php");
         }
 
+
+        public static function RecupMsgUser(){
+            return Avis::RecupererMessage();
+        }
+
+        public static function EnvoyerMsgUser(){
+        if (isset($_SESSION["mail"])) {
+        }
+        }
+
         public static function accueilAdmin(){
             include("View/acceuilAdmin.php");
         }
@@ -63,8 +76,8 @@ require_once("Model\Utilsateur.php");
         public static function login() {
             
             extract($_POST);
-            $userExist = Utilisateur::UtilisateurExiste($mail);
-            if(!$userExist) {
+            $MsgUser = Utilisateur::UtilisateurExiste($mail);
+            if(!$MsgUser) {
                 $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
 				$_SESSION["erreur"] = $erreur;
                 self::loginUtilisateur();
@@ -87,8 +100,8 @@ require_once("Model\Utilsateur.php");
 
         public static function register() {
             extract($_POST);
-            $userExist = Utilisateur::UtilisateurExiste($mail);
-            if($userExist) {
+            $MsgUser = Utilisateur::UtilisateurExiste($mail);
+            if($MsgUser) {
                 $erreur = "Ce nom d'utilisateur est déjà utilisé";
                 $_SESSION["erreur"] = $erreur;
                 self::loginUtilisateur();
