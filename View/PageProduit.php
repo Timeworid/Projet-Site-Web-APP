@@ -7,7 +7,7 @@
 <body>
 
 <?php
-    include("View/Header.php");
+     include("View/Header.php");
 ?>
 
 <!--CORPS DE LA PAGE-->>
