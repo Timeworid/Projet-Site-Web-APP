@@ -8,7 +8,7 @@
 </head>
 <body>
   <footer class="corentin1-global">
-  	 <div class="container">
+  	 <div class="containerHF">
   	 	<div class="row">
   	 		<div class="corentin1">
   	 			<h1>Plus d'informations</h1>
@@ -23,7 +23,7 @@
   	 			<ul class="liste">
   	 				<li><a href="routeur.php?action=pageFAQ">Problèmes fréquents</a></li>
   	 				<li><a href="routeur.php?action=">Protection des données</a></li>
-					<li><a href="routeur.php?action=ticketAdmin">Contacter administrateur</a></li>
+					<li><a href="routeur.php?action=accueilAssistance">Contacter administrateur</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="corentin1">

@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="Admin.css">
 </head>
 <body>
-    <?php
-        include("View/Header.php")
+    <?php 
+        include("View/Header.php");
     ?>
     <div class="flex-ticket">
         <div class= "flex-container-half">
@@ -43,8 +43,8 @@
 
         </div>
     </div>
-    <?php
-        include("View/Footer.php");
+    <?php 
+include("View/Footer.php");
     ?>
 </body> 
 </html>

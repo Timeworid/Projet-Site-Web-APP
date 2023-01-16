@@ -14,7 +14,13 @@
                             <a href="routeur.php?action=Profil">Compte</a>
                             <a href="routeur.php?action=Statistiques">Statistiques</a>
                             <a href="routeur.php?action=Deconnexion">Déconnexion</a>
-                            <?php } else { ?>
+                            <?php if (isset($_SESSION['admin'])) {
+                                if ($_SESSION['admin'] == 1) { ?>
+                                    <a href="routeur.php?action=accueilAdmin">Menu Admin</a>
+                            <?php 
+                                }
+                            }
+                            } else { ?>
                             <a href="routeur.php?action=loginUtilisateur">Compte</a>
                             <?php } ?>
                         </div>

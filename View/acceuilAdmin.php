@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    include("View/Header.php");
+     include("View/Header.php");
     ?>
 
     <div class="flex-stat">
@@ -21,27 +21,27 @@
     </div>
 
     <div class="flex-messages">
-        <div class="container"> 
+        <div class="container scroller"> 
             <!-- a rendre dynamique avec le php-->
-            <a href="routeur.php?action=ticketAdmin" class="a-invisible">
+            <a href="routeur.php?action=messageAdmin" class="a-invisible">
                 <div class="msg">
                     <img src="Data/image.png" width="40px">
                     <p class="admin-text-msg">FEFNRIUNREIUVNRIUGRURBVRUBRYURBVRUVBRVRBVRB</p>
                 </div>
             </a>
-            <a href="routeur.php?action=ticketAdmin" class="a-invisible">
+            <a href="routeur.php?action=messageAdmin" class="a-invisible">
                 <div class="msg">
                     <img src="Data/image.png" width="40px">
                     <p class="admin-text-msg">TEST</p>
                 </div>
             </a>
-            <a href="routeur.php?action=ticketAdmin" class="a-invisible">
+            <a href="routeur.php?action=messageAdmin" class="a-invisible">
                 <div class="msg">
                     <img src="Data/image.png" width="40px">
                     <p class="admin-text-msg">TEST</p>
                 </div>
             </a>
-            <a href="routeur.php?action=ticketAdmin" class="a-invisible">
+            <a href="routeur.php?action=messageAdmin" class="a-invisible">
                 <div class="msg">
                     <img src="Data/image.png" width="40px">
                     <p class="admin-text-msg">TEST</p>
@@ -51,31 +51,31 @@
         </div>
         
         <div class="container scroller"> 
-            <a href="routeur.php?action=msgAdmin" class="a-invisible">
+            <a href="routeur.php?action=chatAdmin" class="a-invisible">
                 <div class="msg">
                     <img src="Data/bulle.png" width="40px">
                     <p class="admin-text-msg">TEST</p>
                 </div>
             </a> 
-            <a href="routeur.php?action=msgAdmin" class="a-invisible">
+            <a href="routeur.php?action=chatAdmin" class="a-invisible">
                 <div class="msg">
                     <img src="Data/bulle.png" width="40px">
                     <p class="admin-text-msg">TEST</p>
                 </div>
             </a> 
-            <a href="routeur.php?action=msgAdmin" class="a-invisible">
+            <a href="routeur.php?action=chatAdmin" class="a-invisible">
                 <div class="msg">
                     <img src="Data/bulle.png" width="40px">
                     <p class="admin-text-msg">TEST</p>
                 </div>
             </a> 
-            <a href="routeur.php?action=msgAdmin" class="a-invisible">
+            <a href="routeur.php?action=chatAdmin" class="a-invisible">
                 <div class="msg">
                     <img src="Data/bulle.png" width="40px">
                     <p class="admin-text-msg">TEST</p>
                 </div>
             </a>
-            <a href="routeur.php?action=msgAdmin" class="a-invisible">
+            <a href="routeur.php?action=chatAdmin" class="a-invisible">
                 <div class="msg">
                     <img src="Data/bulle.png" width="40px">
                     <p class="admin-text-msg">TEST</p>
