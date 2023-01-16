@@ -119,7 +119,7 @@
 
 	public static function UtilisateurExiste($mail) {
 		$requetePreparee = "SELECT count(*) FROM Utilisateur WHERE mail = :tag_mail"; 
-		$req_prep = Connexion::pdo()->prepare($requetePreparee);
+		$req_prep = Connexion::pdo()->prepare($requetePreparee);	
 		$valeurs = array("tag_mail" => $mail);
 		try {
 			$req_prep->execute($valeurs);
@@ -139,7 +139,7 @@
 	public static function AjouterUtilisateur($mail, $motDePasse, $nom, $prenom, $dateNaissance) {
 		$requetePreparee = "INSERT INTO utilisateur VALUES(:tag_mail, :tag_nom, :tag_prenom, :tag_dateNaissance, NULL, NULL, NULL, NULL, :tag_motDePasse,:tag_admin);";
 		$req_prep = Connexion::pdo()->prepare($requetePreparee);
-		$tags = ["tag_mail" => $mail, "tag_motDePasse" => $motDePasse,  "tag_nom" => $nom, "tag_prenom" => $prenom, "tag_dateNaissance" => $dateNaissance, "tag_admin" => 0];
+		$tags = ["tag_mail" => $mail,  "tag_nom" => $nom, "tag_prenom" => $prenom, "tag_dateNaissance" => $dateNaissance, "tag_motDePasse" => $motDePasse, "tag_admin" => 0];
 		try {
 			$req_prep->execute($tags);
 		} catch (PDOException $e) {
