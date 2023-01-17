@@ -95,7 +95,8 @@ require_once("Model\Utilsateur.php");
             } else {
                 if($motDePasse == $motDePasse2) {
                     unset($_SESSION["erreur"]);
-                    Utilisateur::AjouterUtilisateur($mail, $motDePasse, $nom, $prenom, $dateNaissance);
+                    $motDePasse2=password_hash($motDePasse, PASSWORD_DEFAULT);
+                    Utilisateur::AjouterUtilisateur($mail, $motDePasse2, $nom, $prenom, $dateNaissance);
                     $_SESSION["mail"] = $mail;
                     $_SESSION["admin"] = 0;
                     controllerAcceuil::accueil();

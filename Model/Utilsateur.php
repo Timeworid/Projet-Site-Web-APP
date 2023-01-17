@@ -133,7 +133,7 @@
 
 	public static function canConnect($mail, $mdp) {
 		$motDePasse = self::getMDPByMail($mail);
-		return $mdp == $motDePasse;
+		return password_verify($mdp, $motDePasse);
 	}
 
 	public static function AjouterUtilisateur($mail, $motDePasse, $nom, $prenom, $dateNaissance) {
