@@ -1,9 +1,13 @@
 <?php
 // require ici tous les models (les différentes tables de la base de données).
 require_once("Model\Utilsateur.php");
+<<<<<<< Updated upstream
 
 require_once("Model\Avis.php");
 
+=======
+require_once("Model\Statistique.php");
+>>>>>>> Stashed changes
     class controllerAcceuil{
 
         public static function accueil(){
@@ -21,6 +25,14 @@ require_once("Model\Avis.php");
                 include("View/Statistiques.php");
                 //self::accueil();
             }
+        }
+
+        public static function RecupStats(){
+            if(isset($_SESSION["mail"])){
+                echo Statistique::RecupStats($_SESSION["mail"]);
+                return;
+            }
+            return;
         }
 
         public static function Profil(){
