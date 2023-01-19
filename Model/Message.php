@@ -23,9 +23,9 @@
 
 
 	public static function envoiMessage($message, $utilisateur, $idConversation){
-		$requetePreparee = "INSERT INTO message VALUES(:tag_idConversation, :tag_dateMessage, :tag_contenuMessage);";
+		$requetePreparee = "INSERT INTO message VALUES(:tag_idConversation, :tag_dateMessage, :tag_contenuMessage, :tag_idMessage);";
 		$req_prep = Connexion::pdo()->prepare($requetePreparee);
-		$tags = ["tag_idConversation" => $idConversation,"tag_dateMessage" => date('y/m/d H:i:s'),"tag_contenuMessage"=>$message];
+		$tags = ["tag_idConversation" => $idConversation,"tag_dateMessage" => date('y/m/d H:i:s'),"tag_contenuMessage"=>$message, "tag_idMessage" =>""];
 		try{
 			$req_prep->execute($tags);
 		} catch (PDOException $e) {

@@ -13,6 +13,9 @@ require_once("Model\Message.php");
             include("View/pageaccueil.php");
         }
 
+        public static function listeUtilisateur(){
+            include("View/ListeUtilisateur.php");
+        }
         public static function accueilAssistance(){
             include("View/accueilAssistance.php");
         }

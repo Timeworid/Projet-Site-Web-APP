@@ -44,7 +44,7 @@
     <script>
         document.getElementById("sendmsg").onkeydown = function(e){
             if(e.keyCode == 13){
-                if(e.value != ""){
+                if(document.getElementById("sendmsg").value != ""){
                     if (window.XMLHttpRequest) {
                         xmlhttp=new XMLHttpRequest();
                     } else {
@@ -61,7 +61,7 @@
             }
             xmlhttp.open("POST","routeur.php",true);
             xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-            xmlhttp.send("action=EnvoiMsg&msg="+e.value);
+            xmlhttp.send("action=EnvoiMsg&msg="+document.getElementById("sendmsg").value);
             xmlhttp.onreadystatechange=function(){
                 if (xmlhttp.readyState==4 && xmlhttp.status==200){
                     console.log(xmlhttp.responseText);

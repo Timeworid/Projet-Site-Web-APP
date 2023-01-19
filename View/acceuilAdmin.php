@@ -19,6 +19,14 @@
             <p class="text-stats">STATISTIQUES</p>
         </div>
     </div>
+    <a href="routeur.php?action=listeUtilisateur" class="a-invisible">
+        <div class="flex-button">
+            
+                <button type="button" class="bouttonContact">Voir la liste des utilisateurs</button>
+            
+        </div>
+    </a>
+
 
     <div class="flex-messages">
         <div class="container scroller"> 
