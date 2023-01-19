@@ -76,8 +76,11 @@ require_once("Model\Message.php");
 
         public static function EnvoyerMsgUser(){
         if (isset($_SESSION["mail"])) {
-            extract($POST);
-            $AvisUser = Avis::EnvoyerAvisUtilisateur();
+            // Récupération de la valeur de l'input de texte
+            $commentaire = $_POST['commentaire'];
+            // Récupération de la valeur de la checkbox cochée
+            $note = $_POST['notation'];
+            Avis::EnvoyerAvisUtilisateur($commentaire, $note);
         }
         else{
             $erreur = "Veuillez vous connecter et laisser une note";

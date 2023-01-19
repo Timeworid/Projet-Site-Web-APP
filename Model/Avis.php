@@ -25,27 +25,25 @@
     }
 
 	public static function RecupererMessage(){
-		$requete = "SELECT * FROM avis WHERE note =5 AND dateAvis=(SELECT MAX(dateAvis) FROM avis ORDER BY dateAvis DESC LIMIT 2)";
+		$requete = "SELECT * FROM avis WHERE note =5 ORDER BY dateAvis DESC LIMIT 3";
 		$req_prep = Connexion::pdo()->prepare($requete);
 		try{
 			$req_prep->execute();
 			return $req_prep->fetch();
 		}catch(PDOException $e){
+			echo "erreur : ".$e->getMessage()."<br>";
 		}
 	}
 
-	public static function EnvoyerAvisUtilisateur(){
-		// Récupération de la valeur de l'input de texte
-		$commentaire = $_POST['AvisUser'];
-		// Récupération de la valeur de la checkbox cochée
-		$note = $_POST['notation'];
-	
-		// Connexion à la base de données
-		$pdo = Connexion::pdo();
-		// Préparation de la requête d'insertion
-		$sql = "INSERT INTO avis (`titreAvis`, `commentaire`, `note`, `idUtilisateur`, `dateAvis`) VALUES ('','$commentaire','3','',CURRENT_TIMESTAMP)";
-		// Exécution de la requête
-		$pdo->exec($sql);
+	public static function EnvoyerAvisUtilisateur($commentaire, $note){
+		$requete = "INSERT INTO avis VALUES (:tag_idAvis, :tag_titreAvis, :tag_commentaire, :tag_note, :tag_mail, :tag_dateAvis)";
+		$req_prep = Connexion::pdo()->prepare($requete);
+		$tags = ["tag_idAvis"=> "", "tag_titreAvis"=> "random", "tag_commentaire"=> $commentaire, "tag_note" => $note, "tag_mail" => $_SESSION["mail"], "tag_dateAvis" => date('y/m/d H:i:s')];
+		try{
+			$req_prep->execute($tags);
+		}catch(PDOException $e){
+			echo "erreur : ".$e->getMessage()."<br>";
+		}
 	}
 	
 

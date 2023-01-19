@@ -62,15 +62,15 @@
         </div>
         <div class="notation" id=etoiles>
             <input type="radio" id="etoiles5" name="notation" value="5" />
-            <label for="etoiles5" title="text">5 etoiles</label>
+            <label for="etoiles5" name="notelabel" title="text">5 etoiles</label>
             <input type="radio" id="etoiles4" name="notation" value="4" />
-            <label for="etoiles4" title="text">4 etoiles</label>
+            <label for="etoiles4" name="notelabel" title="text">4 etoiles</label>
             <input type="radio" id="etoiles3" name="notation" value="3" />
-            <label for="etoiles3" title="text">3 etoiles</label>
+            <label for="etoiles3" name="notelabel"  title="text">3 etoiles</label>
             <input type="radio" id="etoiles2" name="notation" value="2" />
-            <label for="etoiles2" title="text">2 etoiles</label>
+            <label for="etoiles2" name="notelabel" title="text">2 etoiles</label>
             <input type="radio" id="etoiles1" name="notation" value="1" />
-            <label for="etoiles1" title="text">1 etoiles</label>
+            <label for="etoiles1" name="notelabel" title="text">1 etoiles</label>
         </div>
         <!-- DEBUG -> Vérifie si une étoile est cochée -->
 
