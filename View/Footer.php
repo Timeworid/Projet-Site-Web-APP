@@ -8,7 +8,7 @@
 </head>
 <body>
   <footer class="corentin1-global">
-  	 <div class="container">
+  	 <div class="containerHF">
   	 	<div class="row">
   	 		<div class="corentin1">
   	 			<h1>Plus d'informations</h1>
@@ -23,17 +23,17 @@
   	 			<ul class="liste">
   	 				<li><a href="routeur.php?action=pageFAQ">Problèmes fréquents</a></li>
   	 				<li><a href="routeur.php?action=">Protection des données</a></li>
-					<li><a href="routeur.php?action=ticketAdmin">Contacter administrateur</a></li>
+					<li><a href="routeur.php?action=accueilAssistance">Contacter administrateur</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="corentin1">
   	 			<h1>Nous suivre</h1>
   	 			<div class="social-links">
-					<a href="routeur.php?action="><img class="espaceimage" src="Data/facebook.png" height="35px" width="35px" alt=""></a>
-					<a href="routeur.php?action="><img class="espaceimage" src="Data/instagram.png" height="35px" width="35px" alt=""></a>
-					<a href="routeur.php?action="><img class="espaceimage" src="Data/tiktok.png" height="35px" width="35px" alt=""></a>
-					<a href="routeur.php?action="><img class="espaceimage" src="Data/twitter.png" height="35px" width="35px" alt=""></a>
-					<a href="routeur.php?action="><img class="espaceimage" src="Data/linkedin.png" height="35px" width="35px" alt=""></a>
+					<a href="https://facebook.com"><img class="espaceimage" src="Data/facebook.png" height="35px" width="35px" alt=""></a>
+					<a href="https://instagram.com"><img class="espaceimage" src="Data/instagram.png" height="35px" width="35px" alt=""></a>
+					<a href="https://tiktok.com"><img class="espaceimage" src="Data/tiktok.png" height="35px" width="35px" alt=""></a>
+					<a href="https://twitter.com"><img class="espaceimage" src="Data/twitter.png" height="35px" width="35px" alt=""></a>
+					<a href="https://linkedin.com"><img class="espaceimage" src="Data/linkedin.png" height="35px" width="35px" alt=""></a>
   	 			</div>
 				<ul>
 					<li><a  style="color:grey;text-decoration:none;font-size:14px;">Copyright © Andrea</a></li>

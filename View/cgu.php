@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-        include("View/Header.php");
+         include("View/header.php");
     ?>
     <style>
         .logo{

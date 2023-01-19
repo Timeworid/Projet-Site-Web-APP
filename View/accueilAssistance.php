@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>Andrea - Admin</title>
-    <link rel="stylesheet" href="../Admin.css">
+    <link rel="stylesheet" href="Admin.css">
 </head>
 <body>
-
+    <?php
+         include("View/Header.php");
+    ?>
 
 
     <div class="flex-FAQ">
@@ -16,10 +18,14 @@
         <hr>
         <div class="Envoyer">
             <div class="bouttonAdmin">
-                <button type="button" class="bouttonContact">Messagerie</button>
+                <a href ="routeur.php?action=chatAssistance">
+                    <button type="button" class="bouttonContact">Messagerie</button>
+                </a>
             </div>
             <div class="bouttonAdmin">
-                <button type="button" class="bouttonContact">Envoyer un ticket</button>
+                <a href ="routeur.php?action=messageAdmin">
+                    <button type="button" class="bouttonContact">Envoyer un ticket</button>
+                </a>
             </div>   
         </div>
         <div class="zonedetxt">
@@ -30,27 +36,27 @@
             <div class="flex-ticket">
                 <div class="white container scroller "> 
                     <!-- a rendre dynamique avec le php-->
-                    <a href="../View/messageAdmin.html" class="a-invisible">
+                    <a href="routeur.php?action=messageAdmin" class="a-invisible">
                         <div class="msg">
-                            <img src="../Data/image.png" width="40px">
+                            <img src="Data/image.png" width="40px">
                             <p class="admin-text-msg">FEFNRIUNREIUVNRIUGRURBVRUBRYURBVRUVBRVRBVRB</p>
                         </div>
                     </a>
-                    <a href="../View/messageAdmin.html" class="a-invisible">
+                    <a href="routeur.php?action=messageAdmin" class="a-invisible">
                         <div class="msg">
-                            <img src="../Data/image.png" width="40px">
+                            <img src="Data/image.png" width="40px">
                             <p class="admin-text-msg">TEST</p>
                         </div>
                     </a>
-                    <a href="../View/messageAdmin.html" class="a-invisible">
+                    <a href="routeur.php?action=messageAdmin" class="a-invisible">
                         <div class="msg">
-                            <img src="../Data/image.png" width="40px">
+                            <img src="Data/image.png" width="40px">
                             <p class="admin-text-msg">TEST</p>
                         </div>
                     </a>
-                    <a href="../View/messageAdmin.html" class="a-invisible">
+                    <a href="routeur.php?action=messageAdmin" class="a-invisible">
                         <div class="msg">
-                            <img src="../Data/image.png" width="40px">
+                            <img src="Data/image.png" width="40px">
                             <p class="admin-text-msg">TEST</p>
                         </div>
                     </a> 
@@ -64,12 +70,9 @@
     </div>
 
     
-
-
-
-    <footer>
-
-    </footer>
+    <?php
+    include("View/Footer.php");
+    ?>
 
 </body>
 </html> 

@@ -106,6 +106,7 @@ h3 {
   margin: 1%;
   align-items: center;
   justify-content: center;
+  flex-grow: 2;
 }
 
 .commentaires{
@@ -214,3 +215,32 @@ h5 {
 }
 
 /* FIN CSS ETOILES NOTATION */
+
+/* CSS BOUTON SUBMIT AVIS CLIENT */
+
+.bouton-avis {
+  background-color: #4CAF50;
+  border-radius:20px;
+  border: none;
+  color: white;
+  padding: 1.5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.bouton-avis5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.bouton-avis5:hover {
+  background-color: #555555;
+  color: white;
+  box-shadow: 0 2px 2px 0 rgba(200,200,200,200),0 2px 2px 0 rgba(200,200,200,200);
+}

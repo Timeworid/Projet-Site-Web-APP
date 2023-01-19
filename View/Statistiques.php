@@ -6,6 +6,29 @@
         <meta charset="utf-8">
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript">
+            if (window.XMLHttpRequest) {
+                xmlhttp=new XMLHttpRequest();
+            } else {
+                if (window.ActiveXObject){
+                    try {
+                        xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            console.log(e);
+                        }
+                    }
+                }
+            }
+            xmlhttp.open("POST","routeur.php",true);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.send("action=EnvoiMsg");
+            xmlhttp.onreadystatechange=function(){
+                if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                    console.log(xmlhttp.responseText);
+                }
+            }
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
@@ -16,7 +39,7 @@
           ['01h',  3],
           ['02h',  3],
           ['03h',  4],
-          ['04h',  5],
+          ['04h',  5], 
           ['05h',  5],
           ['06h',  5],
           ['07h',  6],
@@ -45,7 +68,7 @@
           height: 400,
           legend: { position: 'bottom' },
           chartArea: {
-            left:150,
+            left:55,
             top:50,
             height:300,
             width:1400,
@@ -217,7 +240,7 @@
     </script>
     </head>
     <?php
-        include("View/Header.php");
+         include("View/Header.php");
     ?>
     <header class="Selection">
         <style>

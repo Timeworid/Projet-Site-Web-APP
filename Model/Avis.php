@@ -24,6 +24,31 @@
     	$this->idUtilisateur = $idUtilisateur;
     }
 
+	public static function RecupererMessage(){
+		$requete = "SELECT * FROM avis WHERE note =5 AND dateAvis=(SELECT MAX(dateAvis) FROM avis ORDER BY dateAvis DESC LIMIT 2)";
+		$req_prep = Connexion::pdo()->prepare($requete);
+		try{
+			$req_prep->execute();
+			return $req_prep->fetch();
+		}catch(PDOException $e){
+		}
+	}
+
+	public static function EnvoyerAvisUtilisateur(){
+		// Récupération de la valeur de l'input de texte
+		$commentaire = $_POST['AvisUser'];
+		// Récupération de la valeur de la checkbox cochée
+		$note = $_POST['notation'];
+	
+		// Connexion à la base de données
+		$pdo = Connexion::pdo();
+		// Préparation de la requête d'insertion
+		$sql = "INSERT INTO avis (`titreAvis`, `commentaire`, `note`, `idUtilisateur`, `dateAvis`) VALUES ('','$commentaire','3','',CURRENT_TIMESTAMP)";
+		// Exécution de la requête
+		$pdo->exec($sql);
+	}
+	
+
     public function getIdAvis(){
 		return $this->idAvis;
 	}
@@ -31,6 +56,7 @@
 	public function setIdAvis($idAvis){
 		$this->idAvis = $idAvis;
 	}
+	
 
 	public function getTitreAvis(){
 		return $this->titreAvis;
