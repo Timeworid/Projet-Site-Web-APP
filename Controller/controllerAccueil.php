@@ -4,11 +4,15 @@ require_once("Model\Utilsateur.php");
 
 require_once("Model\Avis.php");
 
+require_once("Model\Statistique.php");
     class controllerAcceuil{
 
         public static function accueil(){
-
             include("View/pageaccueil.php");
+        }
+
+        public static function accueilAssistance(){
+            include("View/accueilAssistance.php");
         }
 
         public static function Statistiques(){
@@ -18,6 +22,14 @@ require_once("Model\Avis.php");
                 include("View/Statistiques.php");
                 //self::accueil();
             }
+        }
+
+        public static function RecupStats(){
+            if(isset($_SESSION["mail"])){
+                echo Statistique::RecupStats($_SESSION["mail"]);
+                return;
+            }
+            return;
         }
 
         public static function Profil(){
@@ -58,11 +70,11 @@ require_once("Model\Avis.php");
             include("View/acceuilAdmin.php");
         }
 
-        public static function ticketAdmin(){
+        public static function messageAdmin(){
             include("View/messageAdmin.php");
         }
 
-        public static function msgAdmin(){
+        public static function chatAdmin(){
             include("View/chatAdmin.php");
         }
 
