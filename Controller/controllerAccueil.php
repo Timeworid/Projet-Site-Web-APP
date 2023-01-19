@@ -40,11 +40,17 @@ require_once("Model\Avis.php");
 
         public static function RecupMsgUser(){
             $avis = Avis::RecupererMessage();
+            echo json_encode($avis);
         }
 
         public static function EnvoyerMsgUser(){
         if (isset($_SESSION["mail"])) {
-            
+            extract($POST);
+            $AvisUser = Avis::EnvoyerMessage();
+        }
+        else{
+            $erreur = "Veuillez vous connecter et laisser une note";
+            $_SESSION["erreur"] = $erreur;
         }
         }
 

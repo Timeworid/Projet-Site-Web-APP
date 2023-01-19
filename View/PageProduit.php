@@ -90,7 +90,7 @@
             <p class="MsgUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
         </div>
         <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
-            <p class="MsgUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
+            <p id="MsgUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
         </div>
         <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
             <p class="MsgUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>

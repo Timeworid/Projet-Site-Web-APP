@@ -25,9 +25,17 @@
     }
 
 	public static function RecupererMessage(){
-		$requete = "SELECT count(*) FROM avis WHERE note =5";
-		$resultat = Connexion::pdo()->query($requete);
-		return $resultat;
+		$requete = "SELECT * FROM avis WHERE note =5 AND dateAvis=(SELECT MAX(dateAvis) FROM avis)";
+		$req_prep = Connexion::pdo()->prepare($requete);
+		try{
+			$req_prep->execute();
+			return $req_prep->fetch();
+		}catch(PDOException $e){
+		}
+	}
+
+	public static function EnvoyerMessage(){
+		
 	}
 
     public function getIdAvis(){
