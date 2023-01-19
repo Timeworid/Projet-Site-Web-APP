@@ -1,13 +1,10 @@
 <?php
 // require ici tous les models (les différentes tables de la base de données).
 require_once("Model\Utilsateur.php");
-<<<<<<< Updated upstream
 
 require_once("Model\Avis.php");
 
-=======
 require_once("Model\Statistique.php");
->>>>>>> Stashed changes
     class controllerAcceuil{
 
         public static function accueil(){

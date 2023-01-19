@@ -67,7 +67,7 @@
           height: 400,
           legend: { position: 'bottom' },
           chartArea: {
-            left:150,
+            left:55,
             top:50,
             height:300,
             width:1400,
