@@ -1,10 +1,12 @@
 if (document.readyState === 'complete') {
     loadCommentaires();
-  } else {
+    ajouterListener();
+} else {
     document.addEventListener('DOMContentLoaded', function() {
         loadCommentaires();
+        ajouterListener();
     });
-  }
+}
 
 
 function loadCommentaires(){
@@ -37,6 +39,9 @@ function loadCommentaires(){
         document.getElementById("MsgUser2").innerHTML = test["commentaire"];
     }
     }
+}
+
+function ajouterListener(){
     console.log(document.getElementsByName("notation"))
     document.getElementsByName("notation").forEach(function(input){
         input.addEventListener("click", function(){
@@ -53,7 +58,7 @@ function EnvoyerCommentaire() {
     // Récupération de la valeur de l'input de commentaire
     var commentaire = document.getElementById("AvisUser").value;
     var notation = document.getElementById("etoiles").value;
-
+    
 
     // Envoi de la valeur de l'input de commentaire à un script PHP via une requête AJAX
     var xmlhttp = new XMLHttpRequest();
@@ -65,6 +70,8 @@ function EnvoyerCommentaire() {
             console.log(xmlhttp.responseText)
             console.log(JSON.parse(xmlhttp.response))
             var test = JSON.parse(xmlhttp.response)
+            loadCommentaires();
         }
     }
+    
 }
