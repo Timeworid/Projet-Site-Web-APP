@@ -28,6 +28,7 @@ if (xmlhttp.readyState==4 && xmlhttp.status==200){
 }
 }
 
+
 function EnvoyerCommentaire() {
 // Récupération de la valeur de l'input de commentaire
 var commentaire = document.getElementById("AvisUser").value;

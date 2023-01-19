@@ -9,6 +9,7 @@
 	
 	
 	// Gestion des cookies
+	
 	session_start();
 	unset($_SESSION["erreur"]); // On reset le cookie qui s'occupera des erreurs
 	extract($_GET); // On recupera les actions effectuées

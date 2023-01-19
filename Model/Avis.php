@@ -56,6 +56,7 @@
 	public function setIdAvis($idAvis){
 		$this->idAvis = $idAvis;
 	}
+	
 
 	public function getTitreAvis(){
 		return $this->titreAvis;
