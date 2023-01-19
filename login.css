@@ -140,3 +140,10 @@ form .btn input[type="submit"]{
   text-align: justify;
   font-size: 19px;
 }
+.erreur{
+  text-align: center;
+  color: red;
+}
+.g-recaptcha{
+  text-align: center;
+}

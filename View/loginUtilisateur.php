@@ -6,10 +6,17 @@
     <title>Andrea - Connexion</title>
 </head>
 <body>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <?php
          include("View/Header.php");
     ?>
     <div class="wrapper">
+        <div class="erreur">
+            <?php 
+                if (isset($_SESSION["erreur"])) {
+                echo $_SESSION["erreur"];} 
+            ?>
+        </div>
         <div class="title-text">
             <div class="title insc">
                 Inscription
@@ -60,6 +67,7 @@
                         <input type="checkbox" name="remember">
                         <label for="remember" class="condition"> Se souvenir de moi </label>
                     </div>
+                    <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l"></div>
                     <div class="case btn">
                         <div class="btn-layer"></div>
                         <input type="submit" value="Connexion">
@@ -74,10 +82,7 @@
                         </script>
                     </div>
                     <p>
-                        <?php 
-                            if (isset($_SESSION["erreur"])) {
-                            echo $_SESSION["erreur"];} 
-                        ?>
+                        
                     </p>
                 </form>
             </div>
