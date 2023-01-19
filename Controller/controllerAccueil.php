@@ -143,17 +143,15 @@ require_once("Model\Message.php");
         }
         public static function login() {
             extract($_POST);
-<<<<<<< Updated upstream
             $MsgUser = Utilisateur::UtilisateurExiste($mail);
-            if(!$MsgUser) {
+            if (!$MsgUser) {
                 $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
-				$_SESSION["erreur"] = $erreur;
-=======
-            $captcha=self::captcha();
+                $_SESSION["erreur"] = $erreur;
+                $captcha = self::captcha();
+            }
             if (!$captcha) {
                 $erreur = "Captcha invalide";
                 $_SESSION["erreur"] = $erreur;
->>>>>>> Stashed changes
                 self::loginUtilisateur();
             } else {
                 $userExist = Utilisateur::UtilisateurExiste($mail);
