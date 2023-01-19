@@ -58,11 +58,12 @@ require_once("Model\Statistique.php");
         public static function EnvoyerMsgUser(){
         if (isset($_SESSION["mail"])) {
             extract($POST);
-            $AvisUser = Avis::EnvoyerMessage();
+            $AvisUser = Avis::EnvoyerAvisUtilisateur();
         }
         else{
             $erreur = "Veuillez vous connecter et laisser une note";
             $_SESSION["erreur"] = $erreur;
+            self::loginUtilisateur();
         }
         }
 

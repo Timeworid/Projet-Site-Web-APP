@@ -76,7 +76,7 @@
         <!-- <p>
             <input type="button" id="check" onclick="nowCheck()" value="Click it" />
         </p> -->
-        <div style="color:white;"><p>Note moyenne des utiliisateurs</p></div>
+        <div style="color:white;"><p>Noter notre produit et laisser un avis</p></div>
 </div>
 
 <!-- Verifie si on peut mettre un avis/si on est connecté -->
@@ -87,18 +87,18 @@
 
     <div class="avisutilisateurs">
         <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
-            <p class="MsgUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
+            <p id="MsgUser2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
+        </div>
+        <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
+            <p id="MsgUser1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
         </div>
         <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
             <p id="MsgUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
         </div>
-        <div class="commentaires" style="background-color:grey; border-radius:20px; color:white;">
-            <p class="MsgUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, amet ab? Iste doloremque est explicabo, fugiat facere accusantium.</p>
-        </div>
         <div class="commentaires2">
-            <input type="Text" placeholder="Laissez-nous un avis" name="mail" required="" style="border-radius:20px; color:grey;">
+            <input type="Text" id="AvisUser" style="border-radius:20px; color:grey;">
+            <button class="bouton-avis bouton-avis5" onclick="EnvoyerCommentaire()">Laissez-nous un avis</button>
         </div>
-        <button class="bouton-avis bouton-avis5">Laissez-nous un avis</button>
         </div>
     </div>
 

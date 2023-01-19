@@ -106,6 +106,7 @@ h3 {
   margin: 1%;
   align-items: center;
   justify-content: center;
+  flex-grow: 2;
 }
 
 .commentaires{
