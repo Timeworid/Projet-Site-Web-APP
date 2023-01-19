@@ -18,7 +18,7 @@
         <hr>
         <div class="Envoyer">
             <div class="bouttonAdmin">
-                <a href ="routeur.php?action=chatAdmin">
+                <a href ="routeur.php?action=chatAssistance">
                     <button type="button" class="bouttonContact">Messagerie</button>
                 </a>
             </div>

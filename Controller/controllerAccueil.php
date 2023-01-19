@@ -1,10 +1,12 @@
 <?php
 // require ici tous les models (les différentes tables de la base de données).
-require_once("Model\Utilsateur.php");
+require_once("Model\Utilisateur.php");
 
 require_once("Model\Avis.php");
 
 require_once("Model\Statistique.php");
+
+require_once("Model\Message.php");
     class controllerAcceuil{
 
         public static function accueil(){
@@ -13,6 +15,10 @@ require_once("Model\Statistique.php");
 
         public static function accueilAssistance(){
             include("View/accueilAssistance.php");
+        }
+
+        public static function chatAssistance(){
+        include("View/chatAssistance.php");
         }
 
         public static function Statistiques(){
@@ -30,6 +36,19 @@ require_once("Model\Statistique.php");
                 return;
             }
             return;
+        }
+
+        public static function EnvoiMsg(){
+            extract($_POST);
+            if(isset($_SESSION["mail"])){
+                Message::envoiMessage($msg,$_SESSION["mail"], 1);
+            }else{
+                $erreur = "Vous n'êtes plus connecté !";
+                $_SESSION["erreur"] = $erreur;
+                self::accueil();
+            }
+
+
         }
 
         public static function Profil(){
