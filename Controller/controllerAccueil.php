@@ -112,28 +112,66 @@ require_once("Model\Message.php");
             unset($_SESSION["admin"]);
             self::accueil();
         }
-
-        public static function login() {
-            
+        public static function captcha(){
+            $response = $_POST["g-recaptcha-response"];
             extract($_POST);
+            $url = 'https://www.google.com/recaptcha/api/siteverify';
+            $data = array(
+                'secret' => '6LfY9wQkAAAAAGifiKQIpauV5WLg2hC1bha8kYRJ',
+                'response' => $response
+            );
+            $options = array(
+                'http' => array (
+                    'method' => 'POST',
+                    'header' => 'Content-Type: application/x-www-form-urlencoded\r\n',
+                    'content' => http_build_query($data)
+                )
+            );
+            $context  = stream_context_create($options);
+            $verify = file_get_contents($url, false, $context);
+            $captcha_success=json_decode($verify);
+            if ($captcha_success->success==false) {
+                // C'est un bot
+                return false;
+            } else if ($captcha_success->success==true) {
+                // C'est un utilisateur réel, vous pouvez continuer avec le traitement de connexion
+                return true;
+            }
+        }
+        public static function login() {
+            extract($_POST);
+<<<<<<< Updated upstream
             $MsgUser = Utilisateur::UtilisateurExiste($mail);
             if(!$MsgUser) {
                 $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
 				$_SESSION["erreur"] = $erreur;
+=======
+            $captcha=self::captcha();
+            if (!$captcha) {
+                $erreur = "Captcha invalide";
+                $_SESSION["erreur"] = $erreur;
+>>>>>>> Stashed changes
                 self::loginUtilisateur();
-            }
-            else {
-                $canConnect = Utilisateur::canConnect($mail, $motDePasse);
-                if($canConnect) {
-					unset($_SESSION["erreur"]);
-                    $_SESSION["mail"] = $mail;
-                    $admin = Utilisateur::getAdminByMail($mail);
-                    $_SESSION["admin"] = $admin;
-                    controllerAcceuil::accueil();
-                } else {
-                    $erreur = "Votre login ou votre mot de passe est incorrect";
+            } else {
+                $userExist = Utilisateur::UtilisateurExiste($mail);
+                if(!$userExist) {
+                    $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
                     $_SESSION["erreur"] = $erreur;
-                    self::loginUtilisateur()();
+                    self::loginUtilisateur();
+                }
+                else {
+                    $canConnect = Utilisateur::canConnect($mail, $motDePasse);
+                    if($canConnect) {
+                        unset($_SESSION["erreur"]);
+                        $_SESSION["mail"] = $mail;
+                        $admin = Utilisateur::getAdminByMail($mail);
+                        $_SESSION["admin"] = $admin;
+                        controllerAcceuil::accueil();
+                    } else {
+                        $erreur = "Votre login ou votre mot de passe est incorrect";
+                        $_SESSION["erreur"] = $erreur;
+                        self::loginUtilisateur()();
+                    }
                 }
             }
         }
