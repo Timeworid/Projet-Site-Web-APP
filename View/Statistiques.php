@@ -9,7 +9,7 @@
             if (window.XMLHttpRequest) {
                 xmlhttp=new XMLHttpRequest();
             } else {
-                if (window.ActiveXObject)
+                if (window.ActiveXObject){
                     try {
                         xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");
                     } catch (e) {
@@ -19,10 +19,11 @@
                             console.log(e);
                         }
                     }
+                }
             }
             xmlhttp.open("POST","routeur.php",true);
             xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-            xmlhttp.send("action=RecupStats");
+            xmlhttp.send("action=EnvoiMsg");
             xmlhttp.onreadystatechange=function(){
                 if (xmlhttp.readyState==4 && xmlhttp.status==200){
                     console.log(xmlhttp.responseText);

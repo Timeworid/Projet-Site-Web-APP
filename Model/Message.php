@@ -21,6 +21,18 @@
 		$this->contenuMessage = $contenuMessage;
 	}
 
+
+	public static function envoiMessage($message, $utilisateur, $idConversation){
+		$requetePreparee = "INSERT INTO message VALUES(:tag_idConversation, :tag_dateMessage, :tag_contenuMessage);";
+		$req_prep = Connexion::pdo()->prepare($requetePreparee);
+		$tags = ["tag_idConversation" => $idConversation,"tag_dateMessage" => date('y/m/d H:i:s'),"tag_contenuMessage"=>$message];
+		try{
+			$req_prep->execute($tags);
+		} catch (PDOException $e) {
+			echo "erreur : ".$e->getMessage()."<br>";
+		}
+	}
+
 	/**
 	 * @return mixed
 	 */
