@@ -47,6 +47,11 @@ require_once("Model\Message.php");
             return;
         }
 
+        public static function rechercheUtilisateur(){
+            extract($_POST);
+            echo json_encode(Utilisateur::rechercheUtilisateur($utilisateur));
+        }
+
         public static function EnvoiMsg(){
             extract($_POST);
             if(isset($_SESSION["mail"])){
