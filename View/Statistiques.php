@@ -498,8 +498,8 @@
             var Géol=document.getElementById('Géol');
             var Sono=document.getElementById('Sono');
             Temp.addEventListener("click", function() {
-                console.log(Validation);
-                if (Validation.innerText=='Validation terminée') {
+                var response = grecaptcha.getResponse();
+                if(response.length != 0) {
                     document.getElementById('D1').style.display="Contents";
                     document.getElementById('D2').style.display="None";
                     document.getElementById('D3').style.display="None";
