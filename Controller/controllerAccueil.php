@@ -12,12 +12,6 @@ require_once("Model\Message.php");
         public static function accueil(){
             include("View/pageaccueil.php");
         }
-        public static function cgu(){
-            include("View/cgu.php");
-        }
-        public static function forgot(){
-            include("View/forgot.php");
-        }
 
         public static function listeUtilisateur(){
             include("View/ListeUtilisateur.php");
@@ -45,11 +39,6 @@ require_once("Model\Message.php");
                 return;
             }
             return;
-        }
-
-        public static function rechercheUtilisateur(){
-            extract($_POST);
-            echo json_encode(Utilisateur::rechercheUtilisateur($utilisateur));
         }
 
         public static function EnvoiMsg(){
@@ -88,7 +77,8 @@ require_once("Model\Message.php");
             echo json_encode($avis);
         }
 
-    public static function EnvoyerMsgUser(){
+    public static function EnvoyerMsgUser()
+    {
 
         // $captcha = self::captcha();
 
@@ -163,7 +153,12 @@ require_once("Model\Message.php");
         }
         public static function login() {
             extract($_POST);
-            $captcha = self::captcha();
+            $MsgUser = Utilisateur::UtilisateurExiste($mail);
+            if (!$MsgUser) {
+                $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
+                $_SESSION["erreur"] = $erreur;
+                $captcha = self::captcha();
+            }
             if (!$captcha) {
                 $erreur = "Captcha invalide";
                 $_SESSION["erreur"] = $erreur;
@@ -174,7 +169,8 @@ require_once("Model\Message.php");
                     $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
                     $_SESSION["erreur"] = $erreur;
                     self::loginUtilisateur();
-                } else {
+                }
+                else {
                     $canConnect = Utilisateur::canConnect($mail, $motDePasse);
                     if($canConnect) {
                         unset($_SESSION["erreur"]);
@@ -193,30 +189,23 @@ require_once("Model\Message.php");
 
         public static function register() {
             extract($_POST);
-            $captcha = self::captcha();
-            if (!$captcha) {
-                $erreur = "Captcha invalide";
+            $MsgUser = Utilisateur::UtilisateurExiste($mail);
+            if($MsgUser) {
+                $erreur = "Ce nom d'utilisateur est déjà utilisé";
                 $_SESSION["erreur"] = $erreur;
                 self::loginUtilisateur();
             } else {
-                $MsgUser = Utilisateur::UtilisateurExiste($mail);
-                if($MsgUser) {
-                    $erreur = "Ce nom d'utilisateur est déjà utilisé";
+                if($motDePasse == $motDePasse2) {
+                    unset($_SESSION["erreur"]);
+                    $motDePasse2=password_hash($motDePasse, PASSWORD_DEFAULT);
+                    Utilisateur::AjouterUtilisateur($mail, $motDePasse2, $nom, $prenom, $dateNaissance);
+                    $_SESSION["mail"] = $mail;
+                    $_SESSION["admin"] = 0;
+                    controllerAcceuil::accueil();
+                } else {
+                    $erreur = "Vous avez fais une erreur lors de la réécriture de votre mot de passe";
                     $_SESSION["erreur"] = $erreur;
                     self::loginUtilisateur();
-                } else {
-                    if($motDePasse == $motDePasse2) {
-                        unset($_SESSION["erreur"]);
-                        $motDePasse2=password_hash($motDePasse, PASSWORD_DEFAULT);
-                        Utilisateur::AjouterUtilisateur($mail, $motDePasse2, $nom, $prenom, $dateNaissance);
-                        $_SESSION["mail"] = $mail;
-                        $_SESSION["admin"] = 0;
-                        controllerAcceuil::accueil();
-                    } else {
-                        $erreur = "Vous avez fais une erreur lors de la réécriture de votre mot de passe";
-                        $_SESSION["erreur"] = $erreur;
-                        self::loginUtilisateur();
-                    }
                 }
             }
         }
