@@ -106,7 +106,7 @@ $_POST[$key] = htmlspecialchars($value);
         </div>
         <div class="commentaires2">
             <input type="Text" id="AvisUser" style="border-radius:20px; color:grey;">
-            <button class="bouton-avis bouton-avis5" onclick="EnvoyerCommentaire()">Laissez-nous un avis</button>
+            <button style="display:" class="bouton-avis bouton-avis5" onclick="checkAvis()">Laissez-nous un avis</button>
         </div>
         <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l"></div>
         </div>

@@ -52,7 +52,14 @@ function ajouterListener(){
     })
 }
 
-
+function checkAvis() {
+var avisUser = document.getElementById("AvisUser").value;
+if (!avisUser) {
+    alert("Veuillez entrer un avis avant de soumettre");
+} else {
+    EnvoyerCommentaire();
+}
+}
 
 function EnvoyerCommentaire() {
     // Récupération de la valeur de l'input de commentaire
@@ -72,6 +79,7 @@ function EnvoyerCommentaire() {
             var test = JSON.parse(xmlhttp.response)
             loadCommentaires();
         }
+        location.reload();
     }
     
 }
