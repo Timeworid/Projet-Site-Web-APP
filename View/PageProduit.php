@@ -16,6 +16,14 @@
 
 <body>
 
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<?php
+foreach ($_GET as $key => $value)
+$_GET[$key] = htmlspecialchars($value);
+foreach ($_POST as $key => $value)
+$_POST[$key] = htmlspecialchars($value);
+?>
 <div class="header2">
 
 </div>
@@ -100,6 +108,7 @@
             <input type="Text" id="AvisUser" style="border-radius:20px; color:grey;">
             <button class="bouton-avis bouton-avis5" onclick="EnvoyerCommentaire()">Laissez-nous un avis</button>
         </div>
+        <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l"></div>
         </div>
     </div>
 
