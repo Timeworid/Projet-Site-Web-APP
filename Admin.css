@@ -171,6 +171,46 @@ textarea{
     vertical-align: middle;
     padding: 8px;
 }
+.zonedetxt-utilisateur{
+    background-color: #A8B9A2;
+    text-align: center;
+    padding: 0.5%;
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+    font-family: 'Outfit', sans-serif;
+    font-size: large;
+}
+
+.txt-utilisateur{
+    margin :2%;
+}
+
+.boutton-rouge{
+    width: 10%;
+    color:red;
+    justify-content: center;
+    border-radius: 5px;
+    margin-left:1%; 
+    margin-right:1%; 
+    text-align: center;
+    display: flex;
+    vertical-align: middle;
+    padding: 8px;
+}
+.boutton-gris{
+    width: 10%;
+    justify-content: center;
+    border-radius: 5px;
+    margin-left:1%; 
+    margin-right:1%;
+    text-align: center;
+    display: flex;
+    vertical-align: middle;
+    padding: 8px;
+}
 
 #boutton-envoyer{
     width: 40%;
@@ -284,6 +324,11 @@ p{
 
 .FAQ{
     width: 100%;
+    text-align: center;
+    margin: 2%;
+}
+
+.FAQ-no100{
     text-align: center;
     margin: 2%;
 }

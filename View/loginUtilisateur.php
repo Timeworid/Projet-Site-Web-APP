@@ -49,6 +49,7 @@
                     </div>
                     <input type="checkbox" name="cgu" required>
                     <label for="cgu" class="condition"> J'ai lu et j'accepte les <a href="routeur.php?action=cgu">conditions générales d'utilisations.</a> </label>
+                    <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l"></div>
                     <div class="case btn">
                         <div class="btn-layer"></div>
                         <input type="submit" value="Inscription">
@@ -77,7 +78,7 @@
                         <script>
                             var forgot=document.getElementById('mdp');
                             forgot.addEventListener("click", function() {
-                                window.open("./forgot.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+                                window.open("forgot", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
                             });
                         </script>
                     </div>

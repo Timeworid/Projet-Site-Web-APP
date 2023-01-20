@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^(([A-Z]*[a-z]*)*)$ ./routeur.php?action=$1 [L]

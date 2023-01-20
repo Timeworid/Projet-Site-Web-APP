@@ -29,7 +29,7 @@
 		$req_prep = Connexion::pdo()->prepare($requete);
 		try{
 			$req_prep->execute();
-			return $req_prep->fetch();
+			return $req_prep->fetchAll();
 		}catch(PDOException $e){
 			echo "erreur : ".$e->getMessage()."<br>";
 		}

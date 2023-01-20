@@ -34,9 +34,9 @@ function loadCommentaires(){
         console.log(xmlhttp.responseText)
         console.log(JSON.parse(xmlhttp.response)) 
         var test =  JSON.parse(xmlhttp.response) 
-        document.getElementById("MsgUser").innerHTML = test["commentaire"];
-        document.getElementById("MsgUser1").innerHTML = test["commentaire"];
-        document.getElementById("MsgUser2").innerHTML = test["commentaire"];
+        document.getElementById("MsgUser").innerHTML = test[2]["commentaire"];
+        document.getElementById("MsgUser1").innerHTML = test[1]["commentaire"];
+        document.getElementById("MsgUser2").innerHTML = test[0]["commentaire"];
     }
     }
 }
@@ -52,7 +52,14 @@ function ajouterListener(){
     })
 }
 
-
+function checkAvis() {
+var avisUser = document.getElementById("AvisUser").value;
+if (!avisUser) {
+    alert("Veuillez entrer un avis avant de soumettre");
+} else {
+    EnvoyerCommentaire();
+}
+}
 
 function EnvoyerCommentaire() {
     // Récupération de la valeur de l'input de commentaire
@@ -72,6 +79,6 @@ function EnvoyerCommentaire() {
             var test = JSON.parse(xmlhttp.response)
             loadCommentaires();
         }
+        location.reload();
     }
-    
 }

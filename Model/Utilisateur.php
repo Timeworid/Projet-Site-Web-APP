@@ -132,6 +132,31 @@
 	}
 
 
+	public static function rechercheUtilisateur($mail){
+		if($mail == ""){
+			$requetePreparee = "SELECT mail, type FROM Utilisateur";
+			$req_prep = Connexion::pdo()->prepare($requetePreparee);	
+			try {
+				$req_prep->execute();
+				return $req_prep->fetchAll();
+			} catch (PDOException $e) {	
+				echo "erreur : ".$e->getMessage()."<br>";
+			}
+			return false;
+		}else{
+			$requetePreparee = "SELECT mail, type FROM Utilisateur WHERE mail LIKE '%".$mail."%'";
+			$req_prep = Connexion::pdo()->prepare($requetePreparee);	
+			try {
+				$req_prep->execute();
+				return $req_prep->fetchAll();
+			} catch (PDOException $e) {	
+				echo "erreur : ".$e->getMessage()."<br>";
+			}
+			return false;
+		}
+		
+	}
+
 	public static function canConnect($mail, $mdp) {
 		$motDePasse = self::getMDPByMail($mail);
 		return password_verify($mdp, $motDePasse);

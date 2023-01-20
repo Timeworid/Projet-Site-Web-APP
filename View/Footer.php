@@ -13,17 +13,17 @@
   	 		<div class="corentin1">
   	 			<h1>Plus d'informations</h1>
   	 			<ul class="liste">
-					<li><a href="routeur.php?action=apropos">A propos</a></li>
-					<li><a href="routeur.php?action=">Clause de confidentialité</a></li>
-					<li><a href="routeur.php?action=">Conditions générales d'utilisation</a></li>
+					<li><a href="apropos">A propos</a></li>
+					<li><a href="">Clause de confidentialité</a></li>
+					<li><a href="cgu">Conditions générales d'utilisation</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="corentin1">
   	 			<h1>Nous contacter</h1>
   	 			<ul class="liste">
-  	 				<li><a href="routeur.php?action=pageFAQ">Problèmes fréquents</a></li>
-  	 				<li><a href="routeur.php?action=">Protection des données</a></li>
-					<li><a href="routeur.php?action=accueilAssistance">Contacter administrateur</a></li>
+  	 				<li><a href="pageFAQ">Problèmes fréquents</a></li>
+  	 				<li><a href="">Protection des données</a></li>
+					<li><a href="accueilAssistance">Contacter administrateur</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="corentin1">

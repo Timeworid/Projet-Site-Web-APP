@@ -77,22 +77,29 @@ require_once("Model\Message.php");
             echo json_encode($avis);
         }
 
-        public static function EnvoyerMsgUser(){
-        if (isset($_SESSION["mail"])) {
-            // Récupération de la valeur de l'input de texte
-            $commentaire = $_POST['commentaire'];
-            // Récupération de la valeur de la checkbox cochée
-            $note = $_POST['notation'];
-            Avis::EnvoyerAvisUtilisateur($commentaire, $note);
-        }
-        else{
-            $erreur = "Veuillez vous connecter et laisser une note";
-            $_SESSION["erreur"] = $erreur;
-            self::loginUtilisateur();
-        }
-        }
+    public static function EnvoyerMsgUser()
+    {
 
-        
+        // $captcha = self::captcha();
+
+        // if (!$captcha) {
+        //     $erreur = "Captcha invalide";
+        //     $_SESSION["erreur"] = $erreur;
+        //     self::loginUtilisateur();
+        // } else {
+            if (isset($_SESSION["mail"])) {
+                // Récupération de la valeur de l'input de texte
+                $commentaire = $_POST['commentaire'];
+                // Récupération de la valeur de la checkbox cochée
+                $note = $_POST['notation'];
+                Avis::EnvoyerAvisUtilisateur($commentaire, $note);
+            } else {
+                $erreur = "Veuillez vous connecter et laisser une note";
+                $_SESSION["erreur"] = $erreur;
+                self::loginUtilisateur();
+            }
+        }
+    // }
         public static function accueilAdmin(){
             include("View/acceuilAdmin.php");
         }
@@ -146,7 +153,12 @@ require_once("Model\Message.php");
         }
         public static function login() {
             extract($_POST);
-            $captcha = self::captcha();
+            $MsgUser = Utilisateur::UtilisateurExiste($mail);
+            if (!$MsgUser) {
+                $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
+                $_SESSION["erreur"] = $erreur;
+                $captcha = self::captcha();
+            }
             if (!$captcha) {
                 $erreur = "Captcha invalide";
                 $_SESSION["erreur"] = $erreur;
