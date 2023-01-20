@@ -4,7 +4,8 @@
         <title>Statistiques</title>
         <link rel="stylesheet" href="Statistiques.css">
         <meta charset="utf-8">
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+         <script src='https://www.google.com/recaptcha/api.js'></script>
         <script type="text/javascript">
             if (window.XMLHttpRequest) {
                 xmlhttp=new XMLHttpRequest();
@@ -283,6 +284,7 @@
         </div>
     </header>
     <body>
+        <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l" id="Captcha"></div>
         <div class="Température" id="D1">
             <div class="Stats_Graphique">
                 <div class="Graphique">
@@ -323,6 +325,7 @@
                 </div>
             </div>
         </div>
+        <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l" id="Captcha"></div>
         <div class="Cardiaque" id="D2">
             <div class="Stats_Graphique">
                 <div class="Graphique">
@@ -363,6 +366,7 @@
                 </div>
             </div>
         </div>
+        <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l" id="Captcha"></div>
         <div class="CO2" id="D3">
             <div class="Stats_Graphique">
                 <div class="Graphique">
@@ -403,6 +407,7 @@
                 </div>
             </div>
         </div>
+        <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l" id="Captcha"></div>
         <div class="Géolocalisation" id="D4">
             <div class="Stats_Graphique">
                 <div class="Graphique">
@@ -445,6 +450,7 @@
                 </div>
             </div>
         </div>
+        <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l" id="Captcha"></div>
         <div class="Sonore" id="D5">
             <div class="Stats_Graphique">
                 <div class="Graphique">
