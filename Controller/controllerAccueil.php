@@ -174,7 +174,19 @@ require_once("Model\Message.php");
                 }
             }
         }
-
+        public static function Acces_Stats() {
+            extract($_POST);
+            $captcha = self::captcha();
+            if (!$captcha) {
+                $erreur = "Captcha invalide";
+                $_SESSION["erreur"] = $erreur;
+                unset($_SESSION["mail"]);
+                self::loginUtilisateur();
+            } else {
+                self::Statistiques();
+            }
+        }
+ 
         public static function register() {
             extract($_POST);
             $MsgUser = Utilisateur::UtilisateurExiste($mail);
