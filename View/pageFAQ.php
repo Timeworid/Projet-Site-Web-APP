@@ -48,6 +48,16 @@
         </div>
 
     </section>
+
+    <section>
+        <h2> Poser votre question</h2>
+        <br>
+        <input class="text" type="text" id="question" name="question"  size="100">
+        <br>
+        <input class="bouton" type="submit" value="Valider">
+    </section> 
+
+    
     <?php
         include("View/Footer.php");
     ?>
