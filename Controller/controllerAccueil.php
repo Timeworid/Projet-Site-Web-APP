@@ -90,14 +90,13 @@ require_once("Model\Message.php");
 
     public static function EnvoyerMsgUser(){
 
-        $captcha = self::captcha();
+        // $captcha = self::captcha();
 
-        if (!$captcha) {
-            $erreur = "Captcha invalide";
-            $_SESSION["erreur"] = $erreur;
-            self::loginUtilisateur();
-            Avis::PopupCaptcha();
-        } else {
+        // if (!$captcha) {
+        //     $erreur = "Captcha invalide";
+        //     $_SESSION["erreur"] = $erreur;
+        //     self::loginUtilisateur();
+        // } else {
             if (isset($_SESSION["mail"])) {
                 // Récupération de la valeur de l'input de texte
                 $commentaire = $_POST['commentaire'];
@@ -110,7 +109,7 @@ require_once("Model\Message.php");
                 self::loginUtilisateur();
             }
         }
-    }
+    // }
         public static function accueilAdmin(){
             include("View/acceuilAdmin.php");
         }

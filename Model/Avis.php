@@ -45,10 +45,6 @@
 			echo "erreur : ".$e->getMessage()."<br>";
 		}
 	}
-
-	public static function PopupCaptcha(){
-
-	}
 	
 
     public function getIdAvis(){

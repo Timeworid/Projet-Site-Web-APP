@@ -81,5 +81,4 @@ function EnvoyerCommentaire() {
         }
         location.reload();
     }
-    
 }

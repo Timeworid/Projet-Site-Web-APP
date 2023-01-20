@@ -24,6 +24,7 @@ $_GET[$key] = htmlspecialchars($value);
 foreach ($_POST as $key => $value)
 $_POST[$key] = htmlspecialchars($value);
 ?>
+
 <div class="header2">
 
 </div>
