@@ -12,6 +12,12 @@ require_once("Model\Message.php");
         public static function accueil(){
             include("View/pageaccueil.php");
         }
+        public static function cgu(){
+            include("View/cgu.php");
+        }
+        public static function forgot(){
+            include("View/forgot.php");
+        }
 
         public static function listeUtilisateur(){
             include("View/ListeUtilisateur.php");
@@ -170,8 +176,7 @@ require_once("Model\Message.php");
                     $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
                     $_SESSION["erreur"] = $erreur;
                     self::loginUtilisateur();
-                }
-                else {
+                } else {
                     $canConnect = Utilisateur::canConnect($mail, $motDePasse);
                     if($canConnect) {
                         unset($_SESSION["erreur"]);

@@ -8,26 +8,26 @@
                     <div>
                         <button class="dropbtn"><img src="Data/menu.png" alt="menu" style="width:40px;height:40px;"></button>
                         <div class="liensmenu">
-                            <a href="routeur.php?action=presentationProduit">Fiche Produit</a>
-                            <a href="routeur.php?action=pageFAQ">FAQ</a>
+                            <a href="presentationProduit">Fiche Produit</a>
+                            <a href="pageFAQ">FAQ</a>
                             <?php if(isset($_SESSION['mail'])){?>
-                            <a href="routeur.php?action=Profil">Compte</a>
-                            <a href="routeur.php?action=Statistiques">Statistiques</a>
-                            <a href="routeur.php?action=Deconnexion">Déconnexion</a>
+                            <a href="Profil">Compte</a>
+                            <a href="Statistiques">Statistiques</a>
+                            <a href="Deconnexion">Déconnexion</a>
                             <?php if (isset($_SESSION['admin'])) {
                                 if ($_SESSION['admin'] == 1) { ?>
-                                    <a href="routeur.php?action=accueilAdmin">Menu Admin</a>
+                                    <a href="accueilAdmin">Menu Admin</a>
                             <?php 
                                 }
                             }
                             } else { ?>
-                            <a href="routeur.php?action=loginUtilisateur">Compte</a>
+                            <a href="loginUtilisateur">Compte</a>
                             <?php } ?>
                         </div>
                     </div>
                 </div>
             </a>
-            <a href="routeur.php?action=pageaccueil"><img class="logo" src="Data/logo.png" alt="menu" style="width:80px;height:56px;padding-top: 16px;"></a>
+            <a href="pageaccueil"><img class="logo" src="Data/logo.png" alt="menu" style="width:80px;height:56px;padding-top: 16px;"></a>
         </div>
         <div style='align-items: center;' class= "menudroite">
                 <div class="searchbar">
@@ -35,7 +35,7 @@
                 </div>
                 <a href="https://google.com"><img src="Data/search.png" alt="menu" style="width:40px;height:40px;"></a>
                 <div style="color:transparent";><p>__</p></div>
-                <a href="routeur.php?action=loginUtilisateur"><img src="Data/utilisateur.png" alt="menu" style="width:40px;height:40px;"></a>
+                <a href="loginUtilisateur"><img src="Data/utilisateur.png" alt="menu" style="width:40px;height:40px;"></a>
             </a>
         </div>
     </header>
