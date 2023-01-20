@@ -1,9 +1,18 @@
+<?php 
+    foreach ($_GET as $key => $value)
+        $_GET[$key] = htmlspecialchars($value);
+    foreach ($_POST as $key => $value)
+        $_POST[$key] = htmlspecialchars($value);
+?>
+
+
 <!DOCTYPE html> 
 <html>
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="pageFAQ.css">
-        <script src="question.js"></script>
+        <script src="pageFAQ.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
         <title>
             Foire aux questions
         </title>
@@ -16,8 +25,10 @@
     <body>
         
     <?php
-        include("View/Header.php");
+        include("Header.php");
     ?>
+
+    
         <h1>Foire au question</h1>
         
         <!--<input id="searchbar" onkeyup="search_question()" type="text"
@@ -49,17 +60,20 @@
 
     </section>
 
+    
+
     <section>
         <h2> Poser votre question</h2>
         <br>
         <input class="text" type="text" id="question" name="question"  size="100">
         <br>
-        <input class="bouton" type="submit" value="Valider">
+        <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l"></div>
+        <input class="bouton" type="submit" value="Valider" onclick="return confirmer()">
     </section> 
 
-    
+
     <?php
-        include("View/Footer.php");
+        include("Footer.php");
     ?>
     </body>
 
