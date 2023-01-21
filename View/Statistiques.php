@@ -2,7 +2,7 @@
 <html dir="ltr" lang="fr">
     <head>
         <title>Statistiques</title>
-        <link rel="stylesheet" href="Statistiques.css">
+        <link rel="stylesheet" href="StatistiquesCSS.css">
         <meta charset="utf-8">
          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
          <script src='https://www.google.com/recaptcha/api.js'></script>

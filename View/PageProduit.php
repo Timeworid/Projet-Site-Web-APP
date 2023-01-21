@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Test1</title>
-    <link rel="stylesheet" href="PageProduit.css">
+    <link rel="stylesheet" href="PageProduitCSS.css">
     <script src="Javascript/PageProduit.js"></script>
 </head>
 <body>

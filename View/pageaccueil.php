@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>flexboxtrye</title>
-<link rel="stylesheet" href="pageaccueil.css">
+<link rel="stylesheet" href="pageaccueilCSS.css">
 </head>
 <body>
 

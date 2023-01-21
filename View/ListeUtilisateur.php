@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Andrea - Admin</title>
-    <link rel="stylesheet" href="Admin.css">
+    <link rel="stylesheet" href="CSSAdminCSS.css">
 </head>
 <body>
     <?php
@@ -43,7 +43,7 @@ if (document.readyState === 'complete') {
     loadUtilisateur();
 } else {
     document.addEventListener('DOMContentLoaded', function() {
-        loadUtilisateur();
+        loadUtilisateur();  
     });
 }
 
@@ -129,7 +129,8 @@ document.getElementById("search").onkeydown = function(e){
                     console.log(element)
                     utilisateur.id = "utilisateur." + element["mail"]
                     utilisateur.querySelector(".admin-text-msg").innerHTML = element["mail"]
-                    container.appendChild(utilisateur);  
+                    container.appendChild(utilisateur); 
+                    console.log(utilisateur);        
                 })
                 
                 console.log(xmlhttp.responseText);
