@@ -38,7 +38,9 @@ require_once("Model\Message.php");
                 echo Statistique::RecupStats($_SESSION["mail"]);
                 return;
             }
-            return;
+            else{
+                return;
+            }
         }
 
         public static function EnvoiMsg(){

@@ -24,7 +24,7 @@
 			try {
 				$req_prep->execute($valeurs);
 				$r = $req_prep->fetch();
-			return ($r[0] == 1);
+			return ($r);
 			} catch (PDOException $e) {
 				echo "erreur : ".$e->getMessage()."<br>";
 			}
