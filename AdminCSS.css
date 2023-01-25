@@ -79,10 +79,18 @@ textarea{
 .flex-messages{
     display: flex;
     justify-content: space-around;
-    margin-top: 5%;
+    margin-top: 3%;
     margin-right: 10%;
     margin-left: 10%;
     margin-bottom: 5%;
+}
+
+.flex-input{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 .flex-ticket{
@@ -200,6 +208,19 @@ textarea{
     vertical-align: middle;
     padding: 8px;
 }
+
+.boutton-rouge:hover{
+    background-color:rgb(144, 15, 15);
+    color : white;
+    cursor: pointer;
+}
+
+.boutton-gris:hover{
+    background-color:rgb(82, 72, 72);
+    color : white;
+    cursor: pointer;
+}
+
 .boutton-gris{
     width: 10%;
     justify-content: center;
@@ -316,6 +337,7 @@ p{
 
 .input-FAQ{
     padding: 1%;
+    height: 50px;
     font-size: large;   
     background: #E0E0E0;
     border-radius: 10px;
@@ -343,6 +365,7 @@ hr{
 .Envoyer{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 100%;
 }
 
@@ -415,6 +438,12 @@ hr{
 .a-invisible{
     text-decoration: none;
     color:inherit;
+}
+
+.a-invisible-flex{
+    text-decoration: none;
+    color:inherit;
+    display: flex;
 }
 
 

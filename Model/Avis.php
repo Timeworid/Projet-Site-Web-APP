@@ -27,7 +27,7 @@
 	public static function RecupererMessage(){
 		$requete = "SELECT * FROM avis WHERE note=5 ORDER BY dateAvis DESC";
 		$req_prep = Connexion::pdo()->prepare($requete);
-		try{
+		try{	
 			$req_prep->execute();
 			return $req_prep->fetchAll();
 		}catch(PDOException $e){

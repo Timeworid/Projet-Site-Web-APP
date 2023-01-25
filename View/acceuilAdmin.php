@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Andrea - Admin</title>
-    <link rel="stylesheet" href="Admin.css">
+    <link rel="stylesheet" href="AdminCSS.css">
 </head>
 <body>
     <?php
@@ -21,14 +21,21 @@
     </div>
     <a href="routeur.php?action=listeUtilisateur" class="a-invisible">
         <div class="flex-button">
-            
                 <button type="button" class="bouttonContact">Voir la liste des utilisateurs</button>
-            
         </div>
     </a>
 
+    <div class="flex-input">
+        <div class="FAQ-no100">
+            <input class="input-FAQ" id="search-ticket" type="text" placeholder="Rechercher un ticket">
+        </div>
+        <div class="FAQ-no100">
+            <input class="input-FAQ" id="search-msg" type="text" placeholder="Rechercher une conversation">
+        </div>
+    </div>
 
     <div class="flex-messages">
+        
         <div class="container scroller"> 
             <!-- a rendre dynamique avec le php-->
             <a href="routeur.php?action=messageAdmin" class="a-invisible">

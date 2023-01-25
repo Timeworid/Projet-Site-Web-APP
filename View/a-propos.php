@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="a-propos.css">
+        <link rel="stylesheet" href="a-proposCSS.css">
         
         <title>
             A propos de nous

@@ -7,16 +7,12 @@ require_once("Model\Avis.php");
 require_once("Model\Statistique.php");
 
 require_once("Model\Message.php");
+
+require_once("Model\Conversation.php");
     class controllerAcceuil{
 
         public static function accueil(){
             include("View/pageaccueil.php");
-        }
-        public static function cgu(){
-            include("View/cgu.php");
-        }
-        public static function forgot(){
-            include("View/forgot.php");
         }
 
         public static function listeUtilisateur(){
@@ -40,16 +36,13 @@ require_once("Model\Message.php");
         }
 
         public static function RecupStats(){
+            extract($_POST);
             if(isset($_SESSION["mail"])){
-                echo Statistique::RecupStats($_SESSION["mail"]);
+                echo json_encode(Statistique::RecupStats($_SESSION["mail"], $type));
+            }
+            else{
                 return;
             }
-            return;
-        }
-
-        public static function rechercheUtilisateur(){
-            extract($_POST);
-            echo json_encode(Utilisateur::rechercheUtilisateur($utilisateur));
         }
 
         public static function EnvoiMsg(){
@@ -88,7 +81,8 @@ require_once("Model\Message.php");
             echo json_encode($avis);
         }
 
-    public static function EnvoyerMsgUser(){
+    public static function EnvoyerMsgUser()
+    {
 
         // $captcha = self::captcha();
 
@@ -112,6 +106,59 @@ require_once("Model\Message.php");
     // }
         public static function accueilAdmin(){
             include("View/acceuilAdmin.php");
+        }
+
+        public static function deleteUtilisateur(){
+            extract($_POST);
+            if (isset($_SESSION["mail"])){
+                if($_SESSION["admin"] == 1){
+                    Utilisateur::supprimerUtilisateur($utilisateur);
+                }else{
+                    $erreur = "Vous n'avez pas les permissions de supprimer l'utilisateur !";
+                    $_SESSION["erreur"] = $erreur;
+                    self::accueil();
+                }
+            }else{
+                $erreur = "Veuillez vous connecter !";
+                $_SESSION["erreur"] = $erreur;
+                self::loginUtilisateur();
+            }
+        }
+
+        public static function promouvoirUtilisateur(){
+            extract($_POST);
+            if (isset($_SESSION["mail"])){
+                if($_SESSION["admin"] == 1){
+                    if($type == 1){
+                        Utilisateur::promouvoirUtilisateur($utilisateur, $type);
+                    }else{
+                        Utilisateur::promouvoirUtilisateur($utilisateur, 0);
+                    }   
+                }else{
+                    $erreur = "Vous n'avez pas les permissions de promouvoir l'utilisateur !";
+                    $_SESSION["erreur"] = $erreur;
+                    self::accueil();
+                }
+            }else{
+                $erreur = "Veuillez vous connecter !";
+                $_SESSION["erreur"] = $erreur;
+                self::loginUtilisateur();
+            }
+        }
+
+        public static function getUserStatus(){
+            extract($_POST);
+            echo Utilisateur::getAdminByMail($utilisateur)[0];
+        }
+
+        public static function conversationExiste(){
+            extract($_POST);
+            echo Conversation::conversationExiste($utilisateurs);
+        }
+
+        public static function créerConversation(){
+            extract($_POST);
+            echo Conversation::nouvelleConversation($utilisateurs);
         }
 
         public static function messageAdmin(){
@@ -163,7 +210,12 @@ require_once("Model\Message.php");
         }
         public static function login() {
             extract($_POST);
-            $captcha = self::captcha();
+            $MsgUser = Utilisateur::UtilisateurExiste($mail);
+            if (!$MsgUser) {
+                $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
+                $_SESSION["erreur"] = $erreur;
+                $captcha = self::captcha();
+            }
             if (!$captcha) {
                 $erreur = "Captcha invalide";
                 $_SESSION["erreur"] = $erreur;
@@ -174,7 +226,8 @@ require_once("Model\Message.php");
                     $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
                     $_SESSION["erreur"] = $erreur;
                     self::loginUtilisateur();
-                } else {
+                }
+                else {
                     $canConnect = Utilisateur::canConnect($mail, $motDePasse);
                     if($canConnect) {
                         unset($_SESSION["erreur"]);
@@ -190,33 +243,38 @@ require_once("Model\Message.php");
                 }
             }
         }
-
-        public static function register() {
+        public static function Acces_Stats() {
             extract($_POST);
             $captcha = self::captcha();
             if (!$captcha) {
                 $erreur = "Captcha invalide";
                 $_SESSION["erreur"] = $erreur;
+                unset($_SESSION["mail"]);
                 self::loginUtilisateur();
             } else {
-                $MsgUser = Utilisateur::UtilisateurExiste($mail);
-                if($MsgUser) {
-                    $erreur = "Ce nom d'utilisateur est déjà utilisé";
+                self::Statistiques();
+            }
+        }
+ 
+        public static function register() {
+            extract($_POST);
+            $MsgUser = Utilisateur::UtilisateurExiste($mail);
+            if($MsgUser) {
+                $erreur = "Ce nom d'utilisateur est déjà utilisé";
+                $_SESSION["erreur"] = $erreur;
+                self::loginUtilisateur();
+            } else {
+                if($motDePasse == $motDePasse2) {
+                    unset($_SESSION["erreur"]);
+                    $motDePasse2=password_hash($motDePasse, PASSWORD_DEFAULT);
+                    Utilisateur::AjouterUtilisateur($mail, $motDePasse2, $nom, $prenom, $dateNaissance);
+                    $_SESSION["mail"] = $mail;
+                    $_SESSION["admin"] = 0;
+                    controllerAcceuil::accueil();
+                } else {
+                    $erreur = "Vous avez fais une erreur lors de la réécriture de votre mot de passe";
                     $_SESSION["erreur"] = $erreur;
                     self::loginUtilisateur();
-                } else {
-                    if($motDePasse == $motDePasse2) {
-                        unset($_SESSION["erreur"]);
-                        $motDePasse2=password_hash($motDePasse, PASSWORD_DEFAULT);
-                        Utilisateur::AjouterUtilisateur($mail, $motDePasse2, $nom, $prenom, $dateNaissance);
-                        $_SESSION["mail"] = $mail;
-                        $_SESSION["admin"] = 0;
-                        controllerAcceuil::accueil();
-                    } else {
-                        $erreur = "Vous avez fais une erreur lors de la réécriture de votre mot de passe";
-                        $_SESSION["erreur"] = $erreur;
-                        self::loginUtilisateur();
-                    }
                 }
             }
         }

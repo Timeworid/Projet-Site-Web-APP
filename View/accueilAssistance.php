@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Andrea - Admin</title>
-    <link rel="stylesheet" href="Admin.css">
+    <link rel="stylesheet" href="AdminCSS.css">
 </head>
 <body>
     <?php
@@ -12,9 +12,9 @@
 
 
     <div class="flex-FAQ">
-        <div class="FAQ">
-            <input class="input-FAQ" type="text" placeholder="Rechercher sur la FAQ">
-        </div>
+            <div class="FAQ">
+                <input class="input-FAQ" type="text" placeholder="Rechercher sur la FAQ">
+            </div>
         <hr>
         <div class="Envoyer">
             <div class="bouttonAdmin">

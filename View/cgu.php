@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="loginCSS.css">
     <title>Andrea - CGU</title>
 </head>
 <body>

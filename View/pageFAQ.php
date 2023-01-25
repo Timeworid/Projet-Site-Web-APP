@@ -1,8 +1,9 @@
 <!DOCTYPE html> 
-<html>
+<html lang="fr" dir="ltr">
+
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="pageFAQ.css">
+        <link rel="stylesheet" href="pageFAQCSS.css">
         <script src="question.js"></script>
         <title>
             Foire aux questions

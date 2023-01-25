@@ -17,14 +17,14 @@
 			$this->valStat = $valStat;
 		}
 
-		public static function RecupStats($mail) {
-			$requetePreparee = "SELECT valStat, dateStat FROM Statistiques WHERE DATEPART(ss,dateStat) = 00 AND DATEPART(n,dateStat) = 00 AND idUtilisateur=:tag_mail"; 
+		public static function RecupStats($mail, $type) {
+			$requetePreparee = "SELECT valStat, dateStat FROM statistiques WHERE DATE_FORMAT(dateStat, '%i') = 00 AND DATE_FORMAT(dateStat, '%s') = 00 AND mail = :tag_mail AND typeStat = :tag_typeStat"; 
 			$req_prep = Connexion::pdo()->prepare($requetePreparee);
-			$valeurs = array("tag_mail" => $mail);
+			$valeurs = array("tag_mail" => $mail, "tag_typeStat" => $type);
 			try {
 				$req_prep->execute($valeurs);
-				$r = $req_prep->fetch();
-			return ($r[0] == 1);
+				$r = $req_prep->fetchAll();
+				return $r;
 			} catch (PDOException $e) {
 				echo "erreur : ".$e->getMessage()."<br>";
 			}
