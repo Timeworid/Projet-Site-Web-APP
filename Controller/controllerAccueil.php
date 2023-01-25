@@ -36,8 +36,9 @@ require_once("Model\Conversation.php");
         }
 
         public static function RecupStats(){
+            extract($_POST);
             if(isset($_SESSION["mail"])){
-                echo Statistique::RecupStats($_SESSION["mail"]);
+                echo Statistique::RecupStats($_SESSION["mail"], $type);
                 return;
             }
             else{
