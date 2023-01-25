@@ -34,40 +34,17 @@
             xmlhttp.onreadystatechange=function(){
                 if (xmlhttp.readyState==4 && xmlhttp.status==200){
                     console.log(JSON.parse(xmlhttp.response));
+                    
+                    drawChart(JSON.parse(xmlhttp.response))
                 }
             }
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var data_Temp = google.visualization.arrayToDataTable([
-          ['Heure', 'Température'],
-          ['00h',  2],
-          ['01h',  3],
-          ['02h',  3],
-          ['03h',  4],
-          ['04h',  5], 
-          ['05h',  5],
-          ['06h',  5],
-          ['07h',  6],
-          ['08h',  6],
-          ['09h',  7],
-          ['10h',  7],
-          ['11h',  8],
-          ['12h',  9],
-          ['13h',  9],
-          ['14h',  8],
-          ['15h',  8],
-          ['16h',  7],
-          ['17h',  6],
-          ['18h',  5],
-          ['19h',  4],
-          ['20h',  4],
-          ['21h',  3],
-          ['22h',  2],
-          ['23h',  1],
-          ['24h',  1]
-        ]);
+      function drawChart(TableauTemp) {
+        var data_Temp = google.visualization.arrayToDataTable(
+            TableauTemp
+        );
 
         var options_Temp = {
           title: 'Evolution de la température pendant la journée',
