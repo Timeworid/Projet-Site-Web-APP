@@ -2,8 +2,9 @@
 <html dir="ltr" lang="fr">
     <head>
         <title>Statistiques</title>
-        <link rel="stylesheet" href="Statistiques.css">
+        <link rel="stylesheet" href="StatistiquesCSS.css">
         <meta charset="utf-8">
+         <script src='https://www.google.com/recaptcha/api.js'></script>
         <?php
         foreach ($_GET as $key => $value)
         $_GET[$key] = htmlspecialchars($value);
@@ -29,7 +30,7 @@
             }
             xmlhttp.open("POST","routeur.php",true);
             xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-            xmlhttp.send("action=RecupStats");
+            xmlhttp.send("action=RecupStats?type=Température");
             xmlhttp.onreadystatechange=function(){
                 if (xmlhttp.readyState==4 && xmlhttp.status==200){
                     console.log(xmlhttp.responseText);

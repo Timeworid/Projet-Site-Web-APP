@@ -173,6 +173,28 @@
 		}
 	}
 
+	public static function supprimerUtilisateur($mail){
+		$requetePreparee = "DELETE FROM Utilisateur WHERE mail = :tag_mail";
+		$req_prep = Connexion::pdo()->prepare($requetePreparee);
+		$tags = ["tag_mail" => $mail];
+		try {
+			$req_prep->execute($tags);
+		} catch (PDOException $e) {
+			echo "erreur : ".$e->getMessage()."<br>";
+		}
+	}
+
+	public static function promouvoirUtilisateur($mail, $type){
+		$requetePreparee = "UPDATE Utilisateur SET type = :tag_type WHERE mail = :tag_mail";
+		$req_prep = Connexion::pdo()->prepare($requetePreparee);
+		$tags = ["tag_mail" => $mail, "tag_type" => $type];
+		try {
+			$req_prep->execute($tags);
+		} catch (PDOException $e) {
+			echo "erreur : ".$e->getMessage()."<br>";
+		}
+	}
+
 	public static function getMDPByMail($mail) {
 		$requetePreparee = "SELECT motDePasse FROM Utilisateur WHERE mail = :tag_mail"; 
 		$req_prep = Connexion::pdo()->prepare($requetePreparee);
@@ -196,9 +218,7 @@
 		try {
 			$req_prep->execute($valeurs);
 			$r = $req_prep->fetch();
-			if (!$r[0]) 
-				return false;
-			return $r[0];
+			return $r;
 		} catch (PDOException $e) {
 			echo "erreur : ".$e->getMessage()."<br>";
 		}

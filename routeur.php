@@ -28,8 +28,6 @@
 				break;
 			}
 		}
-
-		
 		if(!$actionEffectue){// Si l'action n'a pu être effectuée.
 			controllerAcceuil::accueil();
 		}
