@@ -4,8 +4,18 @@
         <title>Statistiques</title>
         <link rel="stylesheet" href="StatistiquesCSS.css">
         <meta charset="utf-8">
+<<<<<<< Updated upstream
          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
          <script src='https://www.google.com/recaptcha/api.js'></script>
+=======
+        <?php
+        foreach ($_GET as $key => $value)
+        $_GET[$key] = htmlspecialchars($value);
+        foreach ($_POST as $key => $value)
+        $_POST[$key] = htmlspecialchars($value);
+        ?>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+>>>>>>> Stashed changes
         <script type="text/javascript">
             if (window.XMLHttpRequest) {
                 xmlhttp=new XMLHttpRequest();
@@ -284,7 +294,9 @@
         </div>
     </header>
     <body>
-        <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l" id="Captcha"></div>
+        <div style="justify-content:center; display:flex">
+            <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l" id="Captcha"></div>
+        </div>
         <div class="Température" id="D1">
             <div class="Stats_Graphique">
                 <div class="Graphique">
@@ -325,9 +337,8 @@
                 </div>
             </div>
         </div>
-        <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l" id="Captcha"></div>
         <div class="Cardiaque" id="D2">
-            <div class="Stats_Graphique">
+            <div class="Stats_Graphique"> 
                 <div class="Graphique">
                     <div id="Card_Graph" style="margin-top:20px"></div>
                     <button class="Button">
@@ -366,7 +377,6 @@
                 </div>
             </div>
         </div>
-        <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l" id="Captcha"></div>
         <div class="CO2" id="D3">
             <div class="Stats_Graphique">
                 <div class="Graphique">
@@ -407,7 +417,6 @@
                 </div>
             </div>
         </div>
-        <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l" id="Captcha"></div>
         <div class="Géolocalisation" id="D4">
             <div class="Stats_Graphique">
                 <div class="Graphique">
@@ -450,7 +459,6 @@
                 </div>
             </div>
         </div>
-        <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l" id="Captcha"></div>
         <div class="Sonore" id="D5">
             <div class="Stats_Graphique">
                 <div class="Graphique">
@@ -492,45 +500,77 @@
             </div>
         </div>
         <script>
+            var Captcha=document.getElementById('Captcha');
+            var Validation=document.getElementById('recaptcha-accessible-status');
             var Temp=document.getElementById('Temp');
             var Card=document.getElementById('Card');
             var TCO2=document.getElementById('TCO2');
             var Géol=document.getElementById('Géol');
             var Sono=document.getElementById('Sono');
             Temp.addEventListener("click", function() {
-                document.getElementById('D1').style.display="Contents";
-                document.getElementById('D2').style.display="None";
-                document.getElementById('D3').style.display="None";
-                document.getElementById('D4').style.display="None";
-                document.getElementById('D5').style.display="None";
+                var response = grecaptcha.getResponse();
+                if(response.length != 0) {
+                    document.getElementById('D1').style.display="Contents";
+                    document.getElementById('D2').style.display="None";
+                    document.getElementById('D3').style.display="None";
+                    document.getElementById('D4').style.display="None";
+                    document.getElementById('D5').style.display="None";
+                }
+                else {
+                    console.log('Erreur')
+                }
             });
             Card.addEventListener("click", function() {
-                document.getElementById('D1').style.display="None";
-                document.getElementById('D2').style.display="Contents";
-                document.getElementById('D3').style.display="None";
-                document.getElementById('D4').style.display="None";
-                document.getElementById('D5').style.display="None";
+                var response = grecaptcha.getResponse();
+                if(response.length != 0) {
+                    document.getElementById('D1').style.display="None";
+                    document.getElementById('D2').style.display="Contents";
+                    document.getElementById('D3').style.display="None";
+                    document.getElementById('D4').style.display="None";
+                    document.getElementById('D5').style.display="None";
+                }
+                else {
+                    console.log('Erreur')
+                }
             });
             TCO2.addEventListener("click", function() {
-                document.getElementById('D1').style.display="None";
-                document.getElementById('D2').style.display="None";
-                document.getElementById('D3').style.display="Contents";
-                document.getElementById('D4').style.display="None";
-                document.getElementById('D5').style.display="None";
+                var response = grecaptcha.getResponse();
+                if(response.length != 0) {
+                    document.getElementById('D1').style.display="None";
+                    document.getElementById('D2').style.display="None";
+                    document.getElementById('D3').style.display="Contents";
+                    document.getElementById('D4').style.display="None";
+                    document.getElementById('D5').style.display="None";
+                }
+                else {
+                    console.log('Erreur')
+                }
             });
             Géol.addEventListener("click", function() {
-                document.getElementById('D1').style.display="None";
-                document.getElementById('D2').style.display="None";
-                document.getElementById('D3').style.display="None";
-                document.getElementById('D4').style.display="Contents";
-                document.getElementById('D5').style.display="None";
+                var response = grecaptcha.getResponse();
+                if(response.length != 0) {
+                    document.getElementById('D1').style.display="None";
+                    document.getElementById('D2').style.display="None";
+                    document.getElementById('D3').style.display="None";
+                    document.getElementById('D4').style.display="Contents";
+                    document.getElementById('D5').style.display="None";
+                }
+                else {
+                    console.log('Erreur')
+                }
             });
             Sono.addEventListener("click", function() {
-                document.getElementById('D1').style.display="None";
-                document.getElementById('D2').style.display="None";
-                document.getElementById('D3').style.display="None";
-                document.getElementById('D4').style.display="None";
-                document.getElementById('D5').style.display="Contents";
+                var response = grecaptcha.getResponse();
+                if(response.length != 0) {
+                    document.getElementById('D1').style.display="None";
+                    document.getElementById('D2').style.display="None";
+                    document.getElementById('D3').style.display="None";
+                    document.getElementById('D4').style.display="None";
+                    document.getElementById('D5').style.display="Contents";
+                }
+                else {
+                    console.log('Erreur')
+                }
             });
         </script>
         <?php

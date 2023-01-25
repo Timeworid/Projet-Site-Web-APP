@@ -34,9 +34,9 @@ function loadCommentaires(){
         console.log(xmlhttp.responseText)
         console.log(JSON.parse(xmlhttp.response)) 
         var test =  JSON.parse(xmlhttp.response) 
-        document.getElementById("MsgUser").innerHTML = test["commentaire"];
-        document.getElementById("MsgUser1").innerHTML = test["commentaire"];
-        document.getElementById("MsgUser2").innerHTML = test["commentaire"];
+        document.getElementById("MsgUser").innerHTML = test[2]["commentaire"];
+        document.getElementById("MsgUser1").innerHTML = test[1]["commentaire"];
+        document.getElementById("MsgUser2").innerHTML = test[0]["commentaire"];
     }
     }
 }
