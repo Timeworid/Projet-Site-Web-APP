@@ -13,8 +13,7 @@
   	 		<div class="corentin1">
   	 			<h1>Plus d'informations</h1>
   	 			<ul class="liste">
-					<li><a href="apropos">A propos</a></li>
-					<li><a href="">Clause de confidentialité</a></li>
+					<li><a href="">Mentions légales</a></li>
 					<li><a href="cgu">Conditions générales d'utilisation</a></li>
   	 			</ul>
   	 		</div>

@@ -12,7 +12,7 @@ require_once("Model\Conversation.php");
     class controllerAcceuil{
 
         public static function accueil(){
-            include("View/pageaccueil.php");
+            include("View/accueil.php");
         }
 
         public static function listeUtilisateur(){
@@ -68,7 +68,7 @@ require_once("Model\Conversation.php");
         }
         public static function presentationProduit(){
 
-            include("View/PageProduit.php");
+            include("View/Produit.php");
         }
 
         public static function apropos(){
@@ -170,7 +170,7 @@ require_once("Model\Conversation.php");
         }
 
         public static function pageFAQ(){
-            include("View/pageFAQ.php");
+            include("View/FAQ.php");
         }
 
         public static function loginUtilisateur() {
