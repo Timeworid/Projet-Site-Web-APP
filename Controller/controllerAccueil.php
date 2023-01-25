@@ -7,6 +7,8 @@ require_once("Model\Avis.php");
 require_once("Model\Statistique.php");
 
 require_once("Model\Message.php");
+
+require_once("Model\Conversation.php");
     class controllerAcceuil{
 
         public static function accueil(){
@@ -112,6 +114,59 @@ require_once("Model\Message.php");
     // }
         public static function accueilAdmin(){
             include("View/acceuilAdmin.php");
+        }
+
+        public static function deleteUtilisateur(){
+            extract($_POST);
+            if (isset($_SESSION["mail"])){
+                if($_SESSION["admin"] == 1){
+                    Utilisateur::supprimerUtilisateur($utilisateur);
+                }else{
+                    $erreur = "Vous n'avez pas les permissions de supprimer l'utilisateur !";
+                    $_SESSION["erreur"] = $erreur;
+                    self::accueil();
+                }
+            }else{
+                $erreur = "Veuillez vous connecter !";
+                $_SESSION["erreur"] = $erreur;
+                self::loginUtilisateur();
+            }
+        }
+
+        public static function promouvoirUtilisateur(){
+            extract($_POST);
+            if (isset($_SESSION["mail"])){
+                if($_SESSION["admin"] == 1){
+                    if($type == 1){
+                        Utilisateur::promouvoirUtilisateur($utilisateur, $type);
+                    }else{
+                        Utilisateur::promouvoirUtilisateur($utilisateur, 0);
+                    }   
+                }else{
+                    $erreur = "Vous n'avez pas les permissions de promouvoir l'utilisateur !";
+                    $_SESSION["erreur"] = $erreur;
+                    self::accueil();
+                }
+            }else{
+                $erreur = "Veuillez vous connecter !";
+                $_SESSION["erreur"] = $erreur;
+                self::loginUtilisateur();
+            }
+        }
+
+        public static function getUserStatus(){
+            extract($_POST);
+            echo Utilisateur::getAdminByMail($utilisateur)[0];
+        }
+
+        public static function conversationExiste(){
+            extract($_POST);
+            echo Conversation::conversationExiste($utilisateurs);
+        }
+
+        public static function créerConversation(){
+            extract($_POST);
+            echo Conversation::nouvelleConversation($utilisateurs);
         }
 
         public static function messageAdmin(){

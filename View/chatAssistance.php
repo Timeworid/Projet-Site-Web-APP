@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Andrea - Admin</title>
-    <link rel="stylesheet" href="CSSAdminCSS.css">
+    <link rel="stylesheet" href="AdminCSS.css">
 </head>
 <body>
     <?php
@@ -13,16 +13,24 @@
 
     <div class="flex-FAQ">
         <div class="Envoyer">
+            
             <div class="bouttonAdmin">
                 <a href ="routeur.php?action=chatAdmin">
                     <button type="button" class="bouttonContact">Envoyer un message à un admin</button>
                 </a>
             </div>
+            
+            <?php if (isset($_SESSION["admin"])){
+                if ($_SESSION["admin"] == 1){
+            ?>
+            
             <div class="bouttonAdmin">
                 <a href ="routeur.php?action=messageAdmin">
                     <button type="button" class="bouttonContact">Créer une nouvelle conversation</button>
                 </a>
-            </div>   
+            </div> 
+
+            <?php }}?>  
         </div>
         <div class="zonedetxt">
             <p>Vos conversation :</p>

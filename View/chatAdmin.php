@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Andrea - Admin</title>
-    <link rel="stylesheet" href="CSSAdminCSS.css">
+    <link rel="stylesheet" href="AdminCSS.css">
 </head>
 <body>
     <?php
@@ -25,18 +25,6 @@
                 <div class="bubble-text-right">
                     <p>Blablabla</p>
                 </div>
-                <div class="bubble-text-left">
-                    <p>Blablabla</p>
-                </div>
-                <div class="bubble-text-right">
-                    <p>Blablabla</p>
-                </div>
-                <div class="bubble-text-left">
-                    <p>Blablabla</p>
-                </div>
-                <div class="bubble-text-right">
-                    <p>Blablablazf,efnefnefneienfeinfeifnefuebeufhufheneiufneiufenuienfeiufeufebfyujebfeufhehfuj</p>
-                </div>  
             </div>
             <input class="input-send-msg"  id="sendmsg" type="text" placeholder="Type your message here ...">
         </div>
