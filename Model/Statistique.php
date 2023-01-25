@@ -18,12 +18,12 @@
 		}
 
 		public static function RecupStats($mail, $type) {
-			$requetePreparee = "SELECT valStat, dateStat FROM Statistiques WHERE DATE_FORMAT(dateStat, '%k') = 00 AND DATE_FORMAT(dateStat, '%i') AND DATE_FORMAT(dateStat, '%s') = 00 AND mail = :tag_mail AND typeStat = :tag_typeStat"; 
+			$requetePreparee = "SELECT valStat, dateStat FROM statistiques WHERE DATE_FORMAT(dateStat, '%i') = 00 AND DATE_FORMAT(dateStat, '%s') = 00 AND mail = :tag_mail AND typeStat = :tag_typeStat"; 
 			$req_prep = Connexion::pdo()->prepare($requetePreparee);
 			$valeurs = array("tag_mail" => $mail, "tag_typeStat" => $type);
 			try {
 				$req_prep->execute($valeurs);
-				$r = $req_prep->fetch();
+				$r = $req_prep->fetchAll();
 				return $r;
 			} catch (PDOException $e) {
 				echo "erreur : ".$e->getMessage()."<br>";

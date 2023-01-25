@@ -33,7 +33,7 @@
             xmlhttp.send("action=RecupStats&type=Température");
             xmlhttp.onreadystatechange=function(){
                 if (xmlhttp.readyState==4 && xmlhttp.status==200){
-                    console.log(xmlhttp.responseText);
+                    console.log(JSON.parse(xmlhttp.response));
                 }
             }
       google.charts.load('current', {'packages':['corechart']});
