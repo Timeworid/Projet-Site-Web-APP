@@ -507,36 +507,60 @@
                     document.getElementById('D5').style.display="None";
                 }
                 else {
-                    console.log('Ma bite sur ton front')
+                    console.log('Erreur')
                 }
             });
             Card.addEventListener("click", function() {
-                document.getElementById('D1').style.display="None";
-                document.getElementById('D2').style.display="Contents";
-                document.getElementById('D3').style.display="None";
-                document.getElementById('D4').style.display="None";
-                document.getElementById('D5').style.display="None";
+                var response = grecaptcha.getResponse();
+                if(response.length != 0) {
+                    document.getElementById('D1').style.display="None";
+                    document.getElementById('D2').style.display="Contents";
+                    document.getElementById('D3').style.display="None";
+                    document.getElementById('D4').style.display="None";
+                    document.getElementById('D5').style.display="None";
+                }
+                else {
+                    console.log('Erreur')
+                }
             });
             TCO2.addEventListener("click", function() {
-                document.getElementById('D1').style.display="None";
-                document.getElementById('D2').style.display="None";
-                document.getElementById('D3').style.display="Contents";
-                document.getElementById('D4').style.display="None";
-                document.getElementById('D5').style.display="None";
+                var response = grecaptcha.getResponse();
+                if(response.length != 0) {
+                    document.getElementById('D1').style.display="None";
+                    document.getElementById('D2').style.display="None";
+                    document.getElementById('D3').style.display="Contents";
+                    document.getElementById('D4').style.display="None";
+                    document.getElementById('D5').style.display="None";
+                }
+                else {
+                    console.log('Erreur')
+                }
             });
             Géol.addEventListener("click", function() {
-                document.getElementById('D1').style.display="None";
-                document.getElementById('D2').style.display="None";
-                document.getElementById('D3').style.display="None";
-                document.getElementById('D4').style.display="Contents";
-                document.getElementById('D5').style.display="None";
+                var response = grecaptcha.getResponse();
+                if(response.length != 0) {
+                    document.getElementById('D1').style.display="None";
+                    document.getElementById('D2').style.display="None";
+                    document.getElementById('D3').style.display="None";
+                    document.getElementById('D4').style.display="Contents";
+                    document.getElementById('D5').style.display="None";
+                }
+                else {
+                    console.log('Erreur')
+                }
             });
             Sono.addEventListener("click", function() {
-                document.getElementById('D1').style.display="None";
-                document.getElementById('D2').style.display="None";
-                document.getElementById('D3').style.display="None";
-                document.getElementById('D4').style.display="None";
-                document.getElementById('D5').style.display="Contents";
+                var response = grecaptcha.getResponse();
+                if(response.length != 0) {
+                    document.getElementById('D1').style.display="None";
+                    document.getElementById('D2').style.display="None";
+                    document.getElementById('D3').style.display="None";
+                    document.getElementById('D4').style.display="None";
+                    document.getElementById('D5').style.display="Contents";
+                }
+                else {
+                    console.log('Erreur')
+                }
             });
         </script>
         <?php
