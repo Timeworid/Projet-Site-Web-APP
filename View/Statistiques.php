@@ -6,7 +6,6 @@
         <meta charset="utf-8">
          <script src='https://www.google.com/recaptcha/api.js'></script>
         <?php
-        echo $_SESSION["admin"];
         foreach ($_GET as $key => $value)
         $_GET[$key] = htmlspecialchars($value);
         foreach ($_POST as $key => $value)
@@ -35,18 +34,19 @@
             xmlhttp.onreadystatechange=function(){
                 if (xmlhttp.readyState==4 && xmlhttp.status==200){
                     console.log(JSON.parse(xmlhttp.response));    
-                    drawChart(JSON.parse(xmlhttp.response))
+
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(drawChart(JSON.parse(xmlhttp.response)));
                 }
             }
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+      
 
       function drawChart(TableauTemp) {
-        console.log(TableauTemp["dateStat"])
-        console.log(TableauTemp["valStat"])
+        console.log(TableauTemp[0]["dateStat"])
+        console.log(TableauTemp[0]["valStat"])
         var data_Temp = google.visualization.arrayToDataTable([
             ['Heure', 'Température'],
-            [ 3, 4  ]
+            [ TableauTemp[0]["dateStat"], TableauTemp[0]["valStat"]]
         ]);
 
         var options_Temp = {
