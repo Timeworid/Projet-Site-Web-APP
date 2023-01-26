@@ -35,6 +35,11 @@ require_once("Model\Conversation.php");
             }
         }
 
+        public static function rechercheUtilisateur(){
+            extract($_POST);
+            echo json_encode(Utilisateur::rechercheUtilisateur($utilisateur));
+        }
+
         public static function RecupStats(){
             extract($_POST);
             if(isset($_SESSION["mail"])){
@@ -211,16 +216,17 @@ require_once("Model\Conversation.php");
         public static function login() {
             extract($_POST);
             $MsgUser = Utilisateur::UtilisateurExiste($mail);
+            $captcha = self::captcha();
             if (!$MsgUser) {
                 $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
                 $_SESSION["erreur"] = $erreur;
-                $captcha = self::captcha();
             }
             if (!$captcha) {
                 $erreur = "Captcha invalide";
                 $_SESSION["erreur"] = $erreur;
                 self::loginUtilisateur();
-            } else {
+            } 
+            else {
                 $userExist = Utilisateur::UtilisateurExiste($mail);
                 if(!$userExist) {
                     $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
@@ -233,7 +239,7 @@ require_once("Model\Conversation.php");
                         unset($_SESSION["erreur"]);
                         $_SESSION["mail"] = $mail;
                         $admin = Utilisateur::getAdminByMail($mail);
-                        $_SESSION["admin"] = $admin;
+                        $_SESSION["admin"] = $admin[0];
                         controllerAcceuil::accueil();
                     } else {
                         $erreur = "Votre login ou votre mot de passe est incorrect";
