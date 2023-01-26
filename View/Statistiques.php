@@ -6,6 +6,7 @@
         <meta charset="utf-8">
          <script src='https://www.google.com/recaptcha/api.js'></script>
         <?php
+        echo $_SESSION["admin"];
         foreach ($_GET as $key => $value)
         $_GET[$key] = htmlspecialchars($value);
         foreach ($_POST as $key => $value)
@@ -33,8 +34,7 @@
             xmlhttp.send("action=RecupStats&type=Température");
             xmlhttp.onreadystatechange=function(){
                 if (xmlhttp.readyState==4 && xmlhttp.status==200){
-                    console.log(JSON.parse(xmlhttp.response));
-                    
+                    console.log(JSON.parse(xmlhttp.response));    
                     drawChart(JSON.parse(xmlhttp.response))
                 }
             }
@@ -42,9 +42,12 @@
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart(TableauTemp) {
-        var data_Temp = google.visualization.arrayToDataTable(
-            TableauTemp
-        );
+        console.log(TableauTemp["dateStat"])
+        console.log(TableauTemp["valStat"])
+        var data_Temp = google.visualization.arrayToDataTable([
+            ['Heure', 'Température'],
+            [ 3, 4  ]
+        ]);
 
         var options_Temp = {
           title: 'Evolution de la température pendant la journée',

@@ -237,8 +237,10 @@ require_once("Model\Conversation.php");
                     $canConnect = Utilisateur::canConnect($mail, $motDePasse);
                     if($canConnect) {
                         unset($_SESSION["erreur"]);
+                        unset($_SESSION["admin"]);
+                        unset($_SESSION["mail"]);
                         $_SESSION["mail"] = $mail;
-                        $admin = Utilisateur::getAdminByMail($mail);
+                        $admin = Utilisateur::getAdminByMail($mail);  
                         $_SESSION["admin"] = $admin[0];
                         controllerAcceuil::accueil();
                     } else {
