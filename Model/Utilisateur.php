@@ -147,7 +147,7 @@
 
 	public static function rechercheUtilisateur($mail){
 		if($mail == ""){
-			$requetePreparee = "SELECT mail, type FROM Utilisateur";
+			$requetePreparee = "SELECT mail, utilisateur.type FROM Utilisateur";
 			$req_prep = Connexion::pdo()->prepare($requetePreparee);	
 			try {
 				$req_prep->execute();
@@ -157,7 +157,7 @@
 			}
 			return false;
 		}else{
-			$requetePreparee = "SELECT mail, type FROM Utilisateur WHERE mail LIKE '%".$mail."%'";
+			$requetePreparee = "SELECT mail, utilisateur.type FROM Utilisateur WHERE mail LIKE '%".$mail."%'";
 			$req_prep = Connexion::pdo()->prepare($requetePreparee);	
 			try {
 				$req_prep->execute();

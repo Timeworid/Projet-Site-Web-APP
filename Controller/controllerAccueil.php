@@ -12,7 +12,7 @@ require_once("Model\Conversation.php");
     class controllerAcceuil{
 
         public static function accueil(){
-            include("View/pageaccueil.php");
+            include("View/accueil.php");
         }
 
         public static function listeUtilisateur(){
@@ -45,6 +45,11 @@ require_once("Model\Conversation.php");
                 include("View/Statistiques.php");
                 //self::accueil();
             }
+        }
+
+        public static function rechercheUtilisateur(){
+            extract($_POST);
+            echo json_encode(Utilisateur::rechercheUtilisateur($utilisateur));
         }
 
         public static function RecupStats(){
@@ -80,7 +85,7 @@ require_once("Model\Conversation.php");
         }
         public static function presentationProduit(){
 
-            include("View/PageProduit.php");
+            include("View/Produit.php");
         }
 
         public static function apropos(){
@@ -182,7 +187,7 @@ require_once("Model\Conversation.php");
         }
 
         public static function pageFAQ(){
-            include("View/pageFAQ.php");
+            include("View/FAQ.php");
         }
 
         public static function loginUtilisateur() {
@@ -223,16 +228,17 @@ require_once("Model\Conversation.php");
         public static function login() {
             extract($_POST);
             $MsgUser = Utilisateur::UtilisateurExiste($mail);
+            $captcha = self::captcha();
             if (!$MsgUser) {
                 $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
                 $_SESSION["erreur"] = $erreur;
-                $captcha = self::captcha();
             }
             if (!$captcha) {
                 $erreur = "Captcha invalide";
                 $_SESSION["erreur"] = $erreur;
                 self::loginUtilisateur();
-            } else {
+            } 
+            else {
                 $userExist = Utilisateur::UtilisateurExiste($mail);
                 if(!$userExist) {
                     $erreur = "Aucun compte n'existe avec ce login. Pour vous créer un compte, rentrez vos informations dans Inscription.";
@@ -243,9 +249,11 @@ require_once("Model\Conversation.php");
                     $canConnect = Utilisateur::canConnect($mail, $motDePasse);
                     if($canConnect) {
                         unset($_SESSION["erreur"]);
+                        unset($_SESSION["admin"]);
+                        unset($_SESSION["mail"]);
                         $_SESSION["mail"] = $mail;
-                        $admin = Utilisateur::getAdminByMail($mail);
-                        $_SESSION["admin"] = $admin;
+                        $admin = Utilisateur::getAdminByMail($mail);  
+                        $_SESSION["admin"] = $admin[0];
                         controllerAcceuil::accueil();
                     } else {
                         $erreur = "Votre login ou votre mot de passe est incorrect";

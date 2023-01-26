@@ -6,6 +6,7 @@
         <meta charset="utf-8">
          <script src='https://www.google.com/recaptcha/api.js'></script>
         <?php
+        echo $_SESSION["admin"];
         foreach ($_GET as $key => $value)
         $_GET[$key] = htmlspecialchars($value);
         foreach ($_POST as $key => $value)
@@ -33,40 +34,19 @@
             xmlhttp.send("action=RecupStats&type=Température");
             xmlhttp.onreadystatechange=function(){
                 if (xmlhttp.readyState==4 && xmlhttp.status==200){
-                    console.log(JSON.parse(xmlhttp.response));
+                    console.log(JSON.parse(xmlhttp.response));    
+                    drawChart(JSON.parse(xmlhttp.response))
                 }
             }
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
+      function drawChart(TableauTemp) {
+        console.log(TableauTemp["dateStat"])
+        console.log(TableauTemp["valStat"])
         var data_Temp = google.visualization.arrayToDataTable([
-          ['Heure', 'Température'],
-          ['00h',  2],
-          ['01h',  3],
-          ['02h',  3],
-          ['03h',  4],
-          ['04h',  5], 
-          ['05h',  5],
-          ['06h',  5],
-          ['07h',  6],
-          ['08h',  6],
-          ['09h',  7],
-          ['10h',  7],
-          ['11h',  8],
-          ['12h',  9],
-          ['13h',  9],
-          ['14h',  8],
-          ['15h',  8],
-          ['16h',  7],
-          ['17h',  6],
-          ['18h',  5],
-          ['19h',  4],
-          ['20h',  4],
-          ['21h',  3],
-          ['22h',  2],
-          ['23h',  1],
-          ['24h',  1]
+            ['Heure', 'Température'],
+            [ 3, 4  ]
         ]);
 
         var options_Temp = {
@@ -417,7 +397,7 @@
             <div class="Stats_Graphique">
                 <div class="Graphique">
                     <div>
-                        <img class="graph" src="Data/graphique.png">
+                        <img class="Map" src="Data/Map.png" height=auto; width=120px>
                     </div>
                     <button class="Button">
                         <img src="Data/plein-ecran.png" height=50px; width=50px>
