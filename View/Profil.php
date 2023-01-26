@@ -9,12 +9,13 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="fr">
     <head>
-        <link rel="stylesheet" href="./color.css ">
-        <script src="./ajax.js"></script>
+        <link rel="stylesheet" href="ProfilCSS.css ">
+        <script src="Javascript/ajax.js"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
-    <?php
+    <?php 
+        include("View/Header.php");
     ?>
         <div class="flexcontainer1">
             <div class="fc11">
@@ -22,7 +23,7 @@
                 <form class ="formIP" method= "POST" action="routeur.php">
                     <input type="hidden" name="action" value="modifprofil">
                     <input name="nom_prenom" class="InformationsPersonnelles" type="text" placeholder="Nom Prénom">
-                    <input name="age" class="InformationsPersonnelles" type="text" placeholder="Age">
+                    <input name="age" class="InformationsPersonnelles" type="date" placeholder="Age">
                     <input name="adresse" class="InformationsPersonnelles" type="text" placeholder="Adresse">
                     <input name="mail" class="InformationsPersonnelles" type="text" placeholder="Adresse Mail">
             </div>
@@ -31,7 +32,7 @@
                             <input id=info class="Aproposdemoi" type="text" placeholder="A propos de moi">
                         </div>
                         
-                        <input class="Button1" type="submit" value="Modifier mon profil" onclick="return modif()">
+                        <input class="Button1" type="submit" value="Modifier mon profil">
                 </form>
                 
             </div>
@@ -84,8 +85,8 @@
                 <input class="Button2" type="submit" value="Enregistrer les modifications" onclick="return confirmer()">
             </form>
         </div>
-        <?php
-         
-        ?>
+        <?php 
+        include("View/Footer.php");
+    ?>
     </body>
 </html>

@@ -10,7 +10,6 @@ require_once("Model\Message.php");
 
 require_once("Model\Conversation.php");
     class controllerAcceuil{
-
         public static function accueil(){
             include("View/accueil.php");
         }
@@ -20,16 +19,23 @@ require_once("Model\Conversation.php");
         }
         public static function modifprofil(){
             
-        if(!empty($_POST["nom_prenom"])&& !empty($_POST["age"])&&!empty($_POST["adresse"])&&!empty($_POST["mail"])){
-            Utilisateur::modifprofil($_SESSION["mail"],$_POST["nom_prenom"],$_POST["age"],$_POST["adresse"],)
-            header("Location: profil.php");
-
+            if(!empty($_POST["nom_prenom"])&& !empty($_POST["age"])&&!empty($_POST["adresse"])&&!empty($_POST["mail"])){
+                Utilisateur::modifprofil($_SESSION["mail"], $_POST["nom_prenom"], $_POST["age"], $_POST["adresse"], $_POST["mail"]);
+                include("View/Profil.php");
+                }
+            else{
+                include("View/Profil.php");
             }
-        else{
-        header("Location: profil.php?er=true");
         }
 
+        public static function getInfosutilisateur(){
+            if(isset($_SESSION["mail"])){
+                return Utilisateur::infosUtilisateur($_SESSION["mail"]);
+            }else{
+                return null;
+            }
         }
+
         public static function accueilAssistance(){
             include("View/accueilAssistance.php");
         }

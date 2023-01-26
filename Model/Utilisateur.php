@@ -130,14 +130,18 @@
 		}
 		return false;
 	}
-	public static function modifprofil($mail,$nom_prenom,$age,$adresse,) {
-		$requetePreparee = "UPDATE Utilisateur SET nom=:tag_nom,prenom=:tag_prenom,dateNaissance=:tag_dateNaissance,Adresse=:tag_Adresse   WHERE mail = :tag_mail"; 
-		$req_prep = Connexion::pdo()->prepare($requetePreparee);	
-		$valeurs = array("tag_mail" => $mail, "tag_nom" => $nom, "tag_prenom" => $prenom,"tag_datedeNaissance"=>$dateNaissance,"tag_adresse"=>$adresse);
+	public static function modifprofil($mail,$nom_prenom,$age,$adresse, $mailModif) {
+		$requetePreparee = "UPDATE Utilisateur SET nom=:tag_nom, prenom=:tag_prenom, dateNaissance=:tag_dateNaissance,Adresse=:tag_adresse, mail= :tag_mailModif WHERE mail = :tag_mail"; 
+		$req_prep = Connexion::pdo()->prepare($requetePreparee);
+		$nom_prenom = explode(" ", $nom_prenom);
+		$nom = $nom_prenom[0];
+		$prenom = $nom_prenom[1];
+
+		$valeurs = array("tag_mail" => $mail, "tag_nom" => $nom, "tag_prenom" => $prenom,"tag_dateNaissance"=>$age,"tag_adresse"=>$adresse, "tag_mailModif"=> $mailModif);
 		try {
 			$req_prep->execute($valeurs);
 			$r = $req_prep->fetch();
-		return ($r[0] == 1);
+			return $r;
 		} catch (PDOException $e) {
 			echo "erreur : ".$e->getMessage()."<br>";
 		}
@@ -169,6 +173,20 @@
 		}
 		
 	}
+
+	public static function infosUtilisateur($mail){
+		$requetePreparee = "SELECT * FROM Utilisateur WHERE mail = :tag_mail";
+		$req_prep = Connexion::pdo()->prepare($requetePreparee);
+		$tags = array("tag_mail" => $mail);
+		try{
+			$req_prep->execute($tags);
+			return $req_prep->fetchAll();
+		} catch (PDOException $e) {	
+			echo "erreur : ".$e->getMessage()."<br>";
+		}
+		return false;
+	}
+
 
 	public static function canConnect($mail, $mdp) {
 		$motDePasse = self::getMDPByMail($mail);
