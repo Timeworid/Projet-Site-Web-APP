@@ -397,7 +397,7 @@
             <div class="Stats_Graphique">
                 <div class="Graphique">
                     <div>
-                        <img class="graph" src="Data/graphique.png">
+                        <img class="Map" src="Data/Map.png" height=auto; width=120px>
                     </div>
                     <button class="Button">
                         <img src="Data/plein-ecran.png" height=50px; width=50px>
