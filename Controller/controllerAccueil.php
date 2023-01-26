@@ -46,6 +46,7 @@ require_once("Model\Utilsateur.php");
         }
 
         public static function pageFAQ(){
+            $faqs=getFaq()
             include("View/pageFAQ.php");
         }
 

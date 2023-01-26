@@ -37,6 +37,15 @@
 
     
     <section class="faq-section">
+        <?php foreach ($faqs as $faq){
+            echo '<div class="divquestion">
+            <input type="checkbox" id="q1">
+            <label for="q1">'.$faq["question"].'</label>
+            <p>...Lorem ipsum dolor sit amet ...</p>
+            <p>'.$faq["réponse"].'</p>
+        </div>'
+        }?>
+
         <div class="divquestion">
             <input type="checkbox" id="q1">
             <label for="q1">Question 1 ?</label>
