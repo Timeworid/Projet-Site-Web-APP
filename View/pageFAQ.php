@@ -43,8 +43,8 @@
             <label for="q1">'.$faq["question"].'</label>
             <p>...Lorem ipsum dolor sit amet ...</p>
             <p>'.$faq["réponse"].'</p>
-        </div>'
-        }?>
+            </div>'} 
+        ?>
 
         <div class="divquestion">
             <input type="checkbox" id="q1">
