@@ -1,26 +1,37 @@
+<?php
+     if(isset($_GET["er"])){
+        $_message="<p class = 'message' >Merci de remplir le formulaire </p>" ;
+            echo $_message;
+        }
+        
+?>
+
 <!DOCTYPE html>
 <html dir="ltr" lang="fr">
     <head>
-        <link rel="stylesheet" href="ProfilCSS.css ">
+        <link rel="stylesheet" href="./color.css ">
+        <script src="./ajax.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
     <?php
-     include("View/Header.php");
     ?>
         <div class="flexcontainer1">
             <div class="fc11">
                 <div class="Photo"> Photo de profil </div>
-                <form class ="formIP">
-                    <input class="InformationsPersonnelles" type="text" placeholder="Nom Prénom">
-                    <input class="InformationsPersonnelles" type="text" placeholder="Age">
-                    <input class="InformationsPersonnelles" type="text" placeholder="Adresse">
-                    <input class="InformationsPersonnelles" type="text" placeholder="Adresse Mail">
+                <form class ="formIP" method= "POST" action="routeur.php">
+                    <input type="hidden" name="action" value="modifprofil">
+                    <input name="nom_prenom" class="InformationsPersonnelles" type="text" placeholder="Nom Prénom">
+                    <input name="age" class="InformationsPersonnelles" type="text" placeholder="Age">
+                    <input name="adresse" class="InformationsPersonnelles" type="text" placeholder="Adresse">
+                    <input name="mail" class="InformationsPersonnelles" type="text" placeholder="Adresse Mail">
             </div>
                     <div class="fc11">
                         <div class="BigAM">
-                            <input class="Aproposdemoi" type="text" placeholder="A propos de moi">
+                            <input id=info class="Aproposdemoi" type="text" placeholder="A propos de moi">
                         </div>
-                        <input class="Button1" type="submit" value="Modifier mon profil">
+                        
+                        <input class="Button1" type="submit" value="Modifier mon profil" onclick="return modif()">
                 </form>
                 
             </div>
@@ -69,11 +80,12 @@
                         </div>
                     </div>
                 </div>
-                <input class="Button2" type="submit" value="Enregistrer les modifications">
+                <div class="g-recaptcha" data-sitekey="6LfY9wQkAAAAAE-iWVoofmGEPaGk06MwRNszlM3l"></div>
+                <input class="Button2" type="submit" value="Enregistrer les modifications" onclick="return confirmer()">
             </form>
         </div>
         <?php
-            include("View/Footer.php");
+         
         ?>
     </body>
 </html>

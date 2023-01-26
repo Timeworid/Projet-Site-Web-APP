@@ -130,6 +130,19 @@
 		}
 		return false;
 	}
+	public static function modifprofil($mail,$nom_prenom,$age,$adresse,) {
+		$requetePreparee = "UPDATE Utilisateur SET nom=:tag_nom,prenom=:tag_prenom,dateNaissance=:tag_dateNaissance,Adresse=:tag_Adresse   WHERE mail = :tag_mail"; 
+		$req_prep = Connexion::pdo()->prepare($requetePreparee);	
+		$valeurs = array("tag_mail" => $mail, "tag_nom" => $nom, "tag_prenom" => $prenom,"tag_datedeNaissance"=>$dateNaissance,"tag_adresse"=>$adresse);
+		try {
+			$req_prep->execute($valeurs);
+			$r = $req_prep->fetch();
+		return ($r[0] == 1);
+		} catch (PDOException $e) {
+			echo "erreur : ".$e->getMessage()."<br>";
+		}
+		return false;
+	}
 
 
 	public static function rechercheUtilisateur($mail){

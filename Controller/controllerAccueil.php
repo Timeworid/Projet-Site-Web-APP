@@ -18,6 +18,18 @@ require_once("Model\Conversation.php");
         public static function listeUtilisateur(){
             include("View/ListeUtilisateur.php");
         }
+        public static function modifprofil(){
+            
+        if(!empty($_POST["nom_prenom"])&& !empty($_POST["age"])&&!empty($_POST["adresse"])&&!empty($_POST["mail"])){
+            Utilisateur::modifprofil($_SESSION["mail"],$_POST["nom_prenom"],$_POST["age"],$_POST["adresse"],)
+            header("Location: profil.php");
+
+            }
+        else{
+        header("Location: profil.php?er=true");
+        }
+
+        }
         public static function accueilAssistance(){
             include("View/accueilAssistance.php");
         }
