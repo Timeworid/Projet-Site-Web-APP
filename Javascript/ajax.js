@@ -8,6 +8,7 @@ if (document.readyState === 'complete') {
 
 
 function modif(){
+    
     if(confirm("êtes vous sûr de modifier vos donnés ?")){
         return true;
     }else{
@@ -20,3 +21,4 @@ function modif(){
 function confirmer(){
     alert("Vos donnés ont été modifiés");
 }
+

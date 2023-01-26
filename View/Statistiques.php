@@ -13,6 +13,7 @@
         ?>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript">
+    TableauTemp = new Array();
             if (window.XMLHttpRequest) {
                 xmlhttp=new XMLHttpRequest();
             } else {
@@ -34,19 +35,27 @@
             xmlhttp.onreadystatechange=function(){
                 if (xmlhttp.readyState==4 && xmlhttp.status==200){
                     console.log(JSON.parse(xmlhttp.response));    
-
+                    TableauTemp = JSON.parse(xmlhttp.response)
                     google.charts.load('current', {'packages':['corechart']});
-                    google.charts.setOnLoadCallback(drawChart(JSON.parse(xmlhttp.response)));
+                    google.charts.setOnLoadCallback(drawChart);
                 }
             }
+            
       
 
-      function drawChart(TableauTemp) {
+      function drawChart() {
         console.log(TableauTemp[0]["dateStat"])
-        console.log(TableauTemp[0]["valStat"])
+        console.log(TableauTemp[0]["valStat"]) 
+        var Date1 = new Date(Date.parse(TableauTemp[0]["dateStat"]))
+        var Date2 = new Date(Date.parse(TableauTemp[1]["dateStat"]))
+        var Date3 = new Date(Date.parse(TableauTemp[2]["dateStat"]))
+        console.log(Date1);
+        
         var data_Temp = google.visualization.arrayToDataTable([
             ['Heure', 'Température'],
-            [ TableauTemp[0]["dateStat"], TableauTemp[0]["valStat"]]
+            [ Date1.getHours(), +TableauTemp[0]["valStat"]],
+            [ Date2.getHours(), +TableauTemp[1]["valStat"]],
+            [ Date3.getHours(), +TableauTemp[2]["valStat"]]
         ]);
 
         var options_Temp = {

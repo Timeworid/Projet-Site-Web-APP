@@ -1,10 +1,4 @@
-<?php
-     if(isset($_GET["er"])){
-        $_message="<p class = 'message' >Merci de remplir le formulaire </p>" ;
-            echo $_message;
-        }
-        
-?>
+
 
 <!DOCTYPE html>
 <html dir="ltr" lang="fr">
