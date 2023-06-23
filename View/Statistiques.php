@@ -265,6 +265,9 @@
                 </div>
             </div>
         </div>
+        <div class="btn_gestion_container">
+            <button onclick="turnOnLED()" id ="LED">Allumer la LED !</button>
+        </div>
         <script>
             var calendarInputTemp = document.getElementById("myDateTemp");
             calendarInputTemp.addEventListener("change", function() {

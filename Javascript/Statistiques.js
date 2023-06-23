@@ -1,5 +1,31 @@
 
 
+function turnOnLED(){
+    var xmlhttp;
+    if (window.XMLHttpRequest) {
+        xmlhttp=new XMLHttpRequest();
+    } else {
+        if (window.ActiveXObject){
+            try {
+                xmlhttp2=new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                try {
+                    xmlhttp2=new ActiveXObject("Microsoft.XMLHTTP");
+                } catch (e) {
+                    console.log(e);
+                }
+            }
+        }
+    }
+    xmlhttp.open("GET","http://projets-tomcat.isep.fr:8080/appService",true);
+    xmlhttp.setRequestHeader("Access-Control-Allow-Origin","preflight request");
+    xmlhttp.send("ACTION=COMMAND&TEAM=G01e&TRAME=1006D2a01BLUE000000%22");
+    xmlhttp.onreadystatechange=function(){
+        if (xmlhttp.readyState==4 && xmlhttp.status==200){
+            console.log("Envoi de trame réussi ! Alummage de la LED en cours ...")
+        }
+    }
+}
 
 
 
