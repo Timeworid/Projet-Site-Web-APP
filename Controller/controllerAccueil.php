@@ -99,9 +99,17 @@ require_once("Model\Conversation.php");
             extract($_POST);
             if(isset($_SESSION["mail"])){
                 $tab_Dates = json_decode(html_entity_decode($dateStat), true);
+                $tab_Types = json_decode(html_entity_decode($typeStat), true);
                 $tab_Values = json_decode(html_entity_decode($valStat), true);
                 for($i = 0; $i < count($tab_Dates); $i++){
-                    Statistique::envoiStats($_SESSION["mail"], $tab_Dates[$i], "Température", $tab_Values[$i]);
+                    if(intval($tab_Types[$i]) == 3){
+                        Statistique::envoiStats($_SESSION["mail"], $tab_Dates[$i], "Température", $tab_Values[$i]);
+                    }
+                    else if(intval($tab_Types[$i]) == 7){
+                        Statistique::envoiStats($_SESSION["mail"], $tab_Dates[$i], "Son", $tab_Values[$i]);
+                    }else{
+                        Statistique::envoiStats($_SESSION["mail"], $tab_Dates[$i], "Autre", $tab_Values[$i]);
+                    }
                 }
             }
             else{

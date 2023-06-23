@@ -63,6 +63,7 @@
         </div>
         <div class="Température" id="D1">
             <div class="Stats_Graphique">
+            <input type="date" id="myDateTemp">
                 <div class="Graphique">
                     <div id="Temp_Graph" style="margin-top:20px"></div>
                     <button class="Button">
@@ -113,7 +114,7 @@
                 <div class="Stats">
                     <div class="Infos">
                         <div>
-                            <p>Rythme cardiaque actuelle :</p>
+                            <p>Rythme cardiaque actuel :</p>
                         </div>
                     </div>
                     <div class="Infos">
@@ -225,6 +226,7 @@
         </div>
         <div class="Sonore" id="D5">
             <div class="Stats_Graphique">
+            <input type="date" id="myDateSon">
                 <div class="Graphique">
                     <div id="Sonore_Graph" style="margin-top:20px"></div>
                     <button class="Button">
@@ -235,7 +237,7 @@
                 <div class="Stats">
                     <div class="Infos">
                         <div>
-                            <p>Volume sonore actuelle :</p>
+                            <p>Volume sonore actuel :</p>
                         </div>
                     </div>
                     <div class="Infos">
@@ -264,6 +266,22 @@
             </div>
         </div>
         <script>
+            var calendarInputTemp = document.getElementById("myDateTemp");
+            calendarInputTemp.addEventListener("change", function() {
+                var selectedDate = calendarInputTemp.value;
+                console.log(selectedDate);
+                // Perform any actions or update the chart based on the selected date
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(function () {drawChart("Température")});
+            });
+            var calendarInputSon = document.getElementById("myDateSon");
+            calendarInputSon.addEventListener("change", function() {
+                var selectedDate = calendarInputSon.value;
+                console.log(selectedDate);
+                // Perform any actions or update the chart based on the selected date
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(function () {drawChart("Son")});
+            });
             var Captcha=document.getElementById('Captcha');
             var Validation=document.getElementById('recaptcha-accessible-status');
             var Temp=document.getElementById('Temp');
@@ -327,6 +345,7 @@
             Sono.addEventListener("click", function() {
                 var response = grecaptcha.getResponse();
                 if(response.length != 0) {
+                    recupStat("Son");
                     document.getElementById('D1').style.display="None";
                     document.getElementById('D2').style.display="None";
                     document.getElementById('D3').style.display="None";

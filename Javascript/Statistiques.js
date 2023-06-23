@@ -31,23 +31,24 @@ function recupStat(type){
             xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             var tab_Date = new Array()
             var tab_Values = new Array()
+            var tab_Types = new Array()
 
             console.log(JSON.parse(reponse[0]))
             for(var i = 0; i < reponse.length; i++){
                 tab_Date.push(Math.floor(new Date(JSON.parse(reponse[i])[8], JSON.parse(reponse[i])[9], JSON.parse(reponse[i])[10], JSON.parse(reponse[i])[11], JSON.parse(reponse[i])[12], JSON.parse(reponse[i])[13]).getTime() / 1000));
                 tab_Values.push(JSON.parse(reponse[i])[5])
-                
+                tab_Types.push(JSON.parse(reponse[i])[3])
             }
             console.log(reponse);
             
             //console.log(JSON.stringify(tab_Date));
             console.log(JSON.stringify(tab_Values));
             
-            xmlhttp.send("action=EnvoiStats&dateStat="+ JSON.stringify(tab_Date)+"&valStat="+JSON.stringify(tab_Values));
+            xmlhttp.send("action=EnvoiStats&dateStat="+ JSON.stringify(tab_Date)+"&valStat="+JSON.stringify(tab_Values)+"&typeStat="+JSON.stringify(tab_Types));
             xmlhttp.onreadystatechange=function(){
                 if (xmlhttp.readyState==4 && xmlhttp.status==200){
                     console.log("Envoi de Stat réussi")
-                    tab_temp = new Array();
+                    tab_data = new Array();
                     var xmlhttp2;
                     if (window.XMLHttpRequest) {
                         xmlhttp2=new XMLHttpRequest();
@@ -71,11 +72,9 @@ function recupStat(type){
                         if (xmlhttp2.readyState==4 && xmlhttp.status==200){
                             console.log("Recup de Stat réussi")
                             console.log(JSON.parse(xmlhttp2.response));
-                            if(type == "Température"){
-                                tab_temp = JSON.parse(xmlhttp2.response)
-                            }
+                            tab_data = JSON.parse(xmlhttp2.response)
                             google.charts.load('current', {'packages':['corechart']});
-                            google.charts.setOnLoadCallback(drawChart);
+                            google.charts.setOnLoadCallback(function () {drawChart(type)});
                         }
                     }
                 }
@@ -87,45 +86,55 @@ function recupStat(type){
             
       
 
-function drawChart() {
-    console.log(tab_temp[0]["dateStat"])
-    console.log(tab_temp[0]["valStat"]) 
-    for (var i = 1; i < tab_temp.length; i++) {
-        tab_temp[i]["dateStat"] = new Date(Date.parse(tab_temp[i]["dateStat"]));
-    }
-    console.log(tab_temp[1]);
-    
-    var data_Temp = new google.visualization.DataTable();
-
-    
-    data_Temp.addColumn('date', "Heure");            // <-- x-axis - string
-    data_Temp.addColumn('number', "Température");         // <-- y-axis - number
-    for (var i = 1; i < tab_temp.length; i++) {
-        data_Temp.addRow([tab_temp[i]["dateStat"], parseInt(tab_temp[i]["valStat"])]);
-    }
-    
-
-    var options_Temp = {
-        title: 'Evolution de la température pendant la journée',
-        width: 1200,
-        height: 400,
-        legend: { position: 'bottom' },
-        chartArea: {
-        left:55,
-        top:50,
-        height:300,
-        width:1400,
-        backgroundColor: {
-        fill: '	#FFFFFF',
-        fillOpacity: 0.8,
+function drawChart(type) {
+    if(type == "Température"){
+        var data_Temp = new google.visualization.DataTable();
+        for (var i = 1; i < tab_data.length; i++) {
+            tab_data[i]["dateStat"] = new Date(Date.parse(tab_data[i]["dateStat"]));
         }
-        },
+        console.log(tab_data[1]);
+        
+        var daySelected;
+        if(!document.getElementById("myDateTemp").value){
+            document.getElementById("myDateTemp").value = new Date().toISOString().slice(0, 10);
+        }
+        daySelected = new Date(document.getElementById("myDateTemp").value)
+        console.log(daySelected);
+        
+        data_Temp.addColumn('date', "Heure");            // <-- x-axis - string
+        data_Temp.addColumn('number', "Température"); 
+        if(daySelected != null){ 
+            // <-- y-axis - number
+            for (var i = 1; i < tab_data.length; i++) {
+                if(tab_data[i]["dateStat"].getDate() == daySelected.getDate() && tab_data[i]["dateStat"].getMonth() == daySelected.getMonth()){
+                    data_Temp.addRow([tab_data[i]["dateStat"], parseInt(tab_data[i]["valStat"], 16)]);
+                }
+            }
+        }
+        
+
+        var options_Temp = {
+            title: 'Evolution de la température pendant la journée',
+            width: 1200,
+            height: 400,
+            legend: { position: 'bottom' },
+            chartArea: {
+            left:55,
+            top:50,
+            height:300,
+            width:1400,
+            backgroundColor: {
+            fill: '	#FFFFFF',
+            fillOpacity: 0.8,
+            }
+        
+            },
+        }
+
+        var chart_Temp = new google.visualization.LineChart(document.getElementById('Temp_Graph'));
+
+        chart_Temp.draw(data_Temp, options_Temp);
     }
-
-    var chart_Temp = new google.visualization.LineChart(document.getElementById('Temp_Graph'));
-
-    chart_Temp.draw(data_Temp, options_Temp);
-
 
     var data_Card = google.visualization.arrayToDataTable([
         ['Heure', 'Température'],
@@ -229,53 +238,54 @@ function drawChart() {
 
     chart_C02.draw(data_C02, options_C02);
 
-    var data_Sonore = google.visualization.arrayToDataTable([
-        ['Heure', 'Température'],
-        ['00h',  2],
-        ['01h',  3],
-        ['02h',  3],
-        ['03h',  4],
-        ['04h',  5],
-        ['05h',  5],
-        ['06h',  5],
-        ['07h',  6],
-        ['08h',  6],
-        ['09h',  7],
-        ['10h',  7],
-        ['11h',  8],
-        ['12h',  9],
-        ['13h',  9],
-        ['14h',  8],
-        ['15h',  8],
-        ['16h',  7],
-        ['17h',  6],
-        ['18h',  5],
-        ['19h',  4],
-        ['20h',  4],
-        ['21h',  3],
-        ['22h',  2],
-        ['23h',  1],
-        ['24h',  1]
-    ]);
-
-    var options_Sonore = {
-        title: 'Evolution de la température pendant la journée',
-        width: 1200,
-        height: 400,
-        legend: { position: 'bottom' },
-        chartArea: {
-        left:55,
-        top:50,
-        height:300,
-        width:1400,
-        backgroundColor: {
-        fill: '	#FFFFFF',
-        fillOpacity: 0.8,
+    if(type == "Son"){
+        var data_son = new google.visualization.DataTable();
+        for (var i = 1; i < tab_data.length; i++) {
+            tab_data[i]["dateStat"] = new Date(Date.parse(tab_data[i]["dateStat"]));
         }
-        },
+        var daySelected;
+        if(!document.getElementById("myDateSon").value){
+            document.getElementById("myDateSon").value = new Date().toISOString().slice(0, 10);
+        }
+        daySelected = new Date(document.getElementById("myDateSon").value)
+        console.log(daySelected);
+        
+        data_son.addColumn('date', "Heure");            // <-- x-axis - string
+        data_son.addColumn('number', "Son"); 
+        if(daySelected != null){ 
+            // <-- y-axis - number
+            console.log("dans le son")
+            for (var i = 1; i < tab_data.length; i++) {
+                if(tab_data[i]["dateStat"].getDate() == daySelected.getDate() && tab_data[i]["dateStat"].getMonth() == daySelected.getMonth()){
+                    data_son.addRow([tab_data[i]["dateStat"], parseInt(tab_data[i]["valStat"], 16)]);
+                }
+            }
+        }
+
+        var options_Sonore = {
+            title: 'Evolution de la température pendant la journée',
+            width: 1200,
+            height: 400,
+            legend: { position: 'bottom' },
+            chartArea: {
+            left:55,
+            top:50,
+            height:300,
+            width:1400,
+            backgroundColor: {
+            fill: '	#FFFFFF',
+            fillOpacity: 0.8,
+            },
+            explorer: {
+                actions: ['dragToZoom', 'rightClickToReset'],
+                axis: 'horizontal',
+                keepInBounds: true,
+                maxZoomIn: 4.0
+            },
+            },
+        }
+
+        var chart_Sonore = new google.visualization.LineChart(document.getElementById('Sonore_Graph'));
+        chart_Sonore.draw(data_son, options_Sonore);
     }
-
-    var chart_Sonore = new google.visualization.LineChart(document.getElementById('Sonore_Graph'));
-
-    chart_Sonore.draw(data_Sonore, options_Sonore);
 }
