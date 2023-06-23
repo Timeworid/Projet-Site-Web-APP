@@ -18,7 +18,9 @@
 		}
 
 		public static function RecupStats($mail, $type) {
-			$requetePreparee = "SELECT valStat, dateStat FROM statistiques WHERE DATE_FORMAT(dateStat, '%i') = 00 AND DATE_FORMAT(dateStat, '%s') = 00 AND mail = :tag_mail AND typeStat = :tag_typeStat"; 
+			//$requetePreparee = "SELECT valStat, dateStat FROM statistiques WHERE DATE_FORMAT(dateStat, '%i') = 00 AND DATE_FORMAT(dateStat, '%s') = 00 AND mail = :tag_mail AND typeStat = :tag_typeStat"; 
+			
+			$requetePreparee = "SELECT valStat, dateStat FROM statistiques WHERE mail = :tag_mail AND typeStat = :tag_typeStat"; 
 			$req_prep = Connexion::pdo()->prepare($requetePreparee);
 			$valeurs = array("tag_mail" => $mail, "tag_typeStat" => $type);
 			try {
@@ -29,6 +31,19 @@
 				echo "erreur : ".$e->getMessage()."<br>";
 			}
 			return false;
+		}
+
+		public static function envoiStats($mail, $dateStat, $typeStat,$valStat){
+			if($valStat != null){
+				$requetePreparee = "CALL update_Stats(:tag_mail, :tag_dateStat, :tag_typeStat, :tag_valStat);";
+				$req_prep = Connexion::pdo()->prepare($requetePreparee);
+				$tags = ["tag_mail" => $mail,"tag_dateStat" => date('y/m/d H:i:s', (int)$dateStat),"tag_typeStat"=>$typeStat, "tag_valStat" =>$valStat];
+				try{
+					$req_prep->execute($tags);
+				} catch (PDOException $e) {
+					echo "erreur : ".$e->getMessage()."<br>";
+				}
+			}
 		}
 
 

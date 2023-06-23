@@ -68,6 +68,49 @@ require_once("Model\Conversation.php");
             }
         }
 
+        
+
+        public static function getTrames(){
+            
+            $ch = curl_init();
+            curl_setopt($ch,CURLOPT_URL,"http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G01e");
+            curl_setopt($ch, CURLOPT_HEADER, FALSE);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+            $data = curl_exec($ch);
+            curl_close($ch);
+            
+            $data_tab = str_split($data,33);
+            $result = array();
+
+            for ($i = 0; $i < count($data_tab); $i++) {
+                $trame = $data_tab[$i];
+                $t = substr($trame,0,1);
+                $o = substr($trame,1,4);
+                list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
+                sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
+                $result[$i] = json_encode([$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec]);
+            }
+
+            echo(json_encode($result));
+        }
+
+        public static function EnvoiStats(){
+            extract($_POST);
+            if(isset($_SESSION["mail"])){
+                $tab_Dates = json_decode(html_entity_decode($dateStat), true);
+                $tab_Values = json_decode(html_entity_decode($valStat), true);
+                for($i = 0; $i < count($tab_Dates); $i++){
+                    Statistique::envoiStats($_SESSION["mail"], $tab_Dates[$i], "Température", $tab_Values[$i]);
+                }
+            }
+            else{
+                $erreur = "Vous n'êtes plus connecté !";
+                $_SESSION["erreur"] = $erreur;
+                self::accueil();
+            }
+        }
+
         public static function EnvoiMsg(){
             extract($_POST);
             if(isset($_SESSION["mail"])){
@@ -77,7 +120,6 @@ require_once("Model\Conversation.php");
                 $_SESSION["erreur"] = $erreur;
                 self::accueil();
             }
-
 
         }
 
