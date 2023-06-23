@@ -18,7 +18,7 @@ function turnOnLED(){
         }
     }
     xmlhttp.open("GET","http://projets-tomcat.isep.fr:8080/appService",true);
-    xmlhttp.setRequestHeader("Access-Control-Allow-Origin","preflight request");
+    xmlhttp.setRequestHeader("Access-Control-Allow-Origin","*");
     xmlhttp.send("ACTION=COMMAND&TEAM=G01e&TRAME=1006D2a01BLUE000000%22");
     xmlhttp.onreadystatechange=function(){
         if (xmlhttp.readyState==4 && xmlhttp.status==200){
@@ -289,7 +289,7 @@ function drawChart(type) {
         }
 
         var options_Sonore = {
-            title: 'Evolution de la température pendant la journée',
+            title: 'Variation du son pendant la journée',
             width: 1200,
             height: 400,
             legend: { position: 'bottom' },
